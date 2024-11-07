@@ -1,0 +1,21 @@
+framer-motion
+@nextui-org/autocomplete
+@nextui-org/code
+@nextui-org/image
+@nextui-org/kbd
+@nextui-org/link
+@nextui-org/listbox
+@nextui-org/snippet
+@nextui-org/use-infinite-scroll
+@nextui-org/user
+@react-aria/visually-hidden
+intl-messageformat
+@react-stately/data
+nextjs-toploader
+next-themes
+@next/third-parties
+
+
+npm uninstall @chromatic-com/storybook @storybook/addon-essentials @storybook/addon-interactions @storybook/addon-links @storybook/addon-onboarding @storybook/addon-styling-webpack @storybook/blocks @storybook/nextjs @storybook/react @storybook/test eslint-plugin-storybook storybook
+"storybook": "storybook dev -p 6006",
+"build-storybook": "storybook build"

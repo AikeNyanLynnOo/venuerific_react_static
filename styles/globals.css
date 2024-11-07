@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  top: 0 !important;
+  font-family: var(--font-vnf), sans-serif;
+}
+
+.skiptranslate {
+  display: none !important;
+}
+
+/* START banner */
+.banner-bg-gradient {
+  background: linear-gradient(90deg, #1db6e5 0.02%, #4f3aeb 70.06%);
+}
+
+/* END banner */
+
+/* auto complete */
+.MuiAutocomplete-popper {
+  border-radius: 14px;
+  margin-top: 10;
+}
+.MuiAutocomplete-popper .MuiPaper-root {
+  border-radius: 14px;
+  border: 1px solid #d4d4d8;
+}
+
+.MuiAutocomplete-popper .MuiAutocomplete-listbox {
+  background-color: white;
+  height: fit-content;
+  max-height: 180px;
+  border-radius: 14px;
+  padding: 5px;
+  overflow: scroll;
+}
+.MuiPaper-root.MuiPopover-paper.MuiMenu-paper {
+  border-radius: 14px;
+}
+
+/* select list menu */
+.MuiMenu-list {
+  background-color: white;
+}
+.MuiList-root.MuiMenu-list {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 14px;
+  max-height: 140px;
+  padding: 5px;
+  /* width: 90%; */
+}
+.MuiList-root.MuiMenu-list .MuiMenuItem-root {
+  border-radius: 10px;
+}
+.MuiList-root.MuiMenu-list .MuiMenuItem-root.Mui-selected {
+  background-color: #d4d4d8;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #b6b6b6;
+  border-radius: 100vh;
+  height: 10px;
+  /* border: 3px solid #c2c2c2; */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #7c7b7c;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: none;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #b6b6b6;
+  border-radius: 100vh;
+  height: 5px;
+  /* border: 3px solid #c2c2c2; */
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #7c7b7c;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.gm-style-iw-d {
+  overflow-x: visible !important;
+  overflow-y: "scroll" !important;
+  padding-right: 0 !important;
+  margin-right: -5px;
+  max-height: auto !important;
+  padding-top: 6px !important;
+  padding-left: 3px !important;
+  padding-bottom: 8px !important;
+  background-color: white !important;
+}
+.virtual-tour-iframe img {
+  display: none !important;
+}
+
+/* START CALENDAR */
+
+.fc-button {
+  background-color: #ffffff !important;
+  color: #667085 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  height: fit-content !important;
+  padding: 4px 8px !important;
+  border-color: #d0d5dd !important;
+  font-size: 0.875rem !important;
+}
+.fc-button:focus {
+  box-shadow: none !important;
+}
+
+.fc-button-active {
+  background-color: #0d6efd !important;
+  color: #ffffff !important;
+}
+
+.fc-toolbar-title {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+.fc-today-button:disabled {
+  cursor: not-allowed !important;
+  background-color: #0d6efd !important;
+  color: #ffffff !important;
+}
+.fc-button:disabled {
+  cursor: not-allowed !important;
+}
+.fc-today-button {
+  border-color: #0d6efd !important;
+  color: #0d6efd !important;
+}
+
+.fc-col-header-cell-cushion,
+.fc-daygrid-day-number,
+.fc-list-day-text,
+.fc-list-day-side-text,
+.fc-list-event-time,
+.fc-list-event-title {
+  font-size: 0.875rem !important;
+}
+
+.fc-event-main-frame {
+  background-color: #0d6efd !important;
+  color: #ffffff !important;
+}
+
+.fc-daygrid-event-dot,
+.fc-list-event-dot {
+  border-color: #0d6efd !important;
+}
+
+.fc-day-today {
+  background-color: #f2f4f7 !important;
+}
+
+/* .fc-scrollgrid {
+  border-radius: 8px !important;
+} */
+
+.fc-header-toolbar {
+  flex-wrap: wrap !important;
+  row-gap: 4px !important;
+}
+
+.fc-scroller::-webkit-scrollbar {
+  /* display: none !important; */
+  /* use to hide the scrollbar */
+  width: 2px !important;
+  height: 2px !important;
+}
+.fc-scroller::-webkit-scrollbar-track {
+  border-radius: 5px !important;
+  background: none !important;
+}
+
+.fc-scroller::-webkit-scrollbar-thumb {
+  background: #b6b6b6 !important;
+  border-radius: 5px !important;
+  height: 5px !important;
+}
+
+.fc-scroller::-webkit-scrollbar-thumb:hover {
+  background: #7c7b7c !important;
+}
+
+/* fc-daygrid-body fc-daygrid-body-unbalanced */
+.fc-col-header,
+.fc-daygrid-body,
+.fc-scrollgrid-sync-table {
+  width: 100% !important;
+}
+/* END CALENDAR */
+
+/* START CALENDAR TOOLTIP */
+
+/* Custom tippy.js tooltip styles */
+.tippy-box[data-theme~="custom-tooltip"] {
+  background-color: #475467; /* Dark background */
+  color: #ffffff; /* White text */
+  border-radius: 8px; /* Rounded corners */
+  padding: 5px; /* Add padding */
+  font-size: 12px; /* Adjust font size */
+  font-weight: 600;
+  border: 1px solid #636e72; /* Border around tooltip */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 150px;
+}
+
+.tippy-box[data-theme~="custom-tooltip"][data-placement^="top"] .tippy-arrow {
+  border-top-color: #475467; /* Arrow color matching the background */
+}
+
+.tippy-box[data-theme~="custom-tooltip"][data-placement^="bottom"]
+  .tippy-arrow {
+  border-bottom-color: #475467;
+}
+
+.tippy-box[data-theme~="custom-tooltip"][data-placement^="left"] .tippy-arrow {
+  border-left-color: #475467;
+}
+
+.tippy-box[data-theme~="custom-tooltip"][data-placement^="right"] .tippy-arrow {
+  border-right-color: #475467;
+}
+
+/* custom arrow styles */
+.tippy-arrow {
+  color: #475467; /* Color of the arrow */
+}
+
+/* END CALENDAR TOOLTIP */
