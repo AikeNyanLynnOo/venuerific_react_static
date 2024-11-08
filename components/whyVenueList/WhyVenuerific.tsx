@@ -1,7 +1,7 @@
 import Image from "next/image";
-import curatedMarketplaceImg from "../../../public/images/why_venue_list/curated_marketplace.png";
-import venueManagementImg from "../../../public/images/why_venue_list/venue_management.png";
-import endToEndSupportImg from "../../../public/images/why_venue_list/end_to_end_support.png";
+import curatedMarketplaceImg from "../../public/images/why_venue_list/curated_marketplace.png";
+import venueManagementImg from "../../public/images/why_venue_list/venue_management.png";
+import endToEndSupportImg from "../../public/images/why_venue_list/end_to_end_support.png";
 
 const WhyVenuerific = () => {
   const features = [

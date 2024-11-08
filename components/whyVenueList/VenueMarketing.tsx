@@ -1,7 +1,7 @@
 import Image from "next/image";
-import venueMarketingImg1 from "../../../public/images/why_venue_list/venue_marketing_img1.png";
-import venueMarketingImg2 from "../../../public/images/why_venue_list/venue_marketing_img2.png";
-import venueMarketingImg3 from "../../../public/images/why_venue_list/venue_marketing_img3.png";
+import venueMarketingImg1 from "../../public/images/why_venue_list/venue_marketing_img1.png";
+import venueMarketingImg2 from "../../public/images/why_venue_list/venue_marketing_img2.png";
+import venueMarketingImg3 from "../../public/images/why_venue_list/venue_marketing_img3.png";
 
 const sections = [
   {

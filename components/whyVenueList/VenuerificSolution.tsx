@@ -1,10 +1,10 @@
 import Image from "next/image";
-import functionHallsImg from "../../../public/images/why_venue_list/functionHallsImg.png";
-import eventSpacesImg from "../../../public/images/why_venue_list/eventSpacesImg.png";
-import corporateVenuesImg from "../../../public/images/why_venue_list/corporateVenuesImg.png";
-import restaurantsBarsImg from "../../../public/images/why_venue_list/restaurantsBarsImg.png";
-import hotelsVenuesImg from "../../../public/images/why_venue_list/hotelsVenuesImg.png";
-import coworkingSpacesImg from "../../../public/images/why_venue_list/coworkingSpacesImg.png";
+import functionHallsImg from "../../public/images/why_venue_list/functionHallsImg.png";
+import eventSpacesImg from "../../public/images/why_venue_list/eventSpacesImg.png";
+import corporateVenuesImg from "../../public/images/why_venue_list/corporateVenuesImg.png";
+import restaurantsBarsImg from "../../public/images/why_venue_list/restaurantsBarsImg.png";
+import hotelsVenuesImg from "../../public/images/why_venue_list/hotelsVenuesImg.png";
+import coworkingSpacesImg from "../../public/images/why_venue_list/coworkingSpacesImg.png";
 
 const venueData = [
   {
@@ -55,7 +55,7 @@ const VenuerificSolution = () => {
                   alt={venue.alt}
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-lg"
+                  className="rounded-sm"
                 />
               </div>
               <p className="text-xl font-semibold text-gray-800">{venue.title}</p>

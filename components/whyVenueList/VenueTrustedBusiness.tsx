@@ -1,9 +1,9 @@
 import Image from "next/image";
-import venue_trusted_business_img1 from "../../../public/images/why_venue_list/venue_trusted_business_img1.svg";
-import venue_trusted_business_img2 from "../../../public/images/why_venue_list/venue_trusted_business_img2.svg";
-import venue_trusted_business_img3 from "../../../public/images/why_venue_list/venue_trusted_business_img3.svg";
-import venue_trusted_business_img4 from "../../../public/images/why_venue_list/venue_trusted_business_img4.svg";
-import venue_trusted_business_img5 from "../../../public/images/why_venue_list/venue_trusted_business_img5.svg";
+import venue_trusted_business_img1 from "../../public/images/why_venue_list/venue_trusted_business_img1.svg";
+import venue_trusted_business_img2 from "../../public/images/why_venue_list/venue_trusted_business_img2.svg";
+import venue_trusted_business_img3 from "../../public/images/why_venue_list/venue_trusted_business_img3.svg";
+import venue_trusted_business_img4 from "../../public/images/why_venue_list/venue_trusted_business_img4.svg";
+import venue_trusted_business_img5 from "../../public/images/why_venue_list/venue_trusted_business_img5.svg";
 
 const VenueTrustedBusiness = () => {
   return (
