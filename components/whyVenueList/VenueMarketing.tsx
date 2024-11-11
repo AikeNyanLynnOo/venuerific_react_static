@@ -10,11 +10,13 @@ const sections = [
     text: [
       {
         heading: "Rank Higher on Google",
-        description: "Boost your online visibility and attract a world of new event organizers by getting listed on Venuerific.",
+        description:
+          "Boost your online visibility and attract a world of new event organizers by getting listed on Venuerific.",
       },
       {
         heading: "Generate More Leads",
-        description: "Increase venue bookings through specialized venue marketing strategies.",
+        description:
+          "Increase venue bookings through specialized venue marketing strategies.",
       },
     ],
     gradient: "from-[#428EFE] to-[#A261FD]",
@@ -51,11 +53,13 @@ const sections = [
     text: [
       {
         heading: "Instant Quotation Generation",
-        description: "Quickly generate and send quotations to clients, complete with detailed descriptions and prices via email or WhatsApp.",
+        description:
+          "Quickly generate and send quotations to clients, complete with detailed descriptions and prices via email or WhatsApp.",
       },
       {
         heading: "Seamless and Secure Transactions",
-        description: "With Venuerific Payment, receive payment safely and quickly for any bookings.",
+        description:
+          "With Venuerific Payment, receive payment safely and quickly for any bookings.",
       },
       {
         heading: "Grow Revenue with WhatsApp and Email Campaigns",
@@ -71,12 +75,12 @@ const sections = [
 
 const VenueMarketing = () => {
   return (
-    <div className="w-full bg-primary-50">
-      <div className="max-w-screen-xl mx-auto p-8">
-        <h1 className="text-black text-[24px] font-semibold">
+    <div className="w-full mx-auto px-4 py-16 sm:px-0 md:px-5 lg:px-12 xl:px-20 bg-primary-50">
+      <div className="mx-auto pt-8 pb-20">
+        <h1 className="text-black text-2xl font-semibold">
           The #1 Venue Marketing Platform in Asia
         </h1>
-        <h2 className="text-primary-700 text-[36px] font-bold">
+        <h2 className="text-primary-700 text-3xl mt-4 font-bold">
           Venue Management & Marketing Lifecycle
         </h2>
 
@@ -86,7 +90,9 @@ const VenueMarketing = () => {
               <div className={`w-full h-[6px] ${section.bgColor} ${section.gradient} mt-8`}></div>
               <div className="flex items-center space-x-4">
                 <Image src={section.image} alt={section.title} width={44} height={44} />
-                <p className={`${section.textColor} text-[24px] font-semibold`}>{section.title}</p>
+                <p className={`${section.textColor} text-[24px] font-semibold`}>
+                  {section.title}
+                </p>
               </div>
               <div className="space-y-4">
                 {section.text.map((item, index) => (

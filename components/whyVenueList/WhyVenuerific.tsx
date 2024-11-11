@@ -9,26 +9,30 @@ const WhyVenuerific = () => {
       image: curatedMarketplaceImg,
       alt: "Curated Marketplace",
       title: "Curated Marketplace",
-      description: "Connect with thousands of event organizers monthly through Venuerific to generate more revenue."
+      description:
+        "Connect with thousands of event organizers monthly through Venuerific to generate more revenue.",
     },
     {
       image: venueManagementImg,
       alt: "Venue Management",
       title: "Venue Management",
-      description: "Increase sales, save time and stay on top of your venue."
+      description: "Increase sales, save time and stay on top of your venue.",
     },
     {
       image: endToEndSupportImg,
       alt: "End-to-End Support",
       title: "End-to-End Support",
-      description: "Our customer success team offers local and fast assistance to guide you in growing your venue business."
-    }
+      description:
+        "Our customer success team offers local and fast assistance to guide you in growing your venue business.",
+    },
   ];
 
   return (
-    <div className="py-16 bg-white">
-      <div className="max-w-screen-xl mx-auto px-8 text-center">
-        <h2 className="text-3xl font-semibold text-primary-700">Why Venuerific?</h2>
+    <div className="py-16 bg-white w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20">
+      <div className="max-w-screen-xl">
+        <h2 className="text-3xl font-semibold text-primary-700 text-center">
+          Why Venuerific?
+        </h2>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
@@ -42,8 +46,12 @@ const WhyVenuerific = () => {
                   height={48}
                 />
               </div>
-              <p className="text-xl font-semibold text-gray-800">{feature.title}</p>
-              <p className="text-gray-600 mt-2">{feature.description}</p>
+              <p className="text-xl font-semibold text-gray-800">
+                {feature.title}
+              </p>
+              <p className="text-gray-600 mt-2 mb-4 md:mb-0 sm:mb-6">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>
