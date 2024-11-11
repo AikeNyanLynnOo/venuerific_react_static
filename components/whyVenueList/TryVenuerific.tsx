@@ -1,7 +1,7 @@
 const TryVenuerific = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 overflow-hidden">
-      <div className="w-full mx-auto px-4 sm:px-0 md:px-5 lg:px-12 xl:px-20 py-10 flex flex-col justify-center space-y-8">
+      <div className="w-full mx-auto px-4 sm:px-4 md:px-8 lg:px-12 xl:px-20 py-10 flex flex-col justify-center space-y-8">
         <h2 className="text-primary-700 text-[32px] sm:text-[40px] lg:text-[48px] font-bold sm:hidden text-left">
           Request a demo
         </h2>
@@ -12,10 +12,10 @@ const TryVenuerific = () => {
           unlock its full potential.
         </p>
 
-        <h2 className="text-primary-700 text-[32px] sm:text-[40px] lg:text-4xl font-bold hidden sm:block text-left">
+        <h2 className="text-primary-700 text-[32px] sm:text-[40px] lg:text-4xl font-bold hidden sm:block ">
           Ready to try Venuerific?
         </h2>
-        <p className="text-secondary-600 text-[14px] sm:text-[16px] md:text-[18px] hidden sm:block text-left">
+        <p className="text-secondary-600 text-[14px] sm:text-[16px] md:text-[18px] hidden sm:block ">
           Integrate Venuerific easily into your venue sales and marketing
           operations
         </p>

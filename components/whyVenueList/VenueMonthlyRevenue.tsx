@@ -5,9 +5,9 @@ import venueMonthlyRevenueImg from "../../public/images/why_venue_list/venue_mon
 
 const VenueMonthlyRevenue = () => {
   return (
-    <div className="w-full mx-auto px-4 sm:px-0 md:px-5 lg:px-12 xl:px-20 py-16 bg-white">
+    <div className="w-full mx-auto px-4 sm:px-4 md:px-8 lg:px-12 xl:px-20 py-16 bg-white">
       <div className="flex flex-col md:flex-row items-center rounded-lg bg-gradient-to-r from-[#9C3EF3] to-[#4E8CFF] overflow-hidden">
-        <div className="w-full md:w-1/2 text-white px-6 md:px-20 py-4 md:py-8 pt-16 md:pt-24 pb-16 md:pb-24 text-center md:text-left">
+        <div className="w-full md:w-1/2 text-white px-6 md:px-16 py-4 md:py-8 pt-16 md:pt-24 pb-16 md:pb-24 text-center md:text-left">
           <h2 className="text-[24px] md:text-[36px] font-normal">
             Grow Your Monthly Revenue by 50%
           </h2>

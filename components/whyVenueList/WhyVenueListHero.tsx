@@ -30,14 +30,14 @@ const WhyVenueListHero = () => {
             Transform your venue with Venuerific, making it easy to generate
             more leads, manage them, and convert them into revenue.
           </p>
-          <div className="bg-transparent sm:bg-gradient-to-r sm:from-[#9C3EF3] sm:to-[#4E8CFF] rounded-md p-3 inline-block">
+          <div className="bg-transparent lg:bg-gradient-to-r sm:from-[#9C3EF3] sm:to-[#4E8CFF] rounded-md p-3 inline-block">
             <p className="text-white font-normal sm:font-semibold text-lg">
               On average, Venuerific venues earn up to $30,000 per month.
             </p>
           </div>
 
           {/* G2 User Ratings */}
-          <div className="items-center mt-6 hidden sm:flex">
+          <div className="items-center mt-6 hidden lg:flex ">
             <div className="flex-shrink-0 h-[120px] w-[80px] flex items-center">
               <Image
                 src={whyVenueListImg1}
@@ -69,7 +69,7 @@ const WhyVenueListHero = () => {
         </div>
 
         {/* Form Section */}
-        <div className="max-w-screen-xl mx-auto px-8 lg:w-2/5 lg:pl-8 bg-white p-6 shadow-lg rounded-lg space-y-4 z-20 relative hidden sm:block">
+        <div className="max-w-screen-xl mx-auto px-8 lg:w-2/5 lg:pl-8 bg-white p-6 shadow-lg rounded-lg space-y-4 z-20 relative hidden lg:block">
           <h2 className="text-xl font-semibold text-gray-800">
             Fill out the form to speak with our experts
           </h2>
@@ -86,7 +86,7 @@ const WhyVenueListHero = () => {
                 <input
                   type="text"
                   placeholder="Your first name"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1"
+                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
                   required
                 />
               </label>
@@ -97,7 +97,7 @@ const WhyVenueListHero = () => {
                 <input
                   type="text"
                   placeholder="Your last name"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1"
+                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
                   required
                 />
               </label>
@@ -108,7 +108,7 @@ const WhyVenueListHero = () => {
                 <input
                   type="text"
                   placeholder="Your venue name"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1"
+                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
                   required
                 />
               </label>
@@ -117,7 +117,8 @@ const WhyVenueListHero = () => {
                 <input
                   type="text"
                   placeholder="Your venue website"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1"
+                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                  required
                 />
               </label>
             </div>
@@ -130,7 +131,7 @@ const WhyVenueListHero = () => {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1"
+                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
                   required
                 />
               </label>
@@ -141,7 +142,7 @@ const WhyVenueListHero = () => {
                 <input
                   type="text"
                   placeholder="Your phone number"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1"
+                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
                   required
                 />
               </label>
@@ -150,7 +151,7 @@ const WhyVenueListHero = () => {
             <label className="flex flex-col text-gray-700 font-normal">
               <span className="flex items-center">Country</span>
               <select
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
                 required
               >
                 <option>Select your country</option>
@@ -171,7 +172,7 @@ const WhyVenueListHero = () => {
       </div>
 
       <div
-        className="max-w-screen-xl mx-auto px-8 lg:w-2/5 lg:pl-8 bg-white p-6 shadow-lg rounded-lg space-y-4 z-20 relative block sm:hidden"
+        className="max-w-screen-xl mx-auto px-8 lg:w-2/5 lg:pl-8 bg-white p-6 shadow-lg rounded-lg space-y-4 z-20 relative block lg:hidden"
         style={{ borderRadius: "12px" }}
       >
         <h2 className="text-xl font-semibold text-gray-800">
@@ -187,7 +188,7 @@ const WhyVenueListHero = () => {
               <input
                 type="text"
                 placeholder="Your first name"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
                 required
               />
             </label>
@@ -198,7 +199,7 @@ const WhyVenueListHero = () => {
               <input
                 type="text"
                 placeholder="Your last name"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
                 required
               />
             </label>
@@ -209,7 +210,7 @@ const WhyVenueListHero = () => {
               <input
                 type="text"
                 placeholder="Your venue name"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
                 required
               />
             </label>
@@ -218,7 +219,8 @@ const WhyVenueListHero = () => {
               <input
                 type="text"
                 placeholder="Your venue website"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                required
               />
             </label>
           </div>
@@ -231,7 +233,7 @@ const WhyVenueListHero = () => {
               <input
                 type="email"
                 placeholder="Your email address"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
                 required
               />
             </label>
@@ -242,7 +244,7 @@ const WhyVenueListHero = () => {
               <input
                 type="text"
                 placeholder="Your phone number"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
                 required
               />
             </label>
@@ -251,7 +253,7 @@ const WhyVenueListHero = () => {
           <label className="flex flex-col text-gray-700 font-normal">
             <span className="flex items-center">How did you discover us?</span>
             <select
-              className="w-full p-2 border border-gray-300 rounded-lg mt-1"
+              className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
               required
             >
               <option value="" disabled selected className="text-gray-400">
@@ -267,7 +269,8 @@ const WhyVenueListHero = () => {
             <span className="flex items-center">Remarks</span>
             <textarea
               placeholder="Write something here"
-              className="w-full p-2 border border-gray-300 rounded-lg mt-1 resize-none h-32"
+              className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+              required
             />
           </label>
 
@@ -281,7 +284,7 @@ const WhyVenueListHero = () => {
       </div>
 
       {/* G2 User Ratings for mobile */}
-      <div className="items-center mt-6 sm:hidden flex justify-center">
+      <div className="items-center mt-6 lg:hidden flex justify-center">
         {/* G2 Logo */}
         <div className="flex-shrink-0 h-[120px] w-[80px] flex items-center">
           <Image
@@ -307,7 +310,7 @@ const WhyVenueListHero = () => {
                 <path d="M9.049 2.927a.75.75 0 011.902 0l1.502 4.632h4.867a.75.75 0 01.466 1.34l-3.937 2.869 1.503 4.632a.75.75 0 01-1.152.826l-3.938-2.87-3.937 2.87a.75.75 0 01-1.153-.826l1.503-4.632-3.937-2.87a.75.75 0 01.466-1.34h4.867l1.502-4.632z" />
               </svg>
             </span>
-            <span className="font-bold text-black text-[30px] ml-1 sm:text-white">
+            <span className="font-bold text-black text-[30px] ml-1 lg:text-white">
               4.6
             </span>
           </div>
