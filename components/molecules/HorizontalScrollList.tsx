@@ -3,27 +3,29 @@ import { Button } from "@nextui-org/button";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import dynamic from "next/dynamic";
 import { Fragment, useRef } from "react";
+import { WhyListGrowCard } from "../whyVenueList/WhyListGrowCard";
 
 const DynamicCountryCard = dynamic(() =>
   import("@/components/molecules/CountryCard").then(
-    (module) => module.CountryCard,
-  ),
+    (module) => module.CountryCard
+  )
 );
 const DynamicInspirationCard = dynamic(() =>
   import("@/components/molecules/InspirationCard").then(
-    (module) => module.InspirationCard,
-  ),
+    (module) => module.InspirationCard
+  )
 );
 const DynamicReviewCard = dynamic(() =>
   import("@/components/molecules/ReviewCard").then(
-    (module) => module.ReviewCard,
-  ),
+    (module) => module.ReviewCard
+  )
 );
 
 interface HorizontalScrollListProps {
   cardType?: string;
   items?: any[];
   className?: string;
+  Card?: any;
   [otherProp: string]: any;
 }
 export const clickLeft = (containerRef: any) => {
@@ -71,6 +73,7 @@ export const HorizontalScrollList = ({
                 {cardType === "whyshouldchoose" && (
                   <DynamicReviewCard {...item} />
                 )}
+                {cardType === "whylistgrow" && <WhyListGrowCard {...item} />}
               </Fragment>
             ))}
         </div>
