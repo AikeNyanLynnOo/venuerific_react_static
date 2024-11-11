@@ -1,0 +1,55 @@
+import Image from "next/image";
+import curatedMarketplaceImg from "../../public/images/why_venue_list/curated_marketplace.png";
+import venueManagementImg from "../../public/images/why_venue_list/venue_management.png";
+import endToEndSupportImg from "../../public/images/why_venue_list/end_to_end_support.png";
+
+const WhyVenuerific = () => {
+  const features = [
+    {
+      image: curatedMarketplaceImg,
+      alt: "Curated Marketplace",
+      title: "Curated Marketplace",
+      description: "Connect with thousands of event organizers monthly through Venuerific to generate more revenue."
+    },
+    {
+      image: venueManagementImg,
+      alt: "Venue Management",
+      title: "Venue Management",
+      description: "Increase sales, save time and stay on top of your venue."
+    },
+    {
+      image: endToEndSupportImg,
+      alt: "End-to-End Support",
+      title: "End-to-End Support",
+      description: "Our customer success team offers local and fast assistance to guide you in growing your venue business."
+    }
+  ];
+
+  return (
+    <div className="py-16 bg-white">
+      <div className="max-w-screen-xl mx-auto px-8 text-center">
+        <h2 className="text-3xl font-semibold text-primary-700">Why Venuerific?</h2>
+
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div key={index} className="flex flex-col items-center text-center">
+              <div className="relative w-12 h-12 mb-4">
+                <Image
+                  src={feature.image}
+                  alt={feature.alt}
+                  layout="intrinsic"
+                  width={48}
+                  height={48}
+                />
+              </div>
+              <p className="text-xl font-semibold text-gray-800">{feature.title}</p>
+              <p className="text-gray-600 mt-2">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default WhyVenuerific;
