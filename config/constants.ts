@@ -360,6 +360,34 @@ export const MARQUEE_IMGS = [
   },
 ];
 
+export const TRUSTED_BUSINESSES = [
+  {
+    src: "/images/why_venue_list/venue_trusted_business_img1.svg",
+    alt: "trusted1",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/venue_trusted_business_img2.svg",
+    alt: "trusted2",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/venue_trusted_business_img3.svg",
+    alt: "trusted3",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/venue_trusted_business_img4.svg",
+    alt: "trusted4",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/venue_trusted_business_img5.svg",
+    alt: "trusted5",
+    href: "#",
+  },
+];
+
 export const COOKIE_NAME = "googtrans";
 
 export const DUMMY_VENUES = [

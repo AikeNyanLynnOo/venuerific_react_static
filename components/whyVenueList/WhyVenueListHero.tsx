@@ -1,22 +1,18 @@
 "use client";
 import Image from "next/image";
-import whyVenueListHero from "../../public/images/hero_imgs/why_venue_list_hero.png";
-import whyVenueListImg1 from "../../public/images/why_venue_list/why_venue_list_img1.png";
-import React from "react";
 
 const WhyVenueListHero = () => {
   return (
-    <div>
+    <div className="mt-[81px]">
       <div className="relative flex flex-col items-center justify-center bg-gray-100 py-20 lg:px-16 lg:flex-row">
         <div className="absolute inset-0 w-full z-0">
           <Image
-            src={whyVenueListHero}
+            src="/images/hero_imgs/why_venue_list_hero.png"
             alt="Venue background image"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            className="opacity-100"
+            className="opacity-100 h-full w-full object-cover"
             priority
+            height={500}
+            width={1500}
           />
         </div>
         <div className="absolute inset-0 z-10 bg-gray opacity-40"></div>
@@ -40,7 +36,7 @@ const WhyVenueListHero = () => {
           <div className="items-center mt-6 hidden lg:flex ">
             <div className="flex-shrink-0 h-[120px] w-[80px] flex items-center">
               <Image
-                src={whyVenueListImg1}
+                src="/images/why_venue_list/why_venue_list_img1.png"
                 alt="G2 User Ratings Logo"
                 width={60}
                 height={60}
@@ -287,7 +283,7 @@ const WhyVenueListHero = () => {
       <div className="items-center mt-6 lg:hidden flex justify-center">
         <div className="flex-shrink-0 h-[120px] w-[80px] flex items-center">
           <Image
-            src={whyVenueListImg1}
+            src="/images/why_venue_list/why_venue_list_img1.png"
             alt="G2 User Ratings Logo"
             width={60}
             height={60}

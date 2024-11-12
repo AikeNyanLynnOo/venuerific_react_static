@@ -1,39 +1,33 @@
 import Image from "next/image";
-import functionHallsImg from "../../public/images/why_venue_list/functionHallsImg.png";
-import eventSpacesImg from "../../public/images/why_venue_list/eventSpacesImg.png";
-import corporateVenuesImg from "../../public/images/why_venue_list/corporateVenuesImg.png";
-import restaurantsBarsImg from "../../public/images/why_venue_list/restaurantsBarsImg.png";
-import hotelsVenuesImg from "../../public/images/why_venue_list/hotelsVenuesImg.png";
-import coworkingSpacesImg from "../../public/images/why_venue_list/coworkingSpacesImg.png";
 
 const venueData = [
   {
-    image: functionHallsImg,
+    image: "/images/why_venue_list/functionHallsImg.png",
     alt: "Function Halls",
     title: "Function Halls",
   },
   {
-    image: eventSpacesImg,
+    image: "/images/why_venue_list/eventSpacesImg.png",
     alt: "Event Spaces",
     title: "Event Spaces",
   },
   {
-    image: corporateVenuesImg,
+    image: "/images/why_venue_list/corporateVenuesImg.png",
     alt: "Corporate Venues",
     title: "Corporate Venues",
   },
   {
-    image: restaurantsBarsImg,
+    image: "/images/why_venue_list/restaurantsBarsImg.png",
     alt: "Restaurants, Bars, and Cafes",
     title: "Restaurants, Bars, and Cafes",
   },
   {
-    image: hotelsVenuesImg,
+    image: "/images/why_venue_list/hotelsVenuesImg.png",
     alt: "Hotels, Wedding Venues, Birthday Party Venues",
     title: "Hotels, Wedding Venues, and Birthday Party Venues",
   },
   {
-    image: coworkingSpacesImg,
+    image: "/images/why_venue_list/coworkingSpacesImg.png",
     alt: "Coworking Spaces",
     title: "Coworking Spaces",
   },
@@ -57,9 +51,9 @@ const VenuerificSolution = () => {
                 <Image
                   src={venue.image}
                   alt={venue.alt}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-sm"
+                  className="rounded-sm h-full w-full object-cover"
+                  height={300}
+                  width={350}
                 />
               </div>
               <p className="text-xl font-semibold text-gray-800">

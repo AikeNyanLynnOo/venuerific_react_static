@@ -1,12 +1,9 @@
 import Image from "next/image";
-import venueMarketingImg1 from "../../public/images/why_venue_list/venue_marketing_img1.png";
-import venueMarketingImg2 from "../../public/images/why_venue_list/venue_marketing_img2.png";
-import venueMarketingImg3 from "../../public/images/why_venue_list/venue_marketing_img3.png";
 
 const sections = [
   {
     title: "Attract & Capture",
-    image: venueMarketingImg1,
+    image: "/images/why_venue_list/venue_marketing_img1.png",
     text: [
       {
         heading: "Rank Higher on Google",
@@ -25,7 +22,7 @@ const sections = [
   },
   {
     title: "Manage & Automate",
-    image: venueMarketingImg2,
+    image: "/images/why_venue_list/venue_marketing_img2.png",
     text: [
       {
         heading: "Easily Manage Leads and Bookings",
@@ -49,7 +46,7 @@ const sections = [
   },
   {
     title: "Convert & Nurture",
-    image: venueMarketingImg3,
+    image: "/images/why_venue_list/venue_marketing_img3.png",
     text: [
       {
         heading: "Instant Quotation Generation",

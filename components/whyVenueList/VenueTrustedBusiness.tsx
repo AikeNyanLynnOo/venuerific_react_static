@@ -1,9 +1,6 @@
+import { TRUSTED_BUSINESSES } from "@/config/constants";
 import Image from "next/image";
-import venue_trusted_business_img1 from "../../public/images/why_venue_list/venue_trusted_business_img1.svg";
-import venue_trusted_business_img2 from "../../public/images/why_venue_list/venue_trusted_business_img2.svg";
-import venue_trusted_business_img3 from "../../public/images/why_venue_list/venue_trusted_business_img3.svg";
-import venue_trusted_business_img4 from "../../public/images/why_venue_list/venue_trusted_business_img4.svg";
-import venue_trusted_business_img5 from "../../public/images/why_venue_list/venue_trusted_business_img5.svg";
+import Marquee from "react-fast-marquee";
 
 const VenueTrustedBusiness = () => {
   return (
@@ -16,7 +13,7 @@ const VenueTrustedBusiness = () => {
         Trusted by industry leaders and venue owners across Asia
       </h2>
 
-      <div className="relative overflow-hidden mt-4 mb-4 md:mt-12">
+      {/* <div className="relative overflow-hidden mt-4 mb-4 md:mt-12">
         <div className="flex justify-center items-center space-x-8 md:space-x-[64px] px-4 sm:px-0">
           <Image src={venue_trusted_business_img1} alt="Venue 1" width={100} height={100} />
           <Image src={venue_trusted_business_img2} alt="Venue 2" width={100} height={100} />
@@ -24,7 +21,20 @@ const VenueTrustedBusiness = () => {
           <Image src={venue_trusted_business_img4} alt="Venue 4" width={100} height={100} />
           <Image src={venue_trusted_business_img5} alt="Venue 5" width={100} height={100} />
         </div>
-      </div>
+      </div> */}
+      <Marquee gradient pauseOnHover className="my-16 md:mt-20">
+        {TRUSTED_BUSINESSES.map(({ src, alt, href }, index) => (
+          <Image
+            key={index}
+            alt={alt}
+            className="w-auto h-[55px] mx-10"
+            width={20}
+            height={55}
+            loading="lazy"
+            src={src}
+          />
+        ))}
+      </Marquee>
     </div>
   );
 };

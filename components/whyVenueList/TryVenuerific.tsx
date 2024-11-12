@@ -36,13 +36,13 @@ const TryVenuerific = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0">
-          <button className="border-2 text-secondary-700 text-center border-secondary-300 px-8 py-4 text-lg rounded-md sm:hidden hover:bg-secondary-300 hover:text-white transition-colors">
+          <button className="border text-secondary-700 text-center border-secondary-300 px-8 py-2 text-lg rounded-md sm:hidden hover:bg-secondary-300 hover:text-white transition-colors font-semibold">
             See Demo
           </button>
-          <button className="border-2 text-secondary-700 border-secondary-300 px-8 py-4 text-lg rounded-md hidden sm:block hover:bg-secondary-300 hover:text-white transition-colors sm:mr-4">
+          <button className="border text-secondary-700 border-secondary-300 px-8 py-2 text-lg rounded-md hidden sm:block hover:bg-secondary-300 hover:text-white transition-colors sm:mr-4 font-semibold">
             Schedule a demo
           </button>
-          <button className="bg-primary-600 text-white px-8 py-4 text-lg rounded-md hidden sm:block hover:bg-primary-700 transition-colors">
+          <button className="bg-primary-600 text-white px-8 py-2 text-lg rounded-md hidden sm:block hover:bg-primary-700 transition-colors font-semibold">
             Sign up for free
           </button>
         </div>

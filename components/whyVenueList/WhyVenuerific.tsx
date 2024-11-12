@@ -1,25 +1,22 @@
 import Image from "next/image";
-import curatedMarketplaceImg from "../../public/images/why_venue_list/curated_marketplace.png";
-import venueManagementImg from "../../public/images/why_venue_list/venue_management.png";
-import endToEndSupportImg from "../../public/images/why_venue_list/end_to_end_support.png";
 
 const WhyVenuerific = () => {
   const features = [
     {
-      image: curatedMarketplaceImg,
+      image: "/images/why_venue_list/curated_marketplace.png",
       alt: "Curated Marketplace",
       title: "Curated Marketplace",
       description:
         "Connect with thousands of event organizers monthly through Venuerific to generate more revenue.",
     },
     {
-      image: venueManagementImg,
+      image: "/images/why_venue_list/venue_management.png",
       alt: "Venue Management",
       title: "Venue Management",
       description: "Increase sales, save time and stay on top of your venue.",
     },
     {
-      image: endToEndSupportImg,
+      image: "/images/why_venue_list/end_to_end_support.png",
       alt: "End-to-End Support",
       title: "End-to-End Support",
       description:
@@ -41,7 +38,6 @@ const WhyVenuerific = () => {
                 <Image
                   src={feature.image}
                   alt={feature.alt}
-                  layout="intrinsic"
                   width={48}
                   height={48}
                 />

@@ -63,8 +63,8 @@ export default function HelpCenterPage() {
             <h2 className="text-2xl font-semibold">
               Getting Started With Venuerific
             </h2>
-            <a href="#" className="text-blue-600 hover:underline">
-              Browse all topics →
+            <a href="/" className="text-blue-600 hover:underline">
+              Browse all topics
             </a>
           </div>
 

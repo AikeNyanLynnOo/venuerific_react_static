@@ -9,9 +9,7 @@ const TalkBannerVendor = () => {
         <Image
           src="/images/why_vendor_list/vendor_banner.png" 
           alt="Vendor Banner"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg h-full"
+          className="rounded-lg h-full w-full object-cover"
         />
         
         <div className="relative flex flex-col md:flex-row items-center h-full rounded-lg px-8 md:px-16 py-8">

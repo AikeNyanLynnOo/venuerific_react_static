@@ -1,7 +1,5 @@
 "use client";
 import Image from "next/image";
-import React from "react";
-import venueMonthlyRevenueImg from "../../public/images/why_venue_list/venue_monthy_revenue_img.png";
 
 const VenueMonthlyRevenue = () => {
   return (
@@ -12,7 +10,7 @@ const VenueMonthlyRevenue = () => {
             Grow Your Monthly Revenue by 50%
           </h2>
           <p className="text-[14px] md:text-[20px] font-medium mt-4">
-            We don't just help you to manage and market your venue, we help you
+            We don&apos;t just help you to manage and market your venue, we help you
             transform your venue business by connecting you with thousands of
             new event organizers and the solutions you need to grow.
           </p>
@@ -23,9 +21,8 @@ const VenueMonthlyRevenue = () => {
 
         <div className="w-full md:w-1/2 hidden md:block">
           <Image
-            src={venueMonthlyRevenueImg}
+            src="/images/why_venue_list/venue_monthy_revenue_img.png"
             alt="Venue Monthly Revenue"
-            layout="responsive"
             width={500}
             height={300}
             className="rounded-lg object-cover"
