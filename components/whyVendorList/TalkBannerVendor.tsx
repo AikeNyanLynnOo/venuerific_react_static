@@ -2,27 +2,33 @@ import Image from "next/image";
 
 const TalkBannerVendor = () => {
   return (
-    <div className="relative w-full h-auto sm:h-[215px] md:h-[300px]">
-      <div className="absolute bottom-0 w-full h-1/2 md:h-1/2 translate-y-1/2 bg-gradient-to-r from-[#211A4C] to-[#323081] z-0"/>
-      <div className="relative max-w-6xl mx-auto px-4 py-10 h-full z-10">
-        <div className="absolute inset-0 bg-black opacity-70 rounded-3xl"/>
-        <Image
-          src="/images/why_vendor_list/vendor_banner.png" 
-          alt="Vendor Banner"
-          className="rounded-lg h-full w-full object-cover"
-        />
-        
+    <div className="relative w-full h-auto md:h-[300px] mt-10">
+      <div className="absolute bottom-0 w-full h-1/2 md:h-1/2 translate-y-1/2 bg-gradient-to-r from-[#211A4C] to-[#323081] z-0" />
+      <div className="absolute inset-0 w-full h-full px-4 md:px-6 lg:px-12 xl:px-20">
+        <div className="relative w-full h-full">
+          <Image
+            src="/images/why_vendor_list/vendor_banner.webp"
+            alt="Vendor Banner"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
+          />
+        </div>
+      </div>
+
+      <div className="relative z-10 w-full mx-auto px-4 md:px-6 lg:px-10 xl:px-20 py-10 h-full">
         <div className="relative flex flex-col md:flex-row items-center h-full rounded-lg px-8 md:px-16 py-8">
-          <div className="flex-1 text-white space-y-4">
+          <div className="flex-1 text-white space-y-4 text-center md:text-left">
             <h2 className="text-2xl md:text-3xl font-semibold">
               Let&apos;s Work On Expanding Your Vendor Reach Together!
             </h2>
             <p className="text-base md:text-lg">
-              Got questions? We’d love to help and we’re looking forward to hearing from you!
+              Got questions? We&apos;d love to help and we&apos;re looking
+              forward to hearing from you!
             </p>
           </div>
-          <div className="mt-4 md:mt-0 md:ml-8">
-            <button className="bg-primary-600 text-white px-6 py-3 rounded-md font-semibold shadow-lg hover:bg-primary-700 transition">
+          <div className="mt-4 md:mt-0 md:ml-8 flex justify-center md:justify-start">
+            <button className="bg-white text-black px-6 py-3 rounded-md shadow-lg hover:bg-primary-700 transition w-full md:w-auto sm:bg-white sm:text-black sm:hover:bg-primary-600 md:bg-primary-600 md:text-white">
               Talk To Our Partnership Specialist
             </button>
           </div>
