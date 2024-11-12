@@ -34,7 +34,7 @@ const WhyVenuerific = () => {
           Why Venuerific?
         </h2>
 
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-5">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center text-center">
               <div className="relative w-12 h-12 mb-4">

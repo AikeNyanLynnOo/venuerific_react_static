@@ -76,38 +76,47 @@ const sections = [
 const VenueMarketing = () => {
   return (
     <div className="w-full mx-auto px-4 py-16 sm:px-6 md:px-8 lg:px-12 xl:px-20 bg-primary-50">
-    <div className="mx-auto pt-8 pb-20">
-      <h1 className="text-black text-2xl font-semibold">
-        The #1 Venue Marketing Platform in Asia
-      </h1>
-      <h2 className="text-primary-700 text-3xl mt-4 font-bold">
-        Venue Management & Marketing Lifecycle
-      </h2>
-  
-      <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
-        {sections.map((section, index) => (
-          <div key={index} className="space-y-4 w-full">
-            <div className={`w-full h-[6px] ${section.bgColor} ${section.gradient} mt-8`}></div>
-            <div className="flex items-center space-x-4">
-              <Image src={section.image} alt={section.title} width={44} height={44} />
-              <p className={`${section.textColor} text-[24px] font-semibold`}>
-                {section.title}
-              </p>
+      <div className="mx-auto pt-8 pb-20">
+        <h1 className="hidden md:block text-black text-2xl font-semibold">
+          The #1 Venue Marketing Platform in Asia
+        </h1>
+
+        <h2 className="text-primary-700 text-3xl font-bold mt-0 md:mt-4">
+          Venue Management & Marketing Lifecycle
+        </h2>
+
+        <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
+          {sections.map((section, index) => (
+            <div key={index} className="space-y-4 w-full">
+              <div
+                className={`w-full h-[6px] ${section.bgColor} ${section.gradient} mt-8`}
+              ></div>
+              <div className="flex items-center space-x-4">
+                <Image
+                  src={section.image}
+                  alt={section.title}
+                  width={44}
+                  height={44}
+                />
+                <p className={`${section.textColor} text-[24px] font-semibold`}>
+                  {section.title}
+                </p>
+              </div>
+              <div className="space-y-4">
+                {section.text.map((item, index) => (
+                  <div key={index}>
+                    <h3 className="text-lg font-bold">{item.heading}</h3>
+                    <p className="text-sm text-secondary-500">
+                      {item.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="space-y-4">
-              {section.text.map((item, index) => (
-                <div key={index}>
-                  <h3 className="text-lg font-bold">{item.heading}</h3>
-                  <p className="text-sm text-secondary-500">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
-  </div>
-  
   );
 };
 
