@@ -4,7 +4,7 @@ const WhyVenueListVideoSec = () => {
       <div className="max-w-screen-xl mx-auto p-6 md:pt-20 md:pl-36 md:pr-36 flex flex-col items-center">
         <div className="w-full relative">
           <div className="relative flex flex-col items-center space-y-4 z-10">
-            <div style={{ width: "100%", height: "535px" }}>
+            <div className="w-full h-[535px]">
               <iframe
                 width="100%"
                 height="100%"
@@ -16,10 +16,7 @@ const WhyVenueListVideoSec = () => {
                 className="rounded-md shadow-lg"
               ></iframe>
             </div>
-            <p
-              className="text-center text-secondary-500 text-[20px] font-semibold"
-              style={{ marginBottom: "60px" }}
-            >
+            <p className="text-center text-secondary-500 text-xl font-semibold mb-16">
               Success Stories - How Venuerific Boosted Our Venues
             </p>
           </div>
