@@ -7,7 +7,7 @@ const WhyVenueListHero = () => {
       <div className="relative flex flex-col items-center justify-center bg-gray-100 py-20 lg:px-16 lg:flex-row">
         <div className="absolute inset-0 w-full z-0">
           <Image
-            src="/images/hero_imgs/why_venue_list_hero.png"
+            src="/images/hero_imgs/why_venue_list_hero.webp"
             alt="Venue background image"
             className="opacity-100 h-full w-full object-cover"
             priority
