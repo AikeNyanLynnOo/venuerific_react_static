@@ -9,9 +9,9 @@ const TalkBannerVendor = () => {
           <Image
             src="/images/why_vendor_list/vendor_banner.webp"
             alt="Vendor Banner"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
+            width={100}
+            height={1000}
+            className="rounded-lg w-full h-full object-cover"
           />
         </div>
       </div>
