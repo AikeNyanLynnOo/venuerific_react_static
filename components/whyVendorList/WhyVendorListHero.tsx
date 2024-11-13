@@ -1,8 +1,45 @@
 "use client";
 import Image from "next/image";
+import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const WhyVendorListHero = () => {
+  const [phoneCode, setPhoneCode] = useState("");
+  const [country, setCountry] = useState("US");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [vendorName, setVendorName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+
+  const handleFirstNameChange = (e: any) => setFirstName(e.target.value);
+  const handleLastNameChange = (e: any) => setLastName(e.target.value);
+  const handleVendorNameChange = (e: any) => setVendorName(e.target.value);
+  const handleEmailChange = (e: any) => setEmail(e.target.value);
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    console.log({
+      firstName,
+      lastName,
+      vendorName,
+      email,
+      phoneNumber,
+    });
+    setFirstName("");
+    setLastName("");
+    setVendorName("");
+    setEmail("");
+    setPhoneNumber("");
+    setPhoneCode("");
+  };
+
+  const handlePhoneInputChange = (value: any) => {
+    setPhoneNumber(value);
+  };
+
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   return (
@@ -86,7 +123,7 @@ const WhyVendorListHero = () => {
           <h2 className="text-xl font-semibold text-gray-800">
             Grow your vendor business with Venuerific.
           </h2>
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <label className="flex flex-col text-gray-700 font-normal">
                 <span className="flex items-center">
@@ -95,8 +132,10 @@ const WhyVendorListHero = () => {
                 <input
                   type="text"
                   placeholder="Your first name"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                  className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
                   required
+                  value={firstName}
+                  onChange={handleFirstNameChange}
                 />
               </label>
               <label className="flex flex-col text-gray-700 font-normal">
@@ -106,8 +145,10 @@ const WhyVendorListHero = () => {
                 <input
                   type="text"
                   placeholder="Your last name"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                  className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
                   required
+                  value={lastName}
+                  onChange={handleLastNameChange}
                 />
               </label>
             </div>
@@ -119,8 +160,10 @@ const WhyVendorListHero = () => {
               <input
                 type="text"
                 placeholder="Your venue name"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
                 required
+                value={vendorName}
+                onChange={handleVendorNameChange}
               />
             </label>
 
@@ -132,22 +175,49 @@ const WhyVendorListHero = () => {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                  className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
                   required
+                  value={email}
+                  onChange={handleEmailChange}
                 />
               </label>
               <label className="flex flex-col text-gray-700 font-normal">
-                <span className="flex items-center">
+                <span className="flex items-center mb-2">
                   Phone Number<span className="text-red-500 ml-1">*</span>
                 </span>
-                <input
-                  type="text"
-                  placeholder="Your phone number"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
-                  required
+                <PhoneInput
+                  disableSearchIcon
+                  buttonClass="rounded-r-none"
+                  buttonStyle={{
+                    border: "none",
+                    borderRadius: 8,
+                    borderRight: "none",
+                    paddingLeft: 8,
+                    paddingRight: 8,
+                    backgroundColor: "#FFFFFF",
+                  }}
+                  containerClass={`rounded-lg border border-secondary-300 focus:border-secondary-400 hover:border-secondary-400 shadow-sm h-10`}
+                  country={"us"}
+                  countryCodeEditable={false}
+                  disableCountryCode={false}
+                  disableDropdown={false}
+                  dropdownClass="border-secondary-200 rounded-xl shadow-sm"
+                  inputClass={`h-full pl-10`}
+                  inputStyle={{
+                    border: "none",
+                    height: "100%",
+                    width: "100%",
+                    borderRadius: 8,
+                    paddingLeft: 60,
+                    backgroundColor: "#FFFFFF",
+                  }}
+                  value={phoneNumber}
+                  onChange={handlePhoneInputChange}
+                  placeholder="Phone number"
                 />
               </label>
             </div>
+
             <button
               type="submit"
               className="w-full bg-blue-600 text-white p-2 rounded-lg"
@@ -155,6 +225,7 @@ const WhyVendorListHero = () => {
               Next
             </button>
           </form>
+
           <div className="mt-4 text-black">
             <p>Need help for your registered vendor information?</p>
             <a
@@ -174,7 +245,7 @@ const WhyVendorListHero = () => {
         <h2 className="text-xl font-semibold text-gray-800">
           Grow your vendor business with Venuerific.
         </h2>
-        <form className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <label className="flex flex-col text-gray-700 font-normal">
               <span className="flex items-center">
@@ -183,8 +254,10 @@ const WhyVendorListHero = () => {
               <input
                 type="text"
                 placeholder="Your first name"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
                 required
+                value={firstName}
+                onChange={handleFirstNameChange}
               />
             </label>
             <label className="flex flex-col text-gray-700 font-normal">
@@ -194,8 +267,10 @@ const WhyVendorListHero = () => {
               <input
                 type="text"
                 placeholder="Your last name"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
                 required
+                value={lastName}
+                onChange={handleLastNameChange}
               />
             </label>
           </div>
@@ -207,8 +282,10 @@ const WhyVendorListHero = () => {
             <input
               type="text"
               placeholder="Your venue name"
-              className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+              className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
               required
+              value={vendorName}
+              onChange={handleVendorNameChange}
             />
           </label>
 
@@ -220,22 +297,49 @@ const WhyVendorListHero = () => {
               <input
                 type="email"
                 placeholder="Your email address"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
                 required
+                value={email}
+                onChange={handleEmailChange}
               />
             </label>
             <label className="flex flex-col text-gray-700 font-normal">
-              <span className="flex items-center">
+              <span className="flex items-center mb-2">
                 Phone Number<span className="text-red-500 ml-1">*</span>
               </span>
-              <input
-                type="text"
-                placeholder="Your phone number"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
-                required
+              <PhoneInput
+                disableSearchIcon
+                buttonClass="rounded-r-none"
+                buttonStyle={{
+                  border: "none",
+                  borderRadius: 8,
+                  borderRight: "none",
+                  paddingLeft: 8,
+                  paddingRight: 8,
+                  backgroundColor: "#FFFFFF",
+                }}
+                containerClass={`rounded-lg border border-secondary-300 focus:border-secondary-400 hover:border-secondary-400 shadow-sm h-10`}
+                country={"us"}
+                countryCodeEditable={false}
+                disableCountryCode={false}
+                disableDropdown={false}
+                dropdownClass="border-secondary-200 rounded-xl shadow-sm"
+                inputClass={`h-full pl-10`}
+                inputStyle={{
+                  border: "none",
+                  height: "100%",
+                  width: "100%",
+                  borderRadius: 8,
+                  paddingLeft: 60,
+                  backgroundColor: "#FFFFFF",
+                }}
+                value={phoneNumber}
+                onChange={handlePhoneInputChange}
+                placeholder="Phone number"
               />
             </label>
           </div>
+
           <button
             type="submit"
             className="w-full bg-blue-600 text-white p-2 rounded-lg"
@@ -243,6 +347,7 @@ const WhyVendorListHero = () => {
             Next
           </button>
         </form>
+
         <div className="mt-4 text-black text-center">
           <p>Need help for your registered vendor information?</p>
           <a

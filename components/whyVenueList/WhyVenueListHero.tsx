@@ -1,7 +1,65 @@
 "use client";
 import Image from "next/image";
+import { useState } from "react";
+import { CaretDown } from "@phosphor-icons/react/dist/ssr";
+import { Select, SelectItem } from "@nextui-org/select";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const WhyVenueListHero = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [venueName, setVenueName] = useState("");
+  const [venueWebsite, setVenueWebsite] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [phoneCode, setPhoneCode] = useState("");
+  const [country, setCountry] = useState("US");
+  const [discover, setDiscover] = useState("");
+  const [remark, setRemark] = useState("");
+
+  const handleFirstNameChange = (e: any) => setFirstName(e.target.value);
+  const handleLastNameChange = (e: any) => setLastName(e.target.value);
+  const handleVenueChange = (e: any) => setVenueName(e.target.value);
+  const handleVenueWebsiteChange = (e: any) => setVenueWebsite(e.target.value);
+  const handleEmailChange = (e: any) => setEmail(e.target.value);
+  const handleDiscoverChange = (e: any) => setDiscover(e.target.value);
+  const handleRemarkChange = (e: any) => setRemark(e.target.value);
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    const formData = {
+      firstName,
+      lastName,
+      venueName,
+      venueWebsite,
+      email,
+      phoneNumber,
+      phoneCode,
+      country,
+      discover,
+      remark,
+    };
+    console.log(formData);
+
+    setFirstName("");
+    setLastName("");
+    setVenueName("");
+    setVenueWebsite("");
+    setEmail("");
+    setPhoneNumber("");
+    setPhoneCode("");
+    setCountry("");
+    setDiscover("");
+    setRemark("");
+  };
+
+  const handleCountryChange = (e: any) => {
+    setCountry(e.target.value);
+  };
+
+  const handlePhoneInputChange = (value: any) => setPhoneNumber(value);
+
   return (
     <div className="mt-[81px]">
       <div className="relative flex flex-col items-center justify-center bg-gray-100 py-20 lg:px-16 lg:flex-row">
@@ -15,8 +73,7 @@ const WhyVenueListHero = () => {
             width={1500}
           />
         </div>
-        <div className="absolute inset-0 z-10 bg-gray opacity-40"></div>
-
+        <div className="absolute inset-0 z-10 bg-gray opacity-40" />
         {/* Content Section */}
         <div className="max-w-screen-xl mx-auto px-8 lg:mt-20 lg:w-3/5 lg:pr-8 space-y-4 text-center lg:text-left text-white z-20 relative">
           <h1 className="text-3xl lg:text-5xl font-normal">
@@ -73,7 +130,7 @@ const WhyVenueListHero = () => {
             to see how Venuerific can help your venue.
           </p>
 
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <label className="flex flex-col text-gray-700 font-normal">
                 <span className="flex items-center">
@@ -82,7 +139,9 @@ const WhyVenueListHero = () => {
                 <input
                   type="text"
                   placeholder="Your first name"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                  className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
+                  value={firstName}
+                  onChange={handleFirstNameChange}
                   required
                 />
               </label>
@@ -93,7 +152,9 @@ const WhyVenueListHero = () => {
                 <input
                   type="text"
                   placeholder="Your last name"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                  className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
+                  value={lastName}
+                  onChange={handleLastNameChange}
                   required
                 />
               </label>
@@ -104,7 +165,9 @@ const WhyVenueListHero = () => {
                 <input
                   type="text"
                   placeholder="Your venue name"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                  className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
+                  value={venueName}
+                  onChange={handleVenueChange}
                   required
                 />
               </label>
@@ -113,7 +176,9 @@ const WhyVenueListHero = () => {
                 <input
                   type="text"
                   placeholder="Your venue website"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                  className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
+                  value={venueWebsite}
+                  onChange={handleVenueWebsiteChange}
                   required
                 />
               </label>
@@ -127,11 +192,13 @@ const WhyVenueListHero = () => {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                  className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
+                  value={email}
+                  onChange={handleEmailChange}
                   required
                 />
               </label>
-              <label className="flex flex-col text-gray-700 font-normal">
+              {/* <label className="flex flex-col text-gray-700 font-normal">
                 <span className="flex items-center">
                   Phone Number<span className="text-red-500 ml-1">*</span>
                 </span>
@@ -139,22 +206,123 @@ const WhyVenueListHero = () => {
                   type="text"
                   placeholder="Your phone number"
                   className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
                   required
+                />
+              </label> */}
+
+              <label className="flex flex-col text-gray-700 font-normal">
+                <span className="flex items-center mb-2">
+                  Phone Number<span className="text-red-500 ml-1">*</span>
+                </span>
+                <PhoneInput
+                  disableSearchIcon
+                  buttonClass="rounded-r-none"
+                  buttonStyle={{
+                    border: "none",
+                    borderRadius: 8,
+                    borderRight: "none",
+                    paddingLeft: 8,
+                    paddingRight: 8,
+                    backgroundColor: "#FFFFFF",
+                  }}
+                  containerClass={`rounded-lg border border-secondary-300 focus:border-secondary-400 hover:border-secondary-400 shadow-sm h-10`}
+                  country={"us"}
+                  countryCodeEditable={false}
+                  disableCountryCode={false}
+                  disableDropdown={false}
+                  dropdownClass="border-secondary-200 rounded-xl shadow-sm"
+                  inputClass={`h-full pl-10`}
+                  inputStyle={{
+                    border: "none",
+                    height: "100%",
+                    width: "100%",
+                    borderRadius: 8,
+                    paddingLeft: 60,
+                    backgroundColor: "#FFFFFF",
+                  }}
+                  value={phoneNumber}
+                  onChange={handlePhoneInputChange}
+                  placeholder="Phone number"
                 />
               </label>
             </div>
 
+            {/* <label className="flex flex-col text-gray-700 font-normal">
+          <span className="flex items-center">Country</span>
+          <select
+            className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+            value={country}
+            onChange={(e)  => setCountry(e.target.value)}
+            required
+          >
+            <option>Select your country</option>
+            <option>Singapore</option>
+            <option>Malaysia</option>
+            <option>Indonesia</option>
+          </select>
+        </label> */}
             <label className="flex flex-col text-gray-700 font-normal">
-              <span className="flex items-center">Country</span>
-              <select
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
-                required
+              <span className="flex items-center mb-2">Country</span>
+              <Select
+                disableAnimation
+                aria-label="Select your country"
+                classNames={{
+                  trigger: "h-[42px] min-h-10 rounded-lg border-1",
+                }}
+                placeholder="Select your country"
+                popoverProps={{
+                  placement: "bottom",
+                  offset: 0,
+                  classNames: {
+                    base: "before:bg-default-200",
+                    content:
+                      "p-0 border-small border-divider bg-background max-h-[180px]",
+                  },
+                }}
+                selectorIcon={
+                  <CaretDown
+                    size={18}
+                    style={{
+                      minWidth: "15px",
+                    }}
+                  />
+                }
+                size="lg"
+                startContent={
+                  <Image
+                    alt="icon"
+                    className="w-[20px] h-[20px] object-cover mr-1"
+                    height={20}
+                    loading="lazy"
+                    src="/images/icons/person.svg"
+                    style={{
+                      width: "auto",
+                      height: "auto",
+                    }}
+                    width={20}
+                  />
+                }
+                variant="bordered"
+                onChange={handleCountryChange}
               >
-                <option>Select your country</option>
-                <option>Singapore</option>
-                <option>Malaysia</option>
-                <option>Indonesia</option>
-              </select>
+                <SelectItem key="sg" value="Singapore">
+                  Singapore
+                </SelectItem>
+                <SelectItem key="my" value="Malaysia">
+                  Malaysia
+                </SelectItem>
+                <SelectItem key="id" value="Indonesia">
+                  Indonesia
+                </SelectItem>
+                <SelectItem key="ph" value="Philippines">
+                  Philippines
+                </SelectItem>
+                <SelectItem key="hk" value="Hong Kong">
+                  Hong Kong
+                </SelectItem>
+              </Select>
             </label>
 
             <button
@@ -184,7 +352,9 @@ const WhyVenueListHero = () => {
               <input
                 type="text"
                 placeholder="Your first name"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
+                value={firstName}
+                onChange={handleFirstNameChange}
                 required
               />
             </label>
@@ -195,7 +365,9 @@ const WhyVenueListHero = () => {
               <input
                 type="text"
                 placeholder="Your last name"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
+                value={lastName}
+                onChange={handleLastNameChange}
                 required
               />
             </label>
@@ -206,7 +378,9 @@ const WhyVenueListHero = () => {
               <input
                 type="text"
                 placeholder="Your venue name"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
+                value={venueName}
+                onChange={handleVenueChange}
                 required
               />
             </label>
@@ -215,7 +389,9 @@ const WhyVenueListHero = () => {
               <input
                 type="text"
                 placeholder="Your venue website"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
+                value={venueWebsite}
+                onChange={handleVenueWebsiteChange}
                 required
               />
             </label>
@@ -229,19 +405,45 @@ const WhyVenueListHero = () => {
               <input
                 type="email"
                 placeholder="Your email address"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+                className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
+                value={email}
+                onChange={handleEmailChange}
                 required
               />
             </label>
             <label className="flex flex-col text-gray-700 font-normal">
-              <span className="flex items-center">
+              <span className="flex items-center mb-2">
                 Phone Number<span className="text-red-500 ml-1">*</span>
               </span>
-              <input
-                type="text"
-                placeholder="Your phone number"
-                className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
-                required
+              <PhoneInput
+                disableSearchIcon
+                buttonClass="rounded-r-none"
+                buttonStyle={{
+                  border: "none",
+                  borderRadius: 8,
+                  borderRight: "none",
+                  paddingLeft: 8,
+                  paddingRight: 8,
+                  backgroundColor: "#FFFFFF",
+                }}
+                containerClass={`rounded-lg border border-secondary-300 focus:border-secondary-400 hover:border-secondary-400 shadow-sm h-10`}
+                country={"us"}
+                countryCodeEditable={false}
+                disableCountryCode={false}
+                disableDropdown={false}
+                dropdownClass="border-secondary-200 rounded-xl shadow-sm"
+                inputClass={`h-full pl-10`}
+                inputStyle={{
+                  border: "none",
+                  height: "100%",
+                  width: "100%",
+                  borderRadius: 8,
+                  paddingLeft: 60,
+                  backgroundColor: "#FFFFFF",
+                }}
+                value={phoneNumber}
+                onChange={handlePhoneInputChange}
+                placeholder="Phone number"
               />
             </label>
           </div>
@@ -249,7 +451,9 @@ const WhyVenueListHero = () => {
           <label className="flex flex-col text-gray-700 font-normal">
             <span className="flex items-center">How did you discover us?</span>
             <select
-              className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+              className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
+              value={discover}
+              onChange={handleDiscoverChange}
               required
             >
               <option value="" disabled selected className="text-gray-400">
@@ -265,7 +469,9 @@ const WhyVenueListHero = () => {
             <span className="flex items-center">Remarks</span>
             <textarea
               placeholder="Write something here"
-              className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
+              className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
+              value={remark}
+              onChange={handleRemarkChange}
               required
             />
           </label>
