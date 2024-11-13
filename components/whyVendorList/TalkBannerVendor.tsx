@@ -16,8 +16,8 @@ const TalkBannerVendor = () => {
         </div>
       </div>
 
-      <div className="relative z-10 w-full mx-auto px-4 md:px-6 lg:px-10 xl:px-20 py-10 h-full">
-        <div className="relative flex flex-col md:flex-row items-center h-full rounded-lg px-8 md:px-16 py-8">
+      <div className="relative z-10 w-full mx-auto px-4 md:px-6 lg:px-10 xl:px-20 py-6 h-full">
+        <div className="relative flex flex-col md:flex-row items-center h-full rounded-lg px-8 md:px-16 py-6">
           <div className="flex-1 text-white space-y-4 text-center md:text-left">
             <h2 className="text-2xl md:text-3xl font-semibold">
               Let&apos;s Work On Expanding Your Vendor Reach Together!

@@ -1,13 +1,20 @@
 "use client";
 import Image from "next/image";
+import { useMediaQuery } from "react-responsive";
 
 const WhyVendorListHero = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   return (
     <div className="">
       <div className="relative flex flex-col items-center justify-center bg-gray-100 py-20 lg:px-16 lg:flex-row">
         <div className="absolute inset-0 w-full z-0">
           <Image
-            src="/images/hero_imgs/why_vendor_list_hero.webp"
+            src={
+              isMobile
+                ? "/images/hero_imgs/why_vendor_list_hero_mobile.webp"
+                : "/images/hero_imgs/why_vendor_list_hero.webp"
+            }
             alt="Venue background image"
             className="opacity-100 h-full w-full object-cover"
             priority
@@ -65,10 +72,9 @@ const WhyVendorListHero = () => {
                     width={18}
                     height={18}
                   />
-
                   <div className="flex flex-col items-start">
                     <div className="text-xl font-semibold">500+</div>
-                    <div className="text-sm">Registered venues</div>
+                    <div className="text-sm text-left">Registered venues</div>
                   </div>
                 </button>
               </div>
@@ -107,7 +113,6 @@ const WhyVendorListHero = () => {
               </label>
             </div>
 
-            {/* Vendor Name Full Width */}
             <label className="flex flex-col text-gray-700 font-normal">
               <span className="flex items-center">
                 Vendor Name<span className="text-red-500 ml-1">*</span>
@@ -196,7 +201,6 @@ const WhyVendorListHero = () => {
             </label>
           </div>
 
-          {/* Vendor Name Full Width */}
           <label className="flex flex-col text-gray-700 font-normal">
             <span className="flex items-center">
               Vendor Name<span className="text-red-500 ml-1">*</span>
