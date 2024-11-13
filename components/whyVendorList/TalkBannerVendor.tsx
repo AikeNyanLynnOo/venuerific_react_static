@@ -2,15 +2,15 @@ import Image from "next/image";
 
 const TalkBannerVendor = () => {
   return (
-    <div className="relative w-full h-auto md:h-[300px] mt-10">
+    <div className="relative w-full h-auto md:h-[250px] lg:h-[200px] mt-10">
       <div className="absolute bottom-0 w-full h-1/2 md:h-1/2 translate-y-1/2 bg-gradient-to-r from-[#211A4C] to-[#323081] z-0" />
       <div className="absolute inset-0 w-full h-full px-4 md:px-6 lg:px-12 xl:px-20">
         <div className="relative w-full h-full">
           <Image
             src="/images/why_vendor_list/vendor_banner.webp"
             alt="Vendor Banner"
-            width={100}
-            height={1000}
+            width={1000}
+            height={500}
             className="rounded-lg w-full h-full object-cover"
           />
         </div>

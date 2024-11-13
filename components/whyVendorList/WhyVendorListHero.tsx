@@ -6,7 +6,7 @@ const WhyVendorListHero = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   return (
-    <div className="">
+    <div className="mt-[81px]">
       <div className="relative flex flex-col items-center justify-center bg-gray-100 py-20 lg:px-16 lg:flex-row">
         <div className="absolute inset-0 w-full z-0">
           <Image
@@ -22,7 +22,7 @@ const WhyVendorListHero = () => {
             width={1500}
           />
         </div>
-        <div className="absolute inset-0 z-10 bg-gray opacity-40"></div>
+        <div className="absolute inset-0 z-10 bg-gray opacity-40"/>
 
         {/* Content Section */}
         <div className="max-w-3xl mx-auto px-8 lg:w-3/5 lg:pr-8 space-y-4 text-center lg:text-left text-white z-20 relative">
