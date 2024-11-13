@@ -22,7 +22,7 @@ const WhyVendorListHero = () => {
             width={1500}
           />
         </div>
-        <div className="absolute inset-0 z-10 bg-gray opacity-40"/>
+        <div className="absolute inset-0 z-10 bg-gray opacity-40" />
 
         {/* Content Section */}
         <div className="max-w-3xl mx-auto px-8 lg:w-3/5 lg:pr-8 space-y-4 text-center lg:text-left text-white z-20 relative">
@@ -47,10 +47,10 @@ const WhyVendorListHero = () => {
             </span>
           </p>
 
-          <div className="block sm:hidden mt-8">
-            <div className="flex flex-row justify-between space-x-4">
-              <div className="flex flex-col items-center w-full">
-                <button className="border border-white bg-white bg-opacity-30 text-white px-6 py-3 rounded-md flex items-center space-x-2">
+          <div className="block md:block lg:hidden mt-8">
+            <div className="flex flex-row justify-center align-center md:space-x-1">
+              <div className="flex flex-col w-fit mr-4">
+                <div className="border border-white backdrop-filter justify-center backdrop-blur-md bg-gray-300 bg-opacity-30 text-white px-6 py-3 rounded-md flex items-center space-x-2">
                   <Image
                     src="/images/why_vendor_list/vendor_hero_mobile_icon1.webp"
                     alt="Active Users Icon"
@@ -61,11 +61,11 @@ const WhyVendorListHero = () => {
                     <div className="text-xl font-semibold">1000+</div>
                     <div className="text-sm">Active users</div>
                   </div>
-                </button>
+                </div>
               </div>
 
-              <div className="flex flex-col items-center w-full">
-                <button className="border border-white bg-white bg-opacity-30 text-white px-6 py-3 rounded-md flex items-center space-x-2">
+              <div className="flex flex-col w-fit">
+                <div className="border border-white backdrop-filter justify-center backdrop-blur-md bg-gray-300 bg-opacity-30 text-white px-6 py-3 rounded-md flex items-center space-x-2">
                   <Image
                     src="/images/why_vendor_list/vendor_hero_mobile_icon2.webp"
                     alt="Registered Venues Icon"
@@ -76,12 +76,11 @@ const WhyVendorListHero = () => {
                     <div className="text-xl font-semibold">500+</div>
                     <div className="text-sm text-left">Registered venues</div>
                   </div>
-                </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
         {/* Form Section */}
         <div className="max-w-screen-xl mx-auto px-8 lg:w-2/5 lg:pl-8 bg-white p-6 shadow-lg rounded-lg space-y-4 z-20 relative hidden lg:block">
           <h2 className="text-xl font-semibold text-gray-800">
