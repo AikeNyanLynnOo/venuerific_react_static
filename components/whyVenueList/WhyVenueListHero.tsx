@@ -290,20 +290,21 @@ const WhyVenueListHero = () => {
                   />
                 }
                 size="lg"
-                startContent={
-                  <Image
-                    alt="icon"
-                    className="w-[20px] h-[20px] object-cover mr-1"
-                    height={20}
-                    loading="lazy"
-                    src="/images/icons/person.svg"
-                    style={{
-                      width: "auto",
-                      height: "auto",
-                    }}
-                    width={20}
-                  />
-                }
+                // startContent={
+                //   <Image
+                //     alt="icon"
+                //     className="w-[20px] h-[20px] object-cover mr-1"
+                //     height={20}
+                //     loading="lazy"
+                //     src="/images/icons/person.svg"
+                //     style={{
+                //       width: "auto",
+                //       height: "auto",
+                //     }}
+                //     width={20}
+                //   />
+                // }
+                value={country}
                 variant="bordered"
                 onChange={handleCountryChange}
               >
@@ -449,20 +450,39 @@ const WhyVenueListHero = () => {
           </div>
 
           <label className="flex flex-col text-gray-700 font-normal">
-            <span className="flex items-center">How did you discover us?</span>
-            <select
-              className="w-full p-2 border border-gray-300 rounded-lg mt-2 focus:border-secondary-400 outline-none"
+            <span className="flex items-center mb-2">How did you discover us?</span>
+            <Select
+              disableAnimation
+              aria-label="discover"
+              classNames={{
+                trigger: "h-[42px] min-h-10 rounded-lg border-1",
+              }}
+              placeholder="From"
+              popoverProps={{
+                placement: "bottom",
+                offset: 0,
+                classNames: {
+                  base: "before:bg-default-200",
+                  content:
+                    "p-0 border-small border-divider bg-background max-h-[180px]",
+                },
+              }}
+              selectorIcon={
+                <CaretDown
+                  size={18}
+                  style={{
+                    minWidth: "15px",
+                  }}
+                />
+              }
               value={discover}
+              variant="bordered"
               onChange={handleDiscoverChange}
-              required
             >
-              <option value="" disabled selected className="text-gray-400">
-                From
-              </option>
-              <option value=""></option>
-              <option value=""></option>
-              <option value=""></option>
-            </select>
+              <SelectItem key="sg" value="Singapore">
+               Facebook
+              </SelectItem>
+            </Select>
           </label>
 
           <label className="flex flex-col text-gray-700 font-normal">
