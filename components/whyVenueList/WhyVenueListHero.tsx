@@ -14,7 +14,7 @@ const WhyVenueListHero = () => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [phoneCode, setPhoneCode] = useState("");
-  const [country, setCountry] = useState("US");
+  const [country, setCountry] = useState("SG");
   const [discover, setDiscover] = useState("");
   const [remark, setRemark] = useState("");
 
@@ -228,7 +228,7 @@ const WhyVenueListHero = () => {
                     backgroundColor: "#FFFFFF",
                   }}
                   containerClass={`rounded-lg border border-secondary-300 focus:border-secondary-400 hover:border-secondary-400 shadow-sm h-10`}
-                  country={"us"}
+                  country={"sg"}
                   countryCodeEditable={false}
                   disableCountryCode={false}
                   disableDropdown={false}
@@ -239,12 +239,12 @@ const WhyVenueListHero = () => {
                     height: "100%",
                     width: "100%",
                     borderRadius: 8,
-                    paddingLeft: 60,
+                    paddingLeft: 55,
                     backgroundColor: "#FFFFFF",
                   }}
                   value={phoneNumber}
                   onChange={handlePhoneInputChange}
-                  placeholder="Phone number"
+                  // placeholder="Phone number"
                 />
               </label>
             </div>
@@ -427,7 +427,7 @@ const WhyVenueListHero = () => {
                   backgroundColor: "#FFFFFF",
                 }}
                 containerClass={`rounded-lg border border-secondary-300 focus:border-secondary-400 hover:border-secondary-400 shadow-sm h-10`}
-                country={"us"}
+                country={"sg"}
                 countryCodeEditable={false}
                 disableCountryCode={false}
                 disableDropdown={false}
@@ -438,12 +438,12 @@ const WhyVenueListHero = () => {
                   height: "100%",
                   width: "100%",
                   borderRadius: 8,
-                  paddingLeft: 60,
+                  paddingLeft: 55,
                   backgroundColor: "#FFFFFF",
                 }}
                 value={phoneNumber}
                 onChange={handlePhoneInputChange}
-                placeholder="Phone number"
+                // placeholder="Phone number"
               />
             </label>
           </div>

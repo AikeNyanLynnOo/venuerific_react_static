@@ -10,7 +10,7 @@ import Footer from "@/components/molecules/Footer";
 export default function WhyVendorList() {
   return (
     <div>
-      <VNFNavbar className="px-4 md:px-5 lg:px-12 xl:px-20 items-center py-2 fixed" />
+      <VNFNavbar className="px-4 md:px-5 items-center py-2 fixed" maxWidth="full"/>
       <WhyVendorListHero />
       <VendorTrustedBusiness />
       <VendorMarket />
