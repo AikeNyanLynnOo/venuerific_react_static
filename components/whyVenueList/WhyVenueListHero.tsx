@@ -219,7 +219,7 @@ const WhyVenueListHero = () => {
                 />
               </label> */}
 
-              <label className="flex flex-col text-gray-700 font-normal">
+              <div className="flex flex-col text-gray-700 font-normal">
                 <span className="flex items-center mb-2">
                   Phone Number<span className="text-red-500 ml-1">*</span>
                 </span>
@@ -253,7 +253,7 @@ const WhyVenueListHero = () => {
                   onChange={handlePhoneInputChange}
                   // placeholder="Phone number"
                 />
-              </label>
+              </div>
             </div>
 
             <label className="flex flex-col text-gray-700 font-normal">
@@ -399,7 +399,7 @@ const WhyVenueListHero = () => {
                 required
               />
             </label>
-            <label className="flex flex-col text-gray-700 font-normal">
+            <div className="flex flex-col text-gray-700 font-normal">
               <span className="flex items-center mb-2">
                 Phone Number<span className="text-red-500 ml-1">*</span>
               </span>
@@ -433,10 +433,10 @@ const WhyVenueListHero = () => {
                 onChange={handlePhoneInputChange}
                 // placeholder="Phone number"
               />
-            </label>
+            </div>
           </div>
 
-          <label className="flex flex-col text-gray-700 font-normal">
+          <div className="flex flex-col text-gray-700 font-normal">
             <span className="flex items-center mb-2">
               How did you discover us?
             </span>
@@ -472,7 +472,7 @@ const WhyVenueListHero = () => {
                 Facebook
               </SelectItem>
             </Select>
-          </label>
+          </div>
 
           <label className="flex flex-col text-gray-700 font-normal">
             <span className="flex items-center">Remarks</span>

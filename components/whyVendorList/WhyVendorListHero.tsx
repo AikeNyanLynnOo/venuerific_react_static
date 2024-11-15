@@ -75,8 +75,8 @@ const WhyVendorListHero = () => {
 
           <p className="text-white text-lg max-w-[60ch]">
             <span className="hidden sm:block">
-              With Venuerific, you're on Asia's largest platform in the events
-              and venues business.
+              With Venuerific, you&apos;re on Asia&apos;s largest platform in
+              the events and venues business.
             </span>
             <span className="block sm:hidden">
               Get ahead of the competition, be first in joining our vendor
@@ -181,7 +181,7 @@ const WhyVendorListHero = () => {
                   onChange={handleEmailChange}
                 />
               </label>
-              <label className="flex flex-col text-gray-700 font-normal">
+              <div className="flex flex-col text-gray-700 font-normal">
                 <span className="flex items-center mb-2">
                   Phone Number<span className="text-red-500 ml-1">*</span>
                 </span>
@@ -215,7 +215,7 @@ const WhyVendorListHero = () => {
                   onChange={handlePhoneInputChange}
                   // placeholder="Phone number"
                 />
-              </label>
+              </div>
             </div>
 
             <button
@@ -303,7 +303,7 @@ const WhyVendorListHero = () => {
                 onChange={handleEmailChange}
               />
             </label>
-            <label className="flex flex-col text-gray-700 font-normal">
+            <div className="flex flex-col text-gray-700 font-normal">
               <span className="flex items-center mb-2">
                 Phone Number<span className="text-red-500 ml-1">*</span>
               </span>
@@ -337,7 +337,7 @@ const WhyVendorListHero = () => {
                 onChange={handlePhoneInputChange}
                 // placeholder="Phone number"
               />
-            </label>
+            </div>
           </div>
 
           <button
