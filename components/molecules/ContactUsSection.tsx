@@ -16,6 +16,7 @@ import Footer from "./Footer";
 
 import "react-phone-input-2/lib/style.css";
 import { fontVnf } from "@/config/fonts";
+import { VNFNavbar } from "./VNFNavbar";
 interface ContactUsSectionProps {
   headerFooterRes?: any;
 }
@@ -65,6 +66,10 @@ export const ContactUsSection = ({
   };
 
   return (
+    <div>
+       <VNFNavbar
+        className="px-4 md:px-5 items-center py-2 fixed"
+      />
     <section className="mt-[81px] w-full">
       <div className="py-12 px-4 md:pl-2 lg:pr-0 lg:pl-10 xl:pl-20 2xl:pl-0 w-full lg:pl-20 max-w-screen-2xl mx-auto">
         {/* Contact Us Title */}
@@ -419,5 +424,6 @@ export const ContactUsSection = ({
         <Footer />
       </div>
     </section>
+    </div>
   );
 };

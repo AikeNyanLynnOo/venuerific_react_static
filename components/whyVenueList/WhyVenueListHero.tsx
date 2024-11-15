@@ -6,6 +6,8 @@ import { Select, SelectItem } from "@nextui-org/select";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
+type CountryCode = "SG" | "MY" | "ID" | "PH" | "HK";
+
 const WhyVenueListHero = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -13,8 +15,7 @@ const WhyVenueListHero = () => {
   const [venueWebsite, setVenueWebsite] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [phoneCode, setPhoneCode] = useState("");
-  const [country, setCountry] = useState("SG");
+  const [country, setCountry] = useState<CountryCode>("SG");
   const [discover, setDiscover] = useState("");
   const [remark, setRemark] = useState("");
 
@@ -35,7 +36,6 @@ const WhyVenueListHero = () => {
       venueWebsite,
       email,
       phoneNumber,
-      phoneCode,
       country,
       discover,
       remark,
@@ -48,14 +48,21 @@ const WhyVenueListHero = () => {
     setVenueWebsite("");
     setEmail("");
     setPhoneNumber("");
-    setPhoneCode("");
-    setCountry("");
+    setCountry("" as CountryCode);
     setDiscover("");
     setRemark("");
   };
 
-  const handleCountryChange = (e: any) => {
-    setCountry(e.target.value);
+  const countryOptions: Record<CountryCode, { name: string; flag: string }> = {
+    SG: { name: "Singapore", flag: "/images/sg.svg" },
+    MY: { name: "Malaysia", flag: "/images/my.svg" },
+    ID: { name: "Indonesia", flag: "/images/indo.svg" },
+    PH: { name: "Philippines", flag: "/images/phi.svg" },
+    HK: { name: "Hong Kong", flag: "/images/hk.svg" },
+  };
+
+  const handleCountryChange = (value: string) => {
+    setCountry(value as CountryCode);
   };
 
   const handlePhoneInputChange = (value: any) => setPhoneNumber(value);
@@ -249,20 +256,6 @@ const WhyVenueListHero = () => {
               </label>
             </div>
 
-            {/* <label className="flex flex-col text-gray-700 font-normal">
-          <span className="flex items-center">Country</span>
-          <select
-            className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
-            value={country}
-            onChange={(e)  => setCountry(e.target.value)}
-            required
-          >
-            <option>Select your country</option>
-            <option>Singapore</option>
-            <option>Malaysia</option>
-            <option>Indonesia</option>
-          </select>
-        </label> */}
             <label className="flex flex-col text-gray-700 font-normal">
               <span className="flex items-center mb-2">Country</span>
               <Select
@@ -290,42 +283,36 @@ const WhyVenueListHero = () => {
                   />
                 }
                 size="lg"
-                // startContent={
-                //   <Image
-                //     alt="icon"
-                //     className="w-[20px] h-[20px] object-cover mr-1"
-                //     height={20}
-                //     loading="lazy"
-                //     src="/images/icons/person.svg"
-                //     style={{
-                //       width: "auto",
-                //       height: "auto",
-                //     }}
-                //     width={20}
-                //   />
-                // }
                 value={country}
                 variant="bordered"
-                onChange={handleCountryChange}
+                onChange={(e) => handleCountryChange(e.target.value)}
+                renderValue={() => (
+                  <div className="flex items-center">
+                    {country && countryOptions[country] ? (
+                      <>
+                        <img
+                          src={countryOptions[country].flag}
+                          alt={countryOptions[country].name}
+                          className="w-5 h-5 mr-2"
+                        />
+                        {countryOptions[country].name}
+                      </>
+                    ) : (
+                      <span>Select your country</span>
+                    )}
+                  </div>
+                )}
               >
-                <SelectItem key="sg" value="Singapore">
-                  Singapore
-                </SelectItem>
-                <SelectItem key="my" value="Malaysia">
-                  Malaysia
-                </SelectItem>
-                <SelectItem key="id" value="Indonesia">
-                  Indonesia
-                </SelectItem>
-                <SelectItem key="ph" value="Philippines">
-                  Philippines
-                </SelectItem>
-                <SelectItem key="hk" value="Hong Kong">
-                  Hong Kong
-                </SelectItem>
+                {Object.entries(countryOptions).map(([key, { name, flag }]) => (
+                  <SelectItem key={key} value={key} textValue={name}>
+                    <div className="flex items-center">
+                      <img src={flag} alt={name} className="w-5 h-5 mr-2" />
+                      {name}
+                    </div>
+                  </SelectItem>
+                ))}
               </Select>
             </label>
-
             <button
               type="submit"
               className="w-full bg-blue-600 text-white font-semibold p-2 rounded-lg"
@@ -450,7 +437,9 @@ const WhyVenueListHero = () => {
           </div>
 
           <label className="flex flex-col text-gray-700 font-normal">
-            <span className="flex items-center mb-2">How did you discover us?</span>
+            <span className="flex items-center mb-2">
+              How did you discover us?
+            </span>
             <Select
               disableAnimation
               aria-label="discover"
@@ -480,7 +469,7 @@ const WhyVenueListHero = () => {
               onChange={handleDiscoverChange}
             >
               <SelectItem key="sg" value="Singapore">
-               Facebook
+                Facebook
               </SelectItem>
             </Select>
           </label>
