@@ -9,45 +9,45 @@ import { VNFNavbar } from "@/components/molecules/VNFNavbar";
 import { Props } from "@/types";
 import { getHeaderFooter, getHomePageDataAll } from "@/utils/apiFunctions";
 
-export async function generateMetadata(
-  { params, searchParams }: Props,
-  parent: ResolvingMetadata,
-): Promise<Metadata> {
-  // home page meta
-  const { meta } = await getHomePageDataAll({
-    country: params.country || "sg",
-    section: "meta_tags",
-    shouldDetectIP: false,
-  });
+// export async function generateMetadata(
+//   { params, searchParams }: Props,
+//   parent: ResolvingMetadata,
+// ): Promise<Metadata> {
+//   // home page meta
+//   const { meta } = await getHomePageDataAll({
+//     country: params.country || "sg",
+//     section: "meta_tags",
+//     shouldDetectIP: false,
+//   });
 
-  const {
-    meta_tags: { title, description, keywords, og, fb },
-  } = meta || {};
+//   const {
+//     meta_tags: { title, description, keywords, og, fb },
+//   } = meta || {};
 
-  return {
-    title: title || "",
-    description: description || "",
-    keywords: keywords || "",
-    openGraph: {
-      title: (og && og.title) || "",
-      description: (og && og.description) || "",
-      url: (og && og.url) || "",
-      siteName: (og && og.site_name) || "",
-      images: [
-        {
-          url: (og && og.image) || "",
-          width: (og && og.image_width) || 1200,
-          height: (og && og.image_height) || 630,
-          alt: (og && og.image_alt) || og.title || "",
-        },
-      ],
-      type: (og && og.type) || "",
-    },
-    facebook: {
-      appId: (fb && fb.app_id) || "",
-    },
-  };
-}
+//   return {
+//     title: title || "",
+//     description: description || "",
+//     keywords: keywords || "",
+//     openGraph: {
+//       title: (og && og.title) || "",
+//       description: (og && og.description) || "",
+//       url: (og && og.url) || "",
+//       siteName: (og && og.site_name) || "",
+//       images: [
+//         {
+//           url: (og && og.image) || "",
+//           width: (og && og.image_width) || 1200,
+//           height: (og && og.image_height) || 630,
+//           alt: (og && og.image_alt) || og.title || "",
+//         },
+//       ],
+//       type: (og && og.type) || "",
+//     },
+//     facebook: {
+//       appId: (fb && fb.app_id) || "",
+//     },
+//   };
+// }
 
 export default async function Home(props: any) {
   const { params } = props;
