@@ -10,7 +10,7 @@ interface AboutUsSectionProps {
 }
 
 export const AboutUsSection = ({ headerFooterRes }: AboutUsSectionProps) => {
-  const { data } = headerFooterRes;
+  const { data } = headerFooterRes || {};
   const {
     countries_link,
     countries,
@@ -25,7 +25,7 @@ export const AboutUsSection = ({ headerFooterRes }: AboutUsSectionProps) => {
     office,
     socials,
     current_user,
-  } = data;
+  } = data || {};
 
   //   const {
   //     changeCountry,
@@ -103,7 +103,7 @@ export const AboutUsSection = ({ headerFooterRes }: AboutUsSectionProps) => {
 
   return (
     <div>
-      <VNFNavbar className="px-4 md:px-5 items-center py-2 fixed" />
+      <VNFNavbar className="px-4 md:px-5 lg:px-12 xl:px-20 items-center py-2 fixed" />
       <section className="mt-[81px] w-full">
         <Image
           unoptimized
