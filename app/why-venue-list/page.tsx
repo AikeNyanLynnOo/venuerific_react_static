@@ -13,7 +13,10 @@ import WhyVenuerific from "@/components/whyVenueList/WhyVenuerific";
 export default function WhyVenueList() {
   return (
     <div>
-      <VNFNavbar className="px-4 md:px-5 lg:px-12 xl:px-20 items-center py-2 fixed" />
+      <VNFNavbar
+        className="px-4 md:px-5 items-center py-2 fixed"
+        maxWidth="full"
+      />
       {/* Why Venues List Hero Section */}
       <WhyVenueListHero />
 
