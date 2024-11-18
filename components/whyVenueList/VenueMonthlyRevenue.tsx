@@ -3,7 +3,8 @@ import Image from "next/image";
 
 const VenueMonthlyRevenue = () => {
   return (
-    <div className="w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-16 bg-white">
+    <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-16 bg-white">
+    <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
       <div className="flex flex-col border-2 md:flex-row items-center rounded-lg bg-gradient-to-r from-[#9C3EF3] to-[#4E8CFF] overflow-hidden">
         <div className="w-full md:w-1/2 text-white px-6 md:px-16 py-4 md:py-8 pt-16 md:pt-24 pb-16 md:pb-24 text-center md:text-left">
           <h2 className="text-[24px] md:text-[36px] font-normal">
@@ -27,6 +28,7 @@ const VenueMonthlyRevenue = () => {
           className="md:w-1/2 hidden md:block h-4/6 py-0 lg:py-6 xl:py-8 object-cover"
         />
       </div>
+    </div>
     </div>
   );
 };

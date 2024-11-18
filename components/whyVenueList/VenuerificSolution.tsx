@@ -35,8 +35,8 @@ const venueData = [
 
 const VenuerificSolution = () => {
   return (
-    <div className="py-16 bg-white">
-      <div className="w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-10">
+    <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-16 bg-white">
+      <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
         <h2 className="text-primary-700 text-3xl font-semibold text-left lg:text-gray-800">
           Solutions for every type of venue:
         </h2>

@@ -72,7 +72,8 @@ const sections = [
 
 const VenueMarketing = () => {
   return (
-    <div className="w-full mx-auto px-4 py-16 sm:px-6 md:px-8 lg:px-12 xl:px-20 bg-primary-50">
+    <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-10 bg-primary-50">
+    <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
       <div className="mx-auto pt-8 pb-20">
         <h1 className="hidden md:block text-black text-2xl font-semibold">
           The #1 Venue Marketing Platform in Asia
@@ -113,6 +114,7 @@ const VenueMarketing = () => {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 };
