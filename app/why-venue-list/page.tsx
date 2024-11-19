@@ -17,40 +17,21 @@ export default function WhyVenueList() {
         className="px-4 md:px-5 items-center py-2 fixed"
         maxWidth="full"
       />
-      {/* Why Venues List Hero Section */}
       <WhyVenueListHero />
-
-      {/* Venues Trusted Business Section */}
       <VenueTrustedBusiness />
-
-      {/* Why Venuerific Section */}
       <WhyVenuerific />
-
-      {/* Venuerific Solution Section */}
       <VenuerificSolution />
-
-      {/* Venuerific Growing Section */}
       <VenueGrowing />
-
-      {/* Venuerific Monthly Revenue Section */}
       <VenueMonthlyRevenue />
-
-      {/* Venuerific Marketing Section */}
       <div className="flex flex-col md:flex-col">
         <div className="w-full md:w-auto">
           <VenueMarketing />
         </div>
-
-        {/* Venuerific Video Section*/}
         <div className="w-full md:w-auto md:order-first">
           <WhyVenueListVideoSec />
         </div>
       </div>
-
-      {/* Try Venuerific Section */}
       <TryVenuerific />
-
-      {/* Footer  */}
       <div className="w-full mt-10 mx-auto px-5 md:px-5 lg:px-12 xl:px-20 block md:flex items-center justify-between w-full">
         <Footer />
       </div>
