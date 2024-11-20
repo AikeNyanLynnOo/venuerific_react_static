@@ -16,7 +16,7 @@ export const PvmEventsCard = ({
   eventDate,
 }: PvmEventsCardProps) => {
   return (
-    <div className="relative rounded-lg overflow-hidden shadow-lg w-full max-w-[539px] h-[320px]">
+    <div className="mt-8 relative rounded-lg overflow-hidden shadow-lg w-full max-w-[539px] h-[320px]">
       <img src={imageUrl} alt={imgAlt} className="w-full h-full object-cover" />
 
       <div className="absolute top-6 left-4 sm:hidden z-20">

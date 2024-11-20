@@ -64,7 +64,7 @@ const WhyVendorListHero = () => {
         {/* Content Section */}
         <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto relative flex flex-col lg:flex-row items-center justify-center">
           <div className="max-w-3xl mx-auto px-8 lg:w-3/5 lg:pr-8 space-y-4 text-center lg:text-left text-white z-20 relative">
-            <h1 className="text-3xl lg:text-5xl font-normal leading-loose">
+            <h1 className="text-3xl lg:text-5xl font-normal leading-loose below-299:text-xl below-299:leading-snug">
               <span className="block md:hidden">
                 We are on a Mission to Bring Vendor Listing Opportunities to
                 YOUR country!
@@ -73,7 +73,7 @@ const WhyVendorListHero = () => {
                 Unlock new revenue opportunities
               </span>
             </h1>
-            <p className="text-white text-lg max-w-[60ch]">
+            <p className="text-white text-lg max-w-[60ch] below-299:text-sm">
               <span className="block md:hidden">
                 Get ahead of the competition, be first in joining our vendor
                 listing waiting list!
@@ -85,33 +85,41 @@ const WhyVendorListHero = () => {
             </p>
 
             <div className="block md:block lg:hidden mt-8">
-              <div className="flex flex-row justify-center align-center md:space-x-1">
-                <div className="flex flex-col w-fit mr-4">
-                  <div className="border border-white backdrop-filter justify-center backdrop-blur-md bg-gray-300 bg-opacity-30 text-white px-6 py-3 rounded-md flex items-center space-x-2">
+              <div className="flex flex-row justify-center items-center space-x-3 below-299:flex-col below-299:space-x-0 below-299:space-y-3">
+                <div className="flex flex-col w-1/2 max-w-[170px] sm:w-[40%] md:w-[30%] below-299:max-w-[90px] below-299:w-[85%]">
+                  <div className="border border-white backdrop-filter justify-center backdrop-blur-md bg-gray-300 bg-opacity-30 text-white px-3 py-3 below-299:px-2 below-299:py-2 rounded-md flex items-center space-x-2">
                     <Image
                       src="/images/why_vendor_list/vendor_hero_mobile_icon1.webp"
                       alt="Active Users Icon"
-                      width={18}
-                      height={18}
+                      width={20}
+                      height={20}
                     />
-                    <div className="flex flex-col items-start px-3">
-                      <div className="text-xl font-semibold">1000+</div>
-                      <div className="text-sm">Active users</div>
+                    <div className="flex flex-col items-start text-left">
+                      <div className="text-[14px] md:text-[16px] font-semibold leading-tight below-299:text-[11px]">
+                        1000+
+                      </div>
+                      <div className="text-[12px] md:text-[14px] leading-tight below-299:text-[9px] pt-1">
+                        Active users
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex flex-col w-fit">
-                  <div className="border border-white backdrop-filter justify-center backdrop-blur-md bg-gray-300 bg-opacity-30 text-white px-6 py-3 rounded-md flex items-center space-x-2">
+                <div className="flex flex-col w-1/2 max-w-[170px] sm:w-[40%] md:w-[30%] below-299:max-w-[90px] below-299:w-[85%]">
+                  <div className="border border-white backdrop-filter justify-center backdrop-blur-md bg-gray-300 bg-opacity-30 text-white px-3 py-3 below-299:px-2 below-299:py-2 rounded-md flex items-center space-x-2">
                     <Image
                       src="/images/why_vendor_list/vendor_hero_mobile_icon2.webp"
                       alt="Registered Venues Icon"
                       width={18}
                       height={18}
                     />
-                    <div className="flex flex-col items-start">
-                      <div className="text-xl font-semibold">500+</div>
-                      <div className="text-sm text-left">Registered venues</div>
+                    <div className="flex flex-col items-start text-left">
+                      <div className="text-[14px] md:text-[16px] font-semibold leading-tight below-299:text-[11px]">
+                        500+
+                      </div>
+                      <div className="text-[12px] md:text-[14px] leading-tight below-299:text-[9px] pt-1">
+                        Registered venues
+                      </div>
                     </div>
                   </div>
                 </div>
