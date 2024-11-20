@@ -13,13 +13,13 @@ const PvmPlaceManageSec = () => {
               providing unique spaces for birthdays, corporate events, weddings,
               meetings, and other celebrations.
             </p>
-            <p className="mt-6 text-secondary-600 text-lg md:text-xl leading-relaxed">
+            <p className="mt-8 text-secondary-600 text-lg md:text-xl leading-relaxed">
               Our Private Venue Management system takes your venue marketing,
               enquiries management, and event execution to new heights. We are
               proud of our expert management of spaces around Singapore, home to
               any and all celebrations.
             </p>
-            <div className="mt-8 flex flex-col items-center lg:items-start space-y-1">
+            <div className="mt-10 flex flex-col items-center lg:items-start space-y-1">
               <span className="text-primary-600 text-[60px] font-semibold">
                 +20
               </span>
