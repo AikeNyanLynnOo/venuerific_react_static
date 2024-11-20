@@ -5,8 +5,8 @@ import Marquee from "react-fast-marquee";
 const PvmTopEventsMarquee = () => {
   return (
     <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-8 md:py-20">
-      <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
-        <h2 className="mt-0 md:mt-20 text-secondary-500 text-[20px] font-semibold text-center">
+      <div className="px-4 md:px-0 my-10 md:mt-5 max-w-screen-2xl mx-auto">
+        <h2 className="mt-0 md:mt-10 text-secondary-500 text-[20px] font-semibold text-center">
           Managing Top Event Spaces Such As
         </h2>
 
