@@ -24,8 +24,11 @@ const TryVenuerific = () => {
           <p className="text-secondary-600 text-[14px] sm:text-[16px] md:text-[18px] sm:hidden text-left">
             Discover the Venue Management CRM system that not only generates a
             substantial return on investment but also comes at an incredibly
-            affordable subscription fee. Invest just 5 minutes of your time now
-            to unlock its full potential.
+            affordable subscription fee.
+            <span className="block mt-4">
+              Invest just 5 minutes of your time now to unlock its full
+              potential.
+            </span>
           </p>
 
           <h2 className="text-primary-700 text-[32px] sm:text-[40px] lg:text-4xl font-bold hidden sm:block">
@@ -37,13 +40,13 @@ const TryVenuerific = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0">
-            <button className="border text-secondary-700 text-center border-secondary-300 px-8 py-2 text-lg rounded-md sm:hidden hover:bg-secondary-300 hover:text-white transition-colors font-semibold">
+            <button className="border text-secondary-700 text-center border-secondary-300 px-8 py-2 text-lg rounded-md sm:hidden hover:bg-secondary-300 hover:text-white transition-colors">
               See Demo
             </button>
-            <button className="border text-secondary-700 border-secondary-300 px-8 py-2 text-lg rounded-md hidden sm:block hover:bg-secondary-300 hover:text-white transition-colors sm:mr-4 font-semibold">
+            <button className="border text-secondary-700 border-secondary-300 px-8 py-2 text-lg rounded-md hidden sm:block hover:bg-secondary-300 hover:text-white transition-colors sm:mr-4 ">
               Schedule a demo
             </button>
-            <button className="bg-primary-600 text-white px-8 py-2 text-lg rounded-md hidden sm:block hover:bg-primary-500 transition-colors font-semibold">
+            <button className="bg-primary-600 text-white px-8 py-2 text-lg rounded-md hidden sm:block hover:bg-primary-500 transition-colors ">
               Sign up for free
             </button>
           </div>
