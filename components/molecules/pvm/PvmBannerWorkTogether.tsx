@@ -33,7 +33,13 @@ const PvmBannerWorkTogether = ({
             <p className="mt-3 md:mt-2">{text || ""}</p>
           </div>
 
-          <button className="bg-white text-black w-fit font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-primary-700 transition md:w-auto sm:bg-white sm:text-black sm:hover:bg-primary-600 md:bg-primary-600 md:text-white flex items-center gap-2">
+          <button
+            className="
+            bg-white text-black w-fit font-semibold px-6 py-3 rounded-md shadow-lg 
+            hover:bg-primary-700 transition md:w-auto 
+            sm:bg-white sm:text-black sm:hover:bg-primary-600 
+            md:bg-primary-600 md:text-white md:hover:bg-primary-500 flex items-center gap-2"
+          >
             <Image
               src="/images/pvm/chat_default.webp"
               alt="Chat Icon Desktop"

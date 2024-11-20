@@ -228,7 +228,7 @@ const WhyVendorListHero = () => {
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white p-2 rounded-lg"
+                className="w-full bg-primary-600 text-white p-2 rounded-lg hover:bg-primary-500"
               >
                 Next
               </button>
@@ -350,7 +350,7 @@ const WhyVendorListHero = () => {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white p-2 rounded-lg"
+            className="w-full bg-primary-600 text-white p-2 rounded-lg hover:bg-primary-500"
           >
             Next
           </button>

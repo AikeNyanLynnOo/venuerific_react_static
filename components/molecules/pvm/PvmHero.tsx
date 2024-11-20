@@ -41,7 +41,7 @@ const PvmHero = () => {
             </p>
 
             <div className="flex justify-center lg:justify-start">
-              <button className="flex items-center bg-primary-600 text-white px-6 py-3 rounded-md shadow-lg hover:bg-primary-700 transition sm:w-auto">
+              <button className="flex items-center bg-primary-600 hover:bg-primary-500 text-white px-6 py-3 rounded-md shadow-lg transition sm:w-auto">
                 <Image
                   src="/images/pvm/chat_default.webp"
                   alt="Chat Icon"

@@ -80,7 +80,7 @@ const WhyVenueListHero = () => {
         />
       </div>
       <div className="mt-[81px] w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 relative z-10">
-      <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto flex flex-col items-center justify-center py-20 lg:flex-row">
+        <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto flex flex-col items-center justify-center py-20 lg:flex-row">
           <div className="absolute inset-0 z-10 bg-gray opacity-40" />
           {/* Content Section */}
           <div className="max-w-screen-xl mx-auto px-8 lg:mt-20 lg:w-3/5 lg:pr-8 space-y-4 text-center lg:text-left text-white z-20 relative">
@@ -318,7 +318,7 @@ const WhyVenueListHero = () => {
               </label>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white font-semibold p-2 rounded-lg"
+                className="w-full bg-primary-600 text-white font-semibold p-2 rounded-lg hover:bg-primary-500"
               >
                 Schedule a Demo
               </button>
@@ -491,7 +491,7 @@ const WhyVenueListHero = () => {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white font-semibold p-2 rounded-lg"
+            className="w-full bg-primary-600 text-white font-semibold p-2 rounded-lg hover:bg-primary-500"
           >
             Schedule a Demo
           </button>
