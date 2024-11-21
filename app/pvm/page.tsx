@@ -1,14 +1,14 @@
 import { VNFNavbar } from "@/components/molecules/VNFNavbar";
 import Footer from "@/components/molecules/Footer";
-import PvmVenueManagement from "@/components/molecules/pvm/PvmVenueManagement";
-import PvmTopEventsMarquee from "@/components/molecules/pvm/PvmTopEventsMarquee";
-import PvmWhatGet from "@/components/molecules/pvm/PvmWhatGet";
-import PvmLatestEvent from "@/components/molecules/pvm/PvmLatestEvent";
-import PvmYourPlaceSec from "@/components/molecules/pvm/PvmYourPlaceSec";
-import PvmBannerWorkTogether from "@/components/molecules/pvm/PvmBannerWorkTogether";
-import PvmFaqSec from "@/components/molecules/pvm/PvmFaqSec";
-import PvmHero from "@/components/molecules/pvm/PvmHero";
-import PvmPlaceManageSec from "@/components/molecules/pvm/PvmPlaceManageSec";
+import PvmVenueManagement from "@/components/pvm/PvmVenueManagement";
+import PvmTopEventsMarquee from "@/components/pvm/PvmTopEventsMarquee";
+import PvmWhatGet from "@/components/pvm/PvmWhatGet";
+import PvmLatestEvent from "@/components/pvm/PvmLatestEvent";
+import PvmYourPlaceSec from "@/components/pvm/PvmYourPlaceSec";
+import PvmBannerWorkTogether from "@/components/pvm/PvmBannerWorkTogether";
+import PvmFaqSec from "@/components/pvm/PvmFaqSec";
+import PvmHero from "@/components/pvm/PvmHero";
+import PvmPlaceManageSec from "@/components/pvm/PvmPlaceManageSec";
 
 export default function Pvm() {
   return (

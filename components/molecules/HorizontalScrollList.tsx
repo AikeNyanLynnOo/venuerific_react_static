@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import dynamic from "next/dynamic";
 import { Fragment, useRef } from "react";
 import { WhyListGrowCard } from "../whyVenueList/WhyListGrowCard";
-import { PvmEventsCard } from "./pvm/PvmEventsCard";
+import { PvmEventsCard } from "../pvm/PvmEventsCard";
 
 const DynamicCountryCard = dynamic(() =>
   import("@/components/molecules/CountryCard").then(

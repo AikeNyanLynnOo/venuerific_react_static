@@ -1,5 +1,5 @@
-import { HorizontalScrollList } from "../../molecules/HorizontalScrollList";
-import { ScrollContainerWithTitle } from "../../molecules/ScrollContainerWithTitle";
+import { HorizontalScrollList } from "../molecules/HorizontalScrollList";
+import { ScrollContainerWithTitle } from "../molecules/ScrollContainerWithTitle";
 import { PvmEventsCard } from "./PvmEventsCard";
 
 const PvmLatestEvent = () => {
