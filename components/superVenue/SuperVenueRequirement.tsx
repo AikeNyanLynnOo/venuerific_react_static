@@ -38,7 +38,7 @@ const SuperVenueRequirement = () => {
   ];
 
   return (
-    <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-10">
+    <div className="w-full mx-auto px-0 py-6 lg:py-10 md:px-5 lg:px-12 xl:px-20">
       <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
         <div className="text-center md:text-left mb-12">
           <h1 className="text-primary-800 text-3xl font-bold">
@@ -52,7 +52,7 @@ const SuperVenueRequirement = () => {
           </p>
         </div>
 
-        {/* First Section */}
+        {/* First Sec */}
         <div className="py-8 grid grid-cols-1 lg:grid-cols-2 gap-16 md:items-center md:justify-center">
           <div className="space-y-6">
             {firstCardData.map((card, index) => (
@@ -86,7 +86,7 @@ const SuperVenueRequirement = () => {
           </div>
         </div>
 
-        {/* Second Section */}
+        {/* Second Sec */}
         <div className="py-8 grid grid-cols-1 lg:grid-cols-2 gap-16 mt-16 md:items-center md:justify-center">
           <div className="relative">
             <Image
