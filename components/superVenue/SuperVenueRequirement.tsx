@@ -87,7 +87,7 @@ const SuperVenueRequirement = () => {
         </div>
 
         {/* Second Sec */}
-        <div className="py-8 grid grid-cols-1 lg:grid-cols-2 gap-16 mt-16 md:items-center md:justify-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-16 md:items-center md:justify-center">
           <div className="relative">
             <Image
               src="/images/super_venue/super_venue_requirement_sec_img2.webp"
