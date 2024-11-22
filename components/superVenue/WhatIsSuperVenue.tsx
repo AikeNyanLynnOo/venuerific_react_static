@@ -47,7 +47,7 @@ const WhatIsSuperVenue = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-8 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-6 mt-16">
           {cardData.map((card, index) => (
             <div
               key={index}

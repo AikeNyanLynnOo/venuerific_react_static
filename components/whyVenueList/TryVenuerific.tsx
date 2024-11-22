@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { Button } from "@nextui-org/button";
 
 const TryVenuerific = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -38,17 +39,27 @@ const TryVenuerific = () => {
             Integrate Venuerific easily into your venue sales and marketing
             operations
           </p>
-
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0">
-            <button className="border text-secondary-700 text-center border-secondary-300 px-8 py-2 text-lg rounded-md sm:hidden hover:bg-secondary-300 hover:text-white transition-colors">
+            <Button
+              className="border text-secondary-700 text-center border-secondary-300 p-6 text-lg rounded-lg sm:hidden hover:text-black transition-colors"
+              variant="bordered"
+            >
               See Demo
-            </button>
-            <button className="border text-secondary-700 border-secondary-300 px-8 py-2 text-lg rounded-md hidden sm:block hover:bg-secondary-300 hover:text-white transition-colors sm:mr-4 ">
-              Schedule a demo
-            </button>
-            <button className="bg-primary-600 text-white px-8 py-2 text-lg rounded-md hidden sm:block hover:bg-primary-500 transition-colors ">
+            </Button>
+
+            <Button
+              className="border text-secondary-700 text-center border-secondary-300 p-6 text-lg rounded-lg hidden sm:inline-flex hover:text-black transition-colors sm:mr-4"
+              variant="bordered"
+            >
+              Schedule a Demo
+            </Button>
+
+            <Button
+              className="bg-primary-600 text-center text-white p-6 text-lg rounded-lg hidden sm:inline-flex transition-colors hover:bg-primary-500"
+              variant="solid"
+            >
               Sign up for free
-            </button>
+            </Button>
           </div>
         </div>
 

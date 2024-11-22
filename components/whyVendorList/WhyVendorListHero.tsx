@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { Button } from "@nextui-org/button";
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import PhoneInput from "react-phone-input-2";
@@ -226,12 +227,13 @@ const WhyVendorListHero = () => {
                 </div>
               </div>
 
-              <button
+              <Button
                 type="submit"
-                className="w-full bg-primary-600 text-white p-2 rounded-lg hover:bg-primary-500"
+                className="w-full bg-primary-600 text-white p-2 rounded-lg text-[16px]"
+                variant="solid"
               >
                 Next
-              </button>
+              </Button>
             </form>
 
             <div className="mt-4 text-black">
@@ -348,12 +350,13 @@ const WhyVendorListHero = () => {
             </div>
           </div>
 
-          <button
+          <Button
             type="submit"
-            className="w-full bg-primary-600 text-white p-2 rounded-lg hover:bg-primary-500"
+            className="w-full bg-primary-600 text-white p-2 rounded-lg text-[16px]"
+            variant="solid"
           >
             Next
-          </button>
+          </Button>
         </form>
 
         <div className="mt-4 text-black text-center">

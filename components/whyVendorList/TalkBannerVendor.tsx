@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "@nextui-org/button";
 
 const TalkBannerVendor = () => {
   return (
@@ -30,9 +31,9 @@ const TalkBannerVendor = () => {
           </div>
 
           <div className="mt-4 md:mt-0 md:ml-8 flex justify-center md:justify-start">
-            <button className="bg-white text-black font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-primary-700 transition w-full md:w-auto sm:bg-white sm:text-black sm:hover:bg-primary-600 md:bg-primary-600 md:text-white">
+            <Button className="bg-white text-black font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-primary-700 transition w-full md:w-auto sm:bg-white sm:text-black sm:hover:bg-primary-600 md:bg-primary-600 md:text-white text-[16px]">
               Talk To Our Partnership Specialist
-            </button>
+            </Button>
           </div>
         </div>
       </div>

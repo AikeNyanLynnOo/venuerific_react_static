@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { Button } from "@nextui-org/button";
 
 const PvmHero = () => {
   return (
@@ -25,12 +26,12 @@ const PvmHero = () => {
                 height={30}
                 className="w-6 h-6 hidden lg:inline"
               />
-              <p className="text-white text-lg md:text-xl lg:text-2xl font-normal">
+              <p className="text-white text-lg md:text-xl lg:text-2xl font-semibold">
                 Trusted Since 2013
               </p>
             </div>
 
-            <h1 className="text-3xl lg:text-5xl font-normal">
+            <h1 className="text-3xl lg:text-5xl font-semibold">
               Having Trouble Managing Your Venue? We Can Help!
             </h1>
             <p className="text-white text-lg max-w-[60ch]">
@@ -41,16 +42,19 @@ const PvmHero = () => {
             </p>
 
             <div className="flex justify-center lg:justify-start">
-              <button className="flex items-center bg-primary-600 hover:bg-primary-500 text-white px-6 py-3 rounded-md shadow-lg transition sm:w-auto">
-                <Image
-                  src="/images/pvm/chat_default.webp"
-                  alt="Chat Icon"
-                  width={20}
-                  height={20}
-                  className="mr-2"
-                />
-                Talk To Us
-              </button>
+              <Button
+                className="flex items-center bg-primary-600 hover:bg-primary-500 text-white px-6 py-3 rounded-md shadow-lg transition sm:w-auto"
+                startContent={
+                  <Image
+                    src="/images/pvm/chat_default.webp"
+                    alt="Chat Icon"
+                    width={17}
+                    height={17}
+                  />
+                }
+              >
+                <span className="text-[16px]">Talk To Us</span>
+              </Button>
             </div>
           </div>
         </div>

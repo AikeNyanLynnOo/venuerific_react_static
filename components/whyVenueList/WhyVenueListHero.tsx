@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { Button } from "@nextui-org/button";
 import { useState } from "react";
 import { CaretDown } from "@phosphor-icons/react/dist/ssr";
 import { Select, SelectItem } from "@nextui-org/select";
@@ -206,19 +207,6 @@ const WhyVenueListHero = () => {
                     required
                   />
                 </label>
-                {/* <label className="flex flex-col text-gray-700 font-normal">
-                <span className="flex items-center">
-                  Phone Number<span className="text-red-500 ml-1">*</span>
-                </span>
-                <input
-                  type="text"
-                  placeholder="Your phone number"
-                  className="w-full p-2 border border-gray-300 rounded-lg mt-1 focus:border-secondary-400 outline-none"
-                  value={phoneNumber}
-                  onChange={(e) => setPhoneNumber(e.target.value)}
-                  required
-                />
-              </label> */}
 
                 <div className="flex flex-col text-gray-700 font-normal">
                   <span className="flex items-center mb-2">
@@ -316,12 +304,13 @@ const WhyVenueListHero = () => {
                   )}
                 </Select>
               </label>
-              <button
+              <Button
                 type="submit"
-                className="w-full bg-primary-600 text-white font-semibold p-2 rounded-lg hover:bg-primary-500"
+                className="w-full bg-primary-600 text-white p-2 rounded-lg text-[16px]"
+                variant="solid"
               >
                 Schedule a Demo
-              </button>
+              </Button>
             </form>
           </div>
         </div>
@@ -489,12 +478,13 @@ const WhyVenueListHero = () => {
             />
           </label>
 
-          <button
+          <Button
             type="submit"
-            className="w-full bg-primary-600 text-white font-semibold p-2 rounded-lg hover:bg-primary-500"
+            className="w-full bg-primary-600 text-white p-2 rounded-lg text-[16px]"
+            variant="solid"
           >
             Schedule a Demo
-          </button>
+          </Button>
         </form>
       </div>
 

@@ -26,9 +26,9 @@ export default function SuperVenue() {
               forward to hearing from you!"
         btnText="Get In Touch"
       />
-      {/* <div className="w-full mt-10 mx-auto px-5 md:px-5 lg:px-12 xl:px-20 block md:flex items-center justify-between w-full">
+      <div className="w-full mt-10 mx-auto px-5 md:px-5 lg:px-12 xl:px-20 block md:flex items-center justify-between w-full">
         <Footer />
-      </div> */}
+      </div>
     </div>
   );
 }
