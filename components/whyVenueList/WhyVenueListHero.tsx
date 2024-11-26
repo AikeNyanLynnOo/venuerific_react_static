@@ -93,13 +93,37 @@ const WhyVenueListHero = () => {
               more leads, manage them, and convert them into revenue.
             </p>
             <div className="bg-transparent lg:bg-gradient-to-r sm:from-[#9C3EF3] sm:to-[#4E8CFF] rounded-md p-3 inline-block">
-              <p className="text-white font-normal sm:font-semibold text-lg">
-                On average, Venuerific venues earn up to $30,000 per month.
+              <p className="text-white font-normal text-lg">
+                On average, Venuerific venues earn up to
+                <span className="font-semibold text-xl">
+                  {" "}
+                  $50,000 per month.
+                </span>
               </p>
             </div>
 
+            <div className="flex space-x-4 items-center mt-6">
+              <div className="flex items-center justify-center bg-white text-secondary-500 text-[16px] font-medium rounded-[20px] border border-gray-300 px-5 py-2">
+                <img
+                  src="/images/why_venue_list/why_venue_list_img1.webp"
+                  alt="G2 User Ratings Logo"
+                  className="h-6 w-6 mr-2"
+                />
+                Users Loves Us
+              </div>
+
+              <div className="flex items-center justify-center bg-white text-secondary-500 text-[16px] font-medium rounded-[20px] border border-gray-300 px-5 py-2">
+                <img
+                  src="/images/why_venue_list/sace_logo_hero_sec.webp"
+                  alt="SACEOS Logo"
+                  className="mr-2 max-h-4 h-auto"
+                />
+                Circle of Excellence & Innovations
+              </div>
+            </div>
+
             {/* G2 User Ratings */}
-            <div className="items-center mt-6 hidden lg:flex ">
+            {/* <div className="items-center mt-6 hidden lg:flex ">
               <div className="flex-shrink-0 h-[120px] w-[80px] flex items-center">
                 <Image
                   src="/images/why_venue_list/why_venue_list_img1.png"
@@ -127,7 +151,7 @@ const WhyVenueListHero = () => {
                   <span className="text-[30px] text-white ml-1">4.6</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Form Section */}
