@@ -21,7 +21,7 @@ const VenueMonthlyRevenue = () => {
         </div>
 
         <Image
-          src="/images/why_venue_list/venue_monthy_revenue_img.png"
+          src="/images/why_venue_list/venue_monthy_revenue_img.webp"
           alt="Venue Monthly Revenue"
           width={500}
           height={300}

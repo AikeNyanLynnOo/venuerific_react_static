@@ -3,7 +3,7 @@ import Image from "next/image";
 const sections = [
   {
     title: "Attract & Capture",
-    image: "/images/why_venue_list/venue_marketing_img1.png",
+    image: "/images/why_venue_list/venue_marketing_img1.webp",
     text: [
       {
         heading: "Rank Higher on Google",
@@ -22,7 +22,7 @@ const sections = [
   },
   {
     title: "Manage & Automate",
-    image: "/images/why_venue_list/venue_marketing_img2.png",
+    image: "/images/why_venue_list/venue_marketing_img2.webp",
     text: [
       {
         heading: "Easily Manage Leads and Bookings",
@@ -46,7 +46,7 @@ const sections = [
   },
   {
     title: "Convert & Nurture",
-    image: "/images/why_venue_list/venue_marketing_img3.png",
+    image: "/images/why_venue_list/venue_marketing_img3.webp",
     text: [
       {
         heading: "Instant Quotation Generation",

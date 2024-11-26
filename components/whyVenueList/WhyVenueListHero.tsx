@@ -102,7 +102,7 @@ const WhyVenueListHero = () => {
               </p>
             </div>
 
-            <div className="flex space-x-4 items-center mt-6">
+            <div className="flex space-x-4 items-center mt-6 lg:flex hidden">
               <div className="flex items-center justify-center bg-white text-secondary-500 text-[16px] font-medium rounded-[20px] border border-gray-300 px-5 py-2">
                 <img
                   src="/images/why_venue_list/why_venue_list_img1.webp"
@@ -121,9 +121,10 @@ const WhyVenueListHero = () => {
                 Circle of Excellence & Innovations
               </div>
             </div>
+          </div>
 
-            {/* G2 User Ratings */}
-            {/* <div className="items-center mt-6 hidden lg:flex ">
+          {/* G2 User Ratings */}
+          {/* <div className="items-center mt-6 hidden lg:flex ">
               <div className="flex-shrink-0 h-[120px] w-[80px] flex items-center">
                 <Image
                   src="/images/why_venue_list/why_venue_list_img1.png"
@@ -152,7 +153,6 @@ const WhyVenueListHero = () => {
                 </div>
               </div>
             </div> */}
-          </div>
 
           {/* Form Section */}
           <div className="max-w-screen-xl mx-auto px-8 lg:w-2/5 lg:pl-8 bg-white p-6 shadow-lg rounded-lg space-y-4 z-20 relative hidden lg:block">

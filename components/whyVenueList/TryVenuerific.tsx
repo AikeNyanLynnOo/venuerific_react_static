@@ -67,8 +67,8 @@ const TryVenuerific = () => {
           <img
             src={
               isMobile
-                ? "/images/why_venue_list/try_venuerific_img_mobile.png"
-                : "/images/why_venue_list/try_venuerific_img.png"
+                ? "/images/why_venue_list/try_venuerific_img_mobile.webp"
+                : "/images/why_venue_list/try_venuerific_img.webp"
             }
             alt="Try Venuerific"
             className="rounded-md w-full h-[400px] object-contain sm:object-cover"
