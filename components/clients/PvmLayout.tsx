@@ -32,7 +32,7 @@ export default function PvmLayout() {
               forward to hearing from you!"
         btnText="Talk To Us"
       />
-      <div className="w-full mt-10 mx-auto px-5 md:px-5 lg:px-12 xl:px-20 block md:flex items-center justify-between w-full">
+      <div className="w-full mt-10 mx-auto px-5 md:px-5 lg:px-12 xl:px-20 block md:flex items-center justify-between">
         <Footer />
       </div>
     </div>

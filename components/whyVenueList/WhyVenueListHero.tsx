@@ -102,7 +102,7 @@ const WhyVenueListHero = () => {
               </p>
             </div>
 
-            <div className="flex space-x-4 items-center mt-6 lg:flex hidden">
+            <div className=" hidden lg:flex items-center mt-6 space-x-4">
               <div className="flex items-center justify-center bg-white text-secondary-500 text-[16px] font-medium rounded-[20px] border border-gray-300 px-5 py-2">
                 <img
                   src="/images/why_venue_list/why_venue_list_img1.webp"
@@ -110,6 +110,11 @@ const WhyVenueListHero = () => {
                   className="h-6 w-6 mr-2"
                 />
                 Users Loves Us
+                <img
+                  src="/images/why_venue_list/heart.webp"
+                  alt="Heart Icon"
+                  className="h-5 w-5 ml-2"
+                />
               </div>
 
               <div className="flex items-center justify-center bg-white text-secondary-500 text-[16px] font-medium rounded-[20px] border border-gray-300 px-5 py-2">
