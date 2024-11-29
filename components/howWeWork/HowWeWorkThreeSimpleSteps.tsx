@@ -1,7 +1,11 @@
 "use client";
 
-const HowWeWorkThreeSimpleSteps = ({ stepsData = [] }: { stepsData: { title: string, text: string }[] }) => {
-  if (stepsData.length === 0) return null; 
+const HowWeWorkThreeSimpleSteps = ({
+  stepsData = [],
+}: {
+  stepsData: { title: string; text: string }[];
+}) => {
+  if (stepsData.length === 0) return null;
 
   return (
     <div className="w-full mx-auto py-10 mb-4 lg:mb-32 mt-12">

@@ -80,7 +80,7 @@ export const HowWeWorkTabs = ({ customClasses }: FeatureBusinessTabsProps) => {
   const tabsClasses = useMemo(
     () =>
       twMerge(
-        "bg-white border-b px-0 rounded-t-lg w-full max-w-screen-2xl mx-auto font-bold",
+        "bg-white border-b px-5 sm:px-0 rounded-t-lg w-full max-w-screen-2xl mx-auto font-bold",
         customClasses
       ),
     [customClasses]
@@ -124,7 +124,9 @@ export const HowWeWorkTabs = ({ customClasses }: FeatureBusinessTabsProps) => {
                 <h2 className="text-3xl font-semibold text-primary-700 mb-6">
                   {currentTab.heading}
                 </h2>
-                <p className="text-1xl text-secondary-600">{currentTab.text}</p>
+                <p className="text-1xl text-secondary-600 px-5 md:px-8 lg:px-0">
+                  {currentTab.text}
+                </p>
               </div>
 
               {currentTab.steps && (
