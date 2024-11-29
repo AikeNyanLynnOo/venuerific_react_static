@@ -3,20 +3,20 @@ import Image from "next/image";
 const VendorMarket = () => {
   const features = [
     {
-      image: "/images/why_venue_list/curated_marketplace.png",
+      image: "/images/why_venue_list/curated_marketplace.webp",
       alt: "Curated Marketplace",
       title: "Curated Marketplace",
       description:
         "Connect with thousands of event organizers monthly through Venuerific to generate more revenue.",
     },
     {
-      image: "/images/why_venue_list/venue_management.png",
+      image: "/images/why_venue_list/venue_management.webp",
       alt: "Venue Management",
       title: "Venue Management",
       description: "Increase sales, save time and stay on top of your venue.",
     },
     {
-      image: "/images/why_venue_list/end_to_end_support.png",
+      image: "/images/why_venue_list/end_to_end_support.webp",
       alt: "End-to-End Support",
       title: "End-to-End Support",
       description:

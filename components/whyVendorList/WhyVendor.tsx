@@ -3,26 +3,26 @@ import Image from "next/image";
 const vendorData = [
   {
     numberImage: "/images/why_vendor_list/vendor_number1.webp",
-    contentImage: "/images/why_vendor_list/why_vendor_img1.webp",
-    title: "Increased Visibility",
+    contentImage: "/images/why_vendor_list/why_vendor_img_1.webp",
+    title: "Rank higher on Google.",
     description:
-      "When vendors register on Venuerific Vendor Listing, their visibility to potential customers can significantly increase. Through website optimization, their website can rank higher on search engines. As a result, when people search for services related to events, their website will be more likely to appear in search results. This can help vendors reach a wider audience and attract new customers who may not have discovered them otherwise.",
+      "Boost your search engine rankings and drive more organic traffic with Venuerific.",
     imagePosition: "left",
   },
   {
     numberImage: "/images/why_vendor_list/vendor_number2.webp",
-    contentImage: "/images/why_vendor_list/why_vendor_img2.webp",
-    title: "Targeted Marketing",
+    contentImage: "/images/why_vendor_list/why_vendor_img_2.webp",
+    title: "Connect with Event Organizers on Venuerific.",
     description:
-      "Targeted marketing is a powerful tool that our vendor listing platform offers. Our platform allows vendors to fine-tune their listings and showcase their offerings to the right audience—the Venuerific audience—making it easier than ever for them to achieve their marketing goals.",
+      "Over 500,000 active event organizers are on the Venuerific platform.",
     imagePosition: "right",
   },
   {
     numberImage: "/images/why_vendor_list/vendor_number3.webp",
-    contentImage: "/images/why_vendor_list/why_vendor_img3.webp",
-    title: "Cost-Effective Advertising",
+    contentImage: "/images/why_vendor_list/why_vendor_img_3.webp",
+    title: "Grow your business for free.",
     description:
-      "By listing on our platform, vendors can save on advertising costs that they would have otherwise spent on traditional advertising methods such as print ads or payment for online visibility. We allow vendors to showcase their products or services to potential customers who are already interested in hosting events.",
+      "Yes, you read that right!<br />It’s completely free to get listed as a vendor on our platform to unlock revenue opportunities.",
     imagePosition: "left",
   },
 ];
@@ -70,10 +70,10 @@ const WhyVendor = () => {
                   <h3 className="text-lg lg:text-2xl font-semibold text-gray-900 mt-8 md:mt-0 lg:mt-8">
                     {vendor.title}
                   </h3>
-
-                  <p className="text-sm md:text-1xl lg:text-lg text-gray-600 leading-relaxed lg:leading-8 mt-5">
-                    {vendor.description}
-                  </p>
+                  <p
+                    className="text-sm md:text-1xl lg:text-lg text-gray-600 leading-relaxed lg:leading-8 mt-5"
+                    dangerouslySetInnerHTML={{ __html: vendor.description }}
+                  />
                 </div>
               </div>
             </div>
