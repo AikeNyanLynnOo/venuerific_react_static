@@ -14,15 +14,13 @@ const WhatIsSuperVenue = () => {
       image: "/images/super_venue/what_super_venue_badge_icon.webp",
       alt: "Special Badge Icon",
       title: "Special Badge",
-      description:
-        "Stand out with a badge that highlights your venue.",
+      description: "Stand out with a badge that highlights your venue.",
     },
     {
       image: "/images/super_venue/what_super_venue_filter_icon.webp",
       alt: "Super Venue Filter Icon",
       title: "Super Venue Filter Search",
-      description:
-        "A special filter that celebrates YOUR hard work.",
+      description: "A special filter that celebrates YOUR hard work.",
     },
     {
       image: "/images/super_venue/what_super_venue_support_icon.webp",
@@ -41,9 +39,10 @@ const WhatIsSuperVenue = () => {
             What is Super Venue?
           </h1>
           <p className="text-secondary-500 text-xl mt-4">
-            Super Venue is Venuerific's way of recognising our top performing venues.
-            Venues are specially curated based on criteria such as conversion rate,
-            response time, number of bookings and customer ratings.
+            Super Venue is Venuerific's way of recognising our top performing
+            venues. Venues are specially curated based on criteria such as
+            conversion rate, response time, number of bookings and customer
+            ratings.
           </p>
         </div>
 

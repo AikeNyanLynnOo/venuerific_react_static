@@ -31,7 +31,7 @@ const PvmYourPlaceSec = () => {
             },
           ].map((item, index) => (
             <div
-              className="flex items-center md:flex-col md:items-center text-left md:text-center w-full max-w-[200px]" 
+              className="flex items-center md:flex-col md:items-center text-left md:text-center w-full max-w-[200px]"
               key={index}
             >
               <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">

@@ -5,7 +5,7 @@ const TalkBannerVendor = () => {
   return (
     <div className="relative w-full h-auto md:h-[250px] lg:h-[300px] mt-20">
       <div className="absolute w-full h-3/4 md:h-[70%] translate-y-2/3 bg-gradient-to-r from-[#211A4C] to-[#323081] z-0" />
-      <div className="absolute inset-0 w-full h-full px-6 md:px-8 lg:px-12 max-w-screen-2xl mx-auto lg:translate-y-[-100px]"> 
+      <div className="absolute inset-0 w-full h-full px-6 md:px-8 lg:px-12 max-w-screen-2xl mx-auto lg:translate-y-[-100px]">
         <div className="relative w-full h-full">
           <Image
             src="/images/why_vendor_list/vendor_banner.webp"
