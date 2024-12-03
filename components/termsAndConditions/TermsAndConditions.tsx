@@ -15,9 +15,8 @@ const TermsAndConditions = () => {
         <p className="text-secondary-600 text-[20px] mt-6 text-center">
           If you have any further questions, reach out to us{" "}
           <span className="text-primary-600 underline underline-offset-4">
-            here
+            here.
           </span>
-          .
         </p>
         {/* Terms Paragraph 1 */}
         <section>

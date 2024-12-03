@@ -27,7 +27,7 @@ export default function WhyVenueList() {
       <div className="flex flex-col md:flex-col">
         <div className="w-full md:w-auto">
           <VenueMarketing />
-          <VenueMarketingUpdate/>
+          <VenueMarketingUpdate />
         </div>
         <div className="w-full md:w-auto md:order-first">
           <WhyVenueListVideoSec />
