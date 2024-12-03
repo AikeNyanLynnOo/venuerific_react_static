@@ -39,7 +39,7 @@ export const PvmEventsCard = ({
         <p className="text-white text-sm sm:text-base mt-3">{eventDate}</p>
       </div>
 
-      <div className="absolute bottom-4 left-4 right-4 p-4 bg-opacity-70 rounded-lg flex items-center justify-between hidden sm:flex">
+      <div className="absolute bottom-4 left-4 right-4 p-4 bg-opacity-70 rounded-lg flex items-center justify-between sm:flex">
         <img src={logoUrl} alt={logoAlt} className="h-10" />
         <Button
           className="bg-primary-600 text-white py-2 px-4 rounded-lg shadow-md text-[16px]"

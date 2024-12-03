@@ -14,7 +14,7 @@ export default function SuperVenueLayout() {
         className="px-4 md:px-5 items-center py-2 fixed"
         maxWidth="full"
       />
-      <SuperVenueHero/>
+      <SuperVenueHero />
       <SuperVenueRaiseStatus />
       <WhatIsSuperVenue />
       <SuperVenueRequirement />

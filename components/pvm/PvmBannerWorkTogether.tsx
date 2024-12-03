@@ -38,7 +38,7 @@ const PvmBannerWorkTogether = ({
             bg-white text-black w-fit font-semibold px-6 py-3 rounded-lg shadow-lg 
             hover:bg-primary-700 transition md:w-auto 
             sm:bg-white sm:text-black sm:hover:bg-primary-600 
-            md:bg-primary-600 md:text-white md:hover:bg-primary-500 flex items-center gap-2 hidden md:flex"
+            md:bg-primary-600 md:text-white md:hover:bg-primary-500 flex items-center gap-2 md:flex"
             startContent={
               <Image
                 src="/images/pvm/chat_default.webp"
