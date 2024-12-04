@@ -39,7 +39,7 @@ const WhatIsSuperVenue = () => {
             What is Super Venue?
           </h1>
           <p className="text-secondary-500 text-xl mt-4">
-            Super Venue is Venuerific's way of recognising our top performing
+            Super Venue is Venuerific&apos;s way of recognising our top performing
             venues. Venues are specially curated based on criteria such as
             conversion rate, response time, number of bookings and customer
             ratings.

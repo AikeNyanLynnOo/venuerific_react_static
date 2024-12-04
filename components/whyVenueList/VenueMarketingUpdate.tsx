@@ -1,5 +1,4 @@
 "use client";
-
 import { Tab, Tabs } from "@nextui-org/tabs";
 import { useState, useMemo } from "react";
 import { twMerge } from "tailwind-merge";
@@ -10,6 +9,7 @@ const sections = [
     key: "attract_capture",
     title: "Attract & Capture",
     icon: "/images/why_venue_list/venue_marketing_img1.webp",
+    inactiveIcon: "/images/why_venue_list/venue_marketing_img1.webp",
     content: [
       {
         heading: "Rank Higher on Google",
@@ -27,6 +27,7 @@ const sections = [
     key: "manage_automate",
     title: "Manage & Automate",
     icon: "/images/why_venue_list/venue_marketing_img2.webp",
+    inactiveIcon: "/images/why_venue_list/venue_marketing_icon_inactive_2.webp",
     content: [
       {
         heading: "Easily Manage Leads and Bookings",
@@ -48,6 +49,7 @@ const sections = [
     key: "convert_nurture",
     title: "Convert & Nurture",
     icon: "/images/why_venue_list/venue_marketing_img3.webp",
+    inactiveIcon: "/images/why_venue_list/venue_marketing_icon_inactive_3.webp",
     content: [
       {
         heading: "Instant Quotation Generation",
@@ -82,7 +84,7 @@ const VenueMarketingUpdate = () => {
   const currentTab = sections.find((tab) => tab.key === selectedTab);
 
   return (
-    <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-10 bg-primary-50">
+    <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-20 bg-primary-50">
       <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
         <h1 className="hidden md:block text-black text-2xl font-semibold">
           The #1 Venue Marketing Platform in Asia
@@ -111,10 +113,18 @@ const VenueMarketingUpdate = () => {
               key={section.key}
               title={
                 <div
-                  className={`flex items-center gap-2 ${section.textStyle} text-[24px] font-semibold`}
+                  className={`flex items-center gap-2 ${
+                    selectedTab === section.key
+                      ? section.textStyle
+                      : "text-[#98A2B3]"
+                  } text-[24px] font-semibold`}
                 >
                   <Image
-                    src={section.icon}
+                    src={
+                      selectedTab === section.key
+                        ? section.icon
+                        : section.inactiveIcon
+                    }
                     alt={section.title}
                     width={44}
                     height={44}
