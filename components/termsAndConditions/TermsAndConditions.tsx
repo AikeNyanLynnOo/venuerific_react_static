@@ -1,16 +1,27 @@
 "use client";
-import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const TermsAndConditions = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="mt-[81px] w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-10">
-      <div className="px-4 md:px-0 my-10 md:mt-6 max-w-screen-2xl mx-auto w-[60%]">
+      <div className="px-4 md:px-0 my-10 md:mt-6 max-w-screen-2xl mx-auto w-full sm:w-[80%] lg:w-[60%]">
         {" "}
         <p className="text-primary-600 text-[16px] text-center">
           Current as of 20 Jan 2022
         </p>
         <h1 className="text-secondary-900 text-[48px] font-bold mt-6 text-center">
-          Terms & Conditions
+          {isMobile ? "Privacy Policy" : "Terms & Conditions"}
         </h1>
         <p className="text-secondary-600 text-[20px] mt-6 text-center">
           If you have any further questions, reach out to us{" "}
