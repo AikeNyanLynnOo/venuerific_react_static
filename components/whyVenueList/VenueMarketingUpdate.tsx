@@ -20,7 +20,7 @@ const sections = [
         text: "Increase venue bookings through specialized venue marketing strategies.",
       },
     ],
-    rightImage: "/images/why_venue_list/attract_capture_img.png",
+    rightImage: "/images/why_venue_list/1-attract-capture.webp",
     textStyle: "text-primary-600",
   },
   {
@@ -31,18 +31,18 @@ const sections = [
     content: [
       {
         heading: "Easily Manage Leads and Bookings",
-        text: "Track all your leads and manage bookings easily in one platform. Automate the entire venue sales process.",
+        text: "Track all your leads and manage bookings easily in one platform. Automate the entire venue sales process so you can focus what truly matters - growing your venue business.",
       },
       {
         heading: "Manage Your Schedule with Ease",
-        text: "Stay organized from the comfort of our CRM! Our calendar sync feature allows you to integrate your venue’s calendar to Venuerific.",
+        text: "Stay organized from the comfort of our CRM! Our calendar sync feature allows you to integrate your venue’s calendar to Venuerific, enabling you to check event availability and upcoming bookings. Keep your venue management seamless and efficient!",
       },
       {
         heading: "Instant Venue Insights",
-        text: "Save time preparing for meetings with analytics that automatically update in real-time, delivering key insights on your venue's performance.",
+        text: "Save time preparing for meetings with analytics that automatically update in real-time, delivering key insights on your venue's performance, including conversion rates and listing views.",
       },
     ],
-    rightImage: "/images/why_venue_list/manage-automate.png",
+    rightImage: "/images/why_venue_list/2-manage-automate.webp",
     textStyle: "text-[#A261FD]",
   },
   {
@@ -53,7 +53,7 @@ const sections = [
     content: [
       {
         heading: "Instant Quotation Generation",
-        text: "Quickly generate and send quotations to clients via email or WhatsApp.",
+        text: "Quickly generate and send quotations to clients, complete with detailed descriptions and price via email or WhatsApp.",
       },
       {
         heading: "Seamless and Secure Transactions with Venuerific Payment",
@@ -65,7 +65,7 @@ const sections = [
         text: "Harness the power of WhatsApp and email campaigns on Venuerific to promote your venue and nurture customer relationships, positioning your venue for long-term growth.",
       },
     ],
-    rightImage: "/images/why_venue_list/convert-nurture.png",
+    rightImage: "/images/why_venue_list/3-convert-nurture.webp",
     textStyle: "text-[#0D6EFD]",
   },
 ];
@@ -136,17 +136,17 @@ const VenueMarketingUpdate = () => {
           ))}
         </Tabs>
 
-        <div className="text-center md:text-center lg:text-left mt-14">
+        <div className="text-left mt-14">
           {currentTab && (
             <div className="flex flex-col lg:flex-row gap-32 items-center">
               <div className="flex-1 lg:mr-12">
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-left">
                   {currentTab.content.map((item, index) => (
                     <div key={index} className="mb-12">
                       <h3 className="text-[20px] font-semibold text-black mb-2">
                         {item.heading}
                       </h3>
-                      <p className="text-xl text-secondary-600 px-5 md:px-8 lg:px-0">
+                      <p className="text-xl text-secondary-600 lg:px-0">
                         {item.text}
                       </p>
                     </div>
@@ -158,8 +158,8 @@ const VenueMarketingUpdate = () => {
                 <Image
                   src={currentTab.rightImage}
                   alt={`${currentTab.title} Image`}
-                  width={555}
-                  height={555}
+                  width={600}
+                  height={600}
                   className="object-cover"
                 />
               </div>
