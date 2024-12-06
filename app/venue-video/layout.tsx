@@ -1,4 +1,4 @@
-export default function SuperVenue({
+export default function VenueVideo({
   children,
 }: {
   children: React.ReactNode;

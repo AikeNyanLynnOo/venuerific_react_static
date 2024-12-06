@@ -2,7 +2,7 @@ import Image from "next/image";
 
 interface BannerWithTextAndBgProps {
   imgSrc?: string;
-  title?: string;
+  title?: React.ReactNode;
   text?: string;
   btnText?: string;
   btnLink?: string;
