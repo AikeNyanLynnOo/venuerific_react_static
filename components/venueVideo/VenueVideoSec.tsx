@@ -7,19 +7,30 @@ interface VideoCardProps {
   title: string;
 }
 
-const VideoCard: React.FC<VideoCardProps> = ({ src, title }) => (
-  <div className="relative">
-    <iframe
-      className="w-full h-[180px] md:h-[200px] lg:h-[200px] rounded-lg"
-      src={src}
-      title="Venue Video"
-      frameBorder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    />
-    <p className="mt-2 text-primary-600 text-2xl">{title}</p>
-  </div>
-);
+const VideoCard: React.FC<VideoCardProps> = ({ src, title }) => {
+  const youtubeUrl = src.replace("embed", "watch?v");
+
+  return (
+    <div className="relative">
+      <a
+        href={youtubeUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
+      >
+        <iframe
+          className="w-full h-[180px] md:h-[200px] lg:h-[200px] rounded-lg"
+          src={src}
+          title={title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </a>
+      <p className="mt-2 text-primary-600 text-xl font-semibold">{title}</p>
+    </div>
+  );
+};
 
 const VenueVideoSec: React.FC = () => {
   const videos = [
