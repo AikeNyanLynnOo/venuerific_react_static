@@ -76,7 +76,7 @@ const VenueMarketingUpdate = () => {
   const tabsClasses = useMemo(
     () =>
       twMerge(
-        "mt-8 border-b-4 px-5 sm:px-0 rounded-t-lg w-full max-w-screen-2xl mx-auto font-bold"
+        "mt-8 px-5 sm:px-0 rounded-t-lg w-full max-w-screen-2xl mx-auto font-bold"
       ),
     []
   );
@@ -102,9 +102,9 @@ const VenueMarketingUpdate = () => {
           className={tabsClasses}
           classNames={{
             tabList:
-              "mt-6 p-0 text-left flex gap-x-7 w-full md:w-full justify-start",
-            cursor: "w-full h-1 bg-primary-600",
-            tab: "h-12 min-w-fit p-0 flex items-center justify-start text-xl font-semibold",
+              "mt-6 p-0 text-left flex gap-x-7 w-full md:w-full justify-start border-b-4 overflow-visible",
+            cursor: "w-full h-1 bg-primary-600 absolute -bottom-1",
+            tab: "h-auto min-w-fit p-0 flex items-center justify-start text-xl font-semibold py-2 relative",
             tabContent: "min-w-fit p-0",
           }}
         >
