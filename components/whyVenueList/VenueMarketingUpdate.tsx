@@ -140,7 +140,7 @@ const VenueMarketingUpdate = () => {
 
           <div className="text-left mt-14">
             {currentTab && (
-              <div className="flex flex-col lg:flex-row gap-32 items-center">
+              <div className="flex flex-col lg:flex-row gap-32 items-start">
                 <div className="flex-1 lg:mr-12">
                   <div className="flex flex-col items-left">
                     {currentTab.content.map((item, index) => (
@@ -176,14 +176,14 @@ const VenueMarketingUpdate = () => {
             <div key={section.key} className="mb-10">
               <div className="flex flex-col items-start gap-2">
                 {sectionIndex === 0 && (
-                  <div className="w-full h-2 mt-12 mb-3 bg-gradient-to-r from-[#428EFE] to-[#A261FD]"></div>
+                  <div className="w-full h-1.5 mt-12 mb-3 bg-gradient-to-r from-[#428EFE] to-[#A261FD]"></div>
                 )}
                 {sectionIndex === 1 && (
-                  <div className="w-full h-2 mt-6 mb-3 bg-[#A261FD]"></div>
+                  <div className="w-full h-1.5 mt-6 mb-3 bg-[#A261FD]"></div>
                 )}
 
                 {sectionIndex === 2 && (
-                  <div className="w-full h-2 mt-6 mb-3 bg-gradient-to-r from-[#EE46BC] to-[#A261FD]"></div>
+                  <div className="w-full h-1.5 mt-6 mb-3 bg-gradient-to-r from-[#EE46BC] to-[#A261FD]"></div>
                 )}
 
                 <div className="flex items-center gap-4">
