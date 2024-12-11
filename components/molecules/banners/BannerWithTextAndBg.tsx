@@ -47,7 +47,7 @@ export const BannerWithTextAndBg = ({
           {(btnLink && (
             <a href={btnLink}>
               <Button
-                className="rounded-lg w-full md:w-auto bg-primary-600 font-semibold text-base lg:text-lg"
+                className="rounded-lg w-fit bg-primary-600 font-semibold text-base lg:text-lg"
                 size={btnSize || "md"}
                 color="primary"
                 startContent={btnStartContent || <></>}
@@ -59,7 +59,7 @@ export const BannerWithTextAndBg = ({
             </a>
           )) || (
             <Button
-              className="rounded-lg w-full md:w-auto bg-primary-600 font-semibold"
+              className="rounded-lg w-fit bg-primary-600 font-semibold"
               size={btnSize || "md"}
               color="primary"
               startContent={btnStartContent || <></>}
