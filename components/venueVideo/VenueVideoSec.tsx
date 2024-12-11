@@ -27,7 +27,14 @@ const VideoCard: React.FC<VideoCardProps> = ({ src, title }) => {
           allowFullScreen
         />
       </a>
-      <p className="mt-2 text-primary-600 text-xl font-semibold">{title}</p>
+      <a
+        href={youtubeUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block mt-2 text-primary-600 text-xl font-semibold"
+      >
+        {title}
+      </a>
     </div>
   );
 };
