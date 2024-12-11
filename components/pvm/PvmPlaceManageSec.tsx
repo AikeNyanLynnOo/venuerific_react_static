@@ -4,7 +4,7 @@ import Image from "next/image";
 const PvmPlaceManageSec = () => {
   return (
     <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20">
-      <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto py-24 lg:py-10 flex flex-col lg:flex-row items-center lg:justify-between gap-8 lg:gap-[60px]">
+      <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto py-18 lg:py-10 flex flex-col lg:flex-row items-center lg:justify-between gap-8 lg:gap-[60px]">
         <div className="flex-1 space-y-8 text-center lg:text-left lg:mx-auto flex lg:items-center">
           <div>
             <p className="text-secondary-900 text-2xl md:text-3xl leading-relaxed">

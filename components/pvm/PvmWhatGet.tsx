@@ -28,7 +28,7 @@ const PvmWhatGet = () => {
           </div>
 
           <div className="flex-1">
-            <ul className="space-y-4">
+            <ul className="space-y-4 font-semibold">
               {[
                 "Implement a proven management and marketing methodology",
                 "Manage the paperwork trail for all venue inquiries and sales",
