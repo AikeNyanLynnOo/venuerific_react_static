@@ -32,7 +32,7 @@ export const PromotionBadge = ({
         {promoCount > 1 ? (
           <>
             <span className="text-white font-semibold">Promo Available</span>
-            <span className="flex items-center justify-center w-6 h-6 font-semibold bg-white text-danger-500 font-semibold rounded-full">
+            <span className="flex items-center justify-center w-6 h-6 font-semibold bg-white text-danger-500 rounded-full">
               {promoCount}
             </span>
           </>
