@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { useState } from "react";
 import { CaretDown } from "@phosphor-icons/react/dist/ssr";
@@ -71,13 +70,12 @@ const WhyVenueListHero = () => {
   return (
     <div className="relative">
       <div className="absolute inset-0 w-full h-screen sm:h-[500px] md:h-[600px] lg:h-full z-0">
-        <Image
+        <img
           src="/images/hero_imgs/why_venue_list_hero.webp"
           alt="Venue background image"
           className="h-full w-full object-cover object-center"
-          priority
-          height={500}
-          width={1500}
+          height="500"
+          width="1500"
         />
       </div>
       <div className="mt-[81px] w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 relative z-10">
@@ -520,11 +518,11 @@ const WhyVenueListHero = () => {
       {/* G2 User Ratings for mobile */}
       <div className="items-center mt-6 lg:hidden flex justify-center">
         <div className="flex-shrink-0 h-[120px] w-[80px] flex items-center">
-          <Image
+          <img
             src="/images/why_venue_list/why_venue_list_img1.png"
             alt="G2 User Ratings Logo"
-            width={60}
-            height={60}
+            width="60"
+            height="60"
             className="object-contain"
           />
         </div>

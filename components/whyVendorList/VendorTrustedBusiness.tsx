@@ -1,5 +1,4 @@
 import { TRUSTED_BUSINESSES } from "@/config/constants";
-import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 const VendorTrustedBusiness = () => {
@@ -16,15 +15,16 @@ const VendorTrustedBusiness = () => {
 
         <Marquee gradient pauseOnHover className="my-16 md:mt-20">
           {TRUSTED_BUSINESSES.map(({ src, alt, href }, index) => (
-            <Image
-              key={index}
-              alt={alt}
-              className="w-auto h-[55px] mx-10"
-              width={20}
-              height={55}
-              loading="lazy"
-              src={src}
-            />
+            <a key={index} href={href} className="inline-block mx-10">
+              <img
+                src={src}
+                alt={alt}
+                className="w-auto h-[55px]"
+                width="20"
+                height="55"
+                loading="lazy"
+              />
+            </a>
           ))}
         </Marquee>
       </div>

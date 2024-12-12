@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { SOLUTIONS } from "../../config/constants/why-venue-list";
 
 const VenuerificSolution = () => {
@@ -16,12 +15,12 @@ const VenuerificSolution = () => {
               className="bg-white p-4 shadow-sm border border-secondary-200 rounded-lg"
             >
               <div className="relative h-auto mb-4">
-                <Image
+                <img
                   src={venue.image}
                   alt={venue.alt}
                   className="rounded-sm h-60 w-full object-cover"
-                  height={330}
-                  width={350}
+                  height="330"
+                  width="350"
                 />
               </div>
               <p className="text-xl font-semibold text-gray-800">
@@ -31,7 +30,6 @@ const VenuerificSolution = () => {
           ))}
         </div>
       </div>
-          
     </div>
   );
 };

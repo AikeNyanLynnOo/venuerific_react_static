@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { FEATURES } from "../../config/constants/why-venue-list";
 
 const WhyVenuerific = () => {
@@ -16,11 +15,11 @@ const WhyVenuerific = () => {
               className="flex flex-col items-center text-center bg-secondary-50 p-6 rounded-md"
             >
               <div className="relative w-12 h-12 mb-4">
-                <Image
+                <img
                   src={feature.image}
                   alt={feature.alt}
-                  width={48}
-                  height={48}
+                  width="48"
+                  height="48"
                 />
               </div>
               <p className="text-xl font-semibold text-gray-800">

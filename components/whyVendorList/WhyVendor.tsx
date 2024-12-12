@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const vendorData = [
   {
     numberImage: "/images/why_vendor_list/vendor_number1.webp",
@@ -43,25 +41,29 @@ const WhyVendor = () => {
           {vendorData.map((vendor, index) => (
             <div
               key={index}
-              className={`flex flex-col ${vendor.imagePosition === "left" ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-6 md:gap-8 lg:gap-12 p-4 rounded-lg shadow-md md:shadow-none md:p-0`}
+              className={`flex flex-col ${
+                vendor.imagePosition === "left"
+                  ? "md:flex-row"
+                  : "md:flex-row-reverse"
+              } items-center gap-6 md:gap-8 lg:gap-12 p-4 rounded-lg shadow-md md:shadow-none md:p-0`}
             >
               <div className="flex-shrink-0 w-full md:w-1/2">
-                <Image
+                <img
                   src={vendor.contentImage}
                   alt={vendor.title}
-                  width={500}
-                  height={300}
+                  width="500"
+                  height="300"
                   className="rounded-sm w-full h-auto"
                 />
               </div>
 
               <div className="w-full md:w-1/2 flex flex-col items-start md:items-start">
                 <div className="mt-0 mb-0 md:mt-4 md:mb-4 flex items-center justify-center md:justify-start w-full">
-                  <Image
+                  <img
                     src={vendor.numberImage}
                     alt={`Vendor number ${index + 1}`}
-                    width={48}
-                    height={48}
+                    width="48"
+                    height="48"
                     className="lg:w-14 lg:h-14"
                   />
                 </div>

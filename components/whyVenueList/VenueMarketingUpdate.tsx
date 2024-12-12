@@ -2,7 +2,6 @@
 import { Tab, Tabs } from "@nextui-org/tabs";
 import { useState, useMemo } from "react";
 import { twMerge } from "tailwind-merge";
-import Image from "next/image";
 
 const sections = [
   {
@@ -121,15 +120,15 @@ const VenueMarketingUpdate = () => {
                         : "text-[#98A2B3]"
                     } text-[24px] font-semibold`}
                   >
-                    <Image
+                    <img
                       src={
                         selectedTab === section.key
                           ? section.icon
                           : section.inactiveIcon
                       }
                       alt={section.title}
-                      width={44}
-                      height={44}
+                      width="44"
+                      height="44"
                     />
                     <span>{section.title}</span>
                   </div>
@@ -157,11 +156,11 @@ const VenueMarketingUpdate = () => {
                 </div>
 
                 <div className="mt-8 lg:mt-0 lg:flex-none lg:h-full flex items-end">
-                  <Image
+                  <img
                     src={currentTab.rightImage}
                     alt={`${currentTab.title} Image`}
-                    width={600}
-                    height={600}
+                    width="600"
+                    height="600"
                     className="object-cover"
                   />
                 </div>
@@ -187,11 +186,11 @@ const VenueMarketingUpdate = () => {
                 )}
 
                 <div className="flex items-center gap-4">
-                  <Image
+                  <img
                     src={section.icon}
                     alt={section.title}
-                    width={44}
-                    height={44}
+                    width="44"
+                    height="44"
                   />
                   <p className="text-primary-600 text-xl font-semibold">
                     {section.title}

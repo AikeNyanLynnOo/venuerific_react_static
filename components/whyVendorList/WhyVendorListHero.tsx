@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
@@ -47,7 +46,7 @@ const WhyVendorListHero = () => {
     <div className="mt-[81px] w-full mx-auto px-0">
       <div className="px-4 md:px-0 my-10 md:mt-4 mx-auto relative flex flex-col items-center justify-center py-20 lg:px-16 lg:flex-row">
         <div className="absolute inset-0 w-full h-full z-0 mx-auto">
-          <Image
+          <img
             src={
               isMobile
                 ? "/images/hero_imgs/why_vendor_list_hero_mobile.webp"
@@ -55,9 +54,8 @@ const WhyVendorListHero = () => {
             }
             alt="Venue background image"
             className="opacity-100 w-full h-full object-cover"
-            priority
-            height={500}
-            width={1500}
+            height="500"
+            width="1500"
           />
         </div>
         <div className="absolute inset-0 z-10 bg-gray opacity-40" />
@@ -89,12 +87,13 @@ const WhyVendorListHero = () => {
               <div className="flex flex-row justify-center items-center space-x-3 below-299:flex-col below-299:space-x-0 below-299:space-y-3">
                 <div className="flex flex-col w-1/2 max-w-[170px] sm:w-[40%] md:w-[30%] below-299:max-w-[90px] below-299:w-[85%]">
                   <div className="border border-white backdrop-filter justify-center backdrop-blur-md bg-gray-300 bg-opacity-30 text-white px-3 py-3 below-299:px-2 below-299:py-2 rounded-md flex items-center space-x-2">
-                    <Image
+                    <img
                       src="/images/why_vendor_list/vendor_hero_mobile_icon1.webp"
                       alt="Active Users Icon"
-                      width={20}
-                      height={20}
+                      width="20"
+                      height="20"
                     />
+
                     <div className="flex flex-col items-start text-left">
                       <div className="text-[14px] md:text-[16px] font-semibold leading-tight below-299:text-[11px]">
                         1000+
@@ -108,12 +107,13 @@ const WhyVendorListHero = () => {
 
                 <div className="flex flex-col w-1/2 max-w-[170px] sm:w-[40%] md:w-[30%] below-299:max-w-[90px] below-299:w-[85%]">
                   <div className="border border-white backdrop-filter justify-center backdrop-blur-md bg-gray-300 bg-opacity-30 text-white px-3 py-3 below-299:px-2 below-299:py-2 rounded-md flex items-center space-x-2">
-                    <Image
+                    <img
                       src="/images/why_vendor_list/vendor_hero_mobile_icon2.webp"
                       alt="Registered Venues Icon"
-                      width={18}
-                      height={18}
+                      width="18"
+                      height="18"
                     />
+
                     <div className="flex flex-col items-start text-left">
                       <div className="text-[14px] md:text-[16px] font-semibold leading-tight below-299:text-[11px]">
                         500+

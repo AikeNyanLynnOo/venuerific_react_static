@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const sections = [
   {
     title: "Attract & Capture",
@@ -90,11 +88,11 @@ const VenueMarketing = () => {
                   className={`w-full h-[6px] ${section.bgColor} ${section.gradient} mt-8`}
                 ></div>
                 <div className="flex items-center space-x-4">
-                  <Image
+                  <img
                     src={section.image}
                     alt={section.title}
-                    width={44}
-                    height={44}
+                    width="44"
+                    height="44"
                   />
                   <p
                     className={`${section.textColor} text-[24px] font-semibold`}
