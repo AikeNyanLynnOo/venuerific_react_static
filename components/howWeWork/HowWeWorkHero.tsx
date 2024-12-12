@@ -1,17 +1,15 @@
 "use client";
-import Image from "next/image";
 
 const HowWeWorkHero = () => {
   return (
     <div className="relative">
       <div className="absolute inset-0 w-full h-[400px] md:h-[500px]">
-        <Image
+        <img
           src="/images/how_we_work/how_we_work_hero_img.webp"
           alt="How We Work Hero"
+          width="1500"
+          height="500"
           className="h-full w-full object-cover object-center"
-          priority
-          height={500}
-          width={1500}
         />
       </div>
 

@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 const PvmWhatGet = () => {
   return (
     <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-10">
@@ -18,11 +16,11 @@ const PvmWhatGet = () => {
 
         <div className="flex flex-col lg:flex-row items-start pt-6 gap-8">
           <div className="flex-1 hidden lg:block">
-            <Image
+            <img
               src="/images/pvm/pvm_what_get_img.webp"
               alt="Event Management Image"
-              width={560}
-              height={560}
+              width="560"
+              height="560"
               className="rounded-md"
             />
           </div>
@@ -42,11 +40,11 @@ const PvmWhatGet = () => {
                 "Increased venue revenue and profits",
               ].map((text, index) => (
                 <li key={index} className="flex items-start text-secondary-900">
-                  <Image
+                  <img
                     src="/images/pvm/featured_icon.webp"
                     alt="Check Icon"
-                    width={32}
-                    height={32}
+                    width="32"
+                    height="32"
                     className="mr-4"
                   />
                   <span className="pt-1">{text}</span>

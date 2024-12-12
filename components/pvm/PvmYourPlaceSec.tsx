@@ -35,7 +35,13 @@ const PvmYourPlaceSec = () => {
               key={index}
             >
               <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
-                <img src={item.src} alt={item.alt} className="w-12 h-12" />
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="w-12 h-12"
+                  width="48"
+                  height="48"
+                />
               </div>
               <p className="ml-4 md:ml-0 mt-0 md:mt-4 text-lg font-medium text-white">
                 {item.label}

@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 
 const WhatIsSuperVenue = () => {
   const cardData = [
@@ -39,10 +38,10 @@ const WhatIsSuperVenue = () => {
             What is Super Venue?
           </h1>
           <p className="text-secondary-500 text-xl mt-4">
-            Super Venue is Venuerific&apos;s way of recognising our top performing
-            venues. Venues are specially curated based on criteria such as
-            conversion rate, response time, number of bookings and customer
-            ratings.
+            Super Venue is Venuerific&apos;s way of recognising our top
+            performing venues. Venues are specially curated based on criteria
+            such as conversion rate, response time, number of bookings and
+            customer ratings.
           </p>
         </div>
 
@@ -53,11 +52,11 @@ const WhatIsSuperVenue = () => {
               className="border border-secondary200 rounded-lg p-6 flex flex-col items-center text-center md:items-start md:text-left"
             >
               <div className="w-full flex justify-center md:justify-start">
-                <Image
+                <img
                   src={card.image}
                   alt={card.alt}
-                  width={50}
-                  height={50}
+                  width="50"
+                  height="50"
                   className="mb-4"
                 />
               </div>

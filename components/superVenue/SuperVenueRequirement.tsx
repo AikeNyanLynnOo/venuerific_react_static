@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 
 const SuperVenueRequirement = () => {
   const firstCardData = [
@@ -75,15 +74,15 @@ const SuperVenueRequirement = () => {
 
           <div className="relative flex items-center h-full">
             <div className="w-full h-full">
-              <Image
+              <img
                 src="/images/super_venue/super_venue_requirement_sec_img.webp"
                 alt="Super Venue Requirement Image"
-                width={700}
-                height={500}
+                width="700"
+                height="500"
                 className="rounded-lg object-cover h-full w-full"
               />
             </div>
-            <div className="absolute bottom-0 left-0 w-full max-w-[700px] mx-auto py-4 px-6 backdrop-blur-md bg-gray-300 bg-opacity-30 rounded-t-lg">
+            <div className="absolute bottom-0 left-0 w-full mx-auto py-4 px-6 backdrop-blur-md bg-gray-300 bg-opacity-30 rounded-t-lg">
               <span className="text-white text-[30px]">HERE | Singapore</span>
             </div>
           </div>
@@ -93,15 +92,15 @@ const SuperVenueRequirement = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-16">
           <div className="relative flex items-center h-full">
             <div className="w-full h-full">
-              <Image
+              <img
                 src="/images/super_venue/super_venue_requirement_sec_img2.webp"
                 alt="Super Venue Requirement Image 2"
-                width={700}
-                height={500}
+                width="700"
+                height="500"
                 className="rounded-lg object-cover h-full w-full"
               />
             </div>
-            <div className="absolute bottom-0 left-0 w-full max-w-[700px] mx-auto py-4 px-6 backdrop-blur-md bg-gray-300 bg-opacity-30 rounded-t-lg">
+            <div className="absolute bottom-0 left-0 w-full mx-auto py-4 px-6 backdrop-blur-md bg-gray-300 bg-opacity-30 rounded-t-lg">
               <span className="text-white text-[30px]">SOCIOQ | Singapore</span>
             </div>
           </div>

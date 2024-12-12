@@ -1,5 +1,4 @@
 import { TRUSTED_BUSINESSES } from "@/config/constants";
-import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 const PvmTopEventsMarquee = () => {
@@ -12,15 +11,14 @@ const PvmTopEventsMarquee = () => {
 
         <Marquee gradient pauseOnHover className="my-16 md:mt-20">
           {TRUSTED_BUSINESSES.map(({ src, alt, href }, index) => (
-            <Image
-              key={index}
-              alt={alt}
-              className="w-auto h-[55px] mx-10"
-              width={20}
-              height={55}
-              loading="lazy"
-              src={src}
-            />
+            <a href={href} key={index} className="mx-10">
+              <img
+                alt={alt}
+                className="w-auto h-[55px]"
+                loading="lazy"
+                src={src}
+              />
+            </a>
           ))}
         </Marquee>
       </div>

@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 
 const PvmPlaceManageSec = () => {
   return (
@@ -31,11 +30,9 @@ const PvmPlaceManageSec = () => {
         </div>
 
         <div className="hidden lg:block flex-shrink-0 w-full lg:w-auto">
-          <Image
+          <img
             src="/images/pvm/pvm_place_manage_sec_img.webp"
             alt="Venue Management"
-            width={524}
-            height={538}
             className="w-full h-[538px] object-cover rounded-lg"
           />
         </div>

@@ -1,25 +1,18 @@
 "use client";
-import Image from "next/image";
 
 const VenueVideoHero = () => {
   return (
     <div className="relative">
       <div className="absolute inset-0 w-full h-[400px] md:h-[500px]">
-        <Image
-          src="/images/venue_video/venue_video_hero_mobile_img.webp" 
+        <img
+          src="/images/venue_video/venue_video_hero_mobile_img.webp"
           alt="How We Work Hero - Mobile"
-          className="h-full w-full object-cover object-center md:hidden" 
-          priority
-          height={400}
-          width={1500}
+          className="h-full w-full object-cover object-center md:hidden"
         />
-        <Image
-          src="/images/venue_video/venue_video_hero_img.webp" 
+        <img
+          src="/images/venue_video/venue_video_hero_img.webp"
           alt="How We Work Hero - Desktop"
-          className="h-full w-full object-cover object-center hidden md:block" 
-          priority
-          height={500}
-          width={1500}
+          className="h-full w-full object-cover object-center hidden md:block"
         />
       </div>
 
@@ -31,7 +24,7 @@ const VenueVideoHero = () => {
               Venue Video Highlights
             </h1>
             <p className="text-white text-lg max-w-[80ch]">
-              We're an event venue marketplace that provides top production
+              We&apos;re an event venue marketplace that provides top production
               services in Indonesia too. Take a closer look at our top event
               space rental Indonesia through the videos below.
             </p>

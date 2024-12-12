@@ -1,19 +1,16 @@
 "use client";
-import Image from "next/image";
 
 const SuperVenueRaiseStatus = () => {
   return (
     <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-10 bg-secondary-50">
       <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-28">
         <div className="flex-1 order-1 lg:order-none">
-          <Image
+          <img
             src="/images/super_venue/super_venue_raise_status_img.webp"
             alt="Super Venue Raise Status"
             className="w-full h-auto"
-            priority={true}
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            width={500}
-            height={500}
+            width="500"
+            height="500"
           />
         </div>
 
