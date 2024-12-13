@@ -1,7 +1,7 @@
 const vendorData = [
   {
     numberImage: "/images/why_vendor_list/vendor_number1.webp",
-    contentImage: "/images/why_vendor_list/why_vendor_img_1.webp",
+    contentImage: "/images/why_vendor_list/attract-capture-1.webp",
     title: "Rank higher on Google.",
     description:
       "Boost your search engine rankings and drive more organic traffic with Venuerific.",
@@ -9,7 +9,7 @@ const vendorData = [
   },
   {
     numberImage: "/images/why_vendor_list/vendor_number2.webp",
-    contentImage: "/images/why_vendor_list/why_vendor_img_2.webp",
+    contentImage: "/images/why_vendor_list/connect_with_organizers.webp",
     title: "Connect with Event Organizers on Venuerific.",
     description:
       "Over 500,000 active event organizers are on the Venuerific platform.",
@@ -17,7 +17,7 @@ const vendorData = [
   },
   {
     numberImage: "/images/why_vendor_list/vendor_number3.webp",
-    contentImage: "/images/why_vendor_list/why_vendor_img_3.webp",
+    contentImage: "/images/why_vendor_list/group-business.webp",
     title: "Grow your business for free.",
     description:
       "Yes, you read that right!<br />It’s completely free to get listed as a vendor on our platform to unlock revenue opportunities.",
