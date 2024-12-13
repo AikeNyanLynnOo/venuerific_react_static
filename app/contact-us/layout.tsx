@@ -1,4 +1,4 @@
-export default function ContactUsLayout({
+export default function ContactUs({
   children,
 }: {
   children: React.ReactNode;
