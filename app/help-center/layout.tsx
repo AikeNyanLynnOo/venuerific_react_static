@@ -1,4 +1,4 @@
-export default function ContactUsLayout({
+export default function HelpCenter({
   children,
 }: {
   children: React.ReactNode;
