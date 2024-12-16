@@ -30,8 +30,8 @@ export const PromoCodeCard = ({
       <span className="text-secondary-400 text-sm font-normal leading-5">
         {valid_until || ""}
       </span>
-      <span className="uppercase text-sm font-normal leading-5">
-        {description || ""}
+      <span className="capitalize text-sm font-normal leading-5">
+        {description?.toLowerCase() || ""}
       </span>
       <div className="rounded-md border flex justify-between items-center py-2 px-3">
         <span className="text-success-600 text-sm font-bold leading-5">

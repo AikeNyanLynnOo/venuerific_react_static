@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 interface PromotionBadgeProps {
   promotions: {
     name: string;
@@ -7,7 +5,7 @@ interface PromotionBadgeProps {
     description: string;
     code: string;
   }[];
-  handleClick?: () => void;
+  handleClick: () => void;
 }
 
 export const PromotionBadge = ({
@@ -19,20 +17,21 @@ export const PromotionBadge = ({
   return (
     <button
       onClick={handleClick}
-      className="inline-flex w-fit items-center bg-gradient-to-r from-[#FFC641] to-[#FF676A] rounded-full"
+      className="relative inline-flex w-fit items-center bg-gradient-to-r from-[#FFC641] to-[#FF676A] rounded-full"
     >
-      <div className="relative flex-shrink-0 w-8 h-8 p-0 m-0">
-        <div className="bg-white rounded-full h-8 w-8 z-0 top-0 left-0 -translate-x-1 " />
+      <div className="absolute flex-shrink-0 w-9 h-9 p-0 m-0 left-0 -translate-x-1">
+        <div className="bg-white absolute rounded-full h-9 w-9 z-0 top-0 left-0" />
         <img
+          alt="promotion-percent-gif"
           src="/images/animations/percent.gif"
-          className="object-cover w-full h-full rounded-full absolute top-0"
+          className="object-cover w-full h-full scale-125 rounded-full absolute top-0"
         />
       </div>
-      <div className="flex items-center pl-1 pr-4 gap-x-3">
+      <div className="flex items-center pl-10 pr-4 gap-x-3 py-0.5">
         {promoCount > 1 ? (
           <>
-            <span className="text-white font-semibold">Promo Available</span>
-            <span className="flex items-center justify-center w-6 h-6 font-semibold bg-white text-danger-500 rounded-full">
+            <span className="text-white font-semibold">Promos Available</span>
+            <span className="flex items-center justify-center w-6 h-6 font-semibold bg-white text-red-600 rounded-full">
               {promoCount}
             </span>
           </>
