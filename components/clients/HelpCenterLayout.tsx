@@ -95,7 +95,7 @@ export const HelpCenterLayout = ({
                     <input
                       type="email"
                       placeholder="Enter your email"
-                      className="w-full lg:w-[400px] px-4 py-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-primary-600"
+                      className="w-full lg:w-[400px] px-4 py-2 border border-gray-300 focus:border-secondary-400 rounded-md text-black focus:outline-none"
                     />
                     <Button className="bg-primary-600 text-white px-6 py-2 lg:px-8 lg:py-2 rounded-md hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-600">
                       Search
