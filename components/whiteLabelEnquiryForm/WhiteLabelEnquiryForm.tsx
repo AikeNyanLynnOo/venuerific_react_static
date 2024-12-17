@@ -28,10 +28,7 @@ const WhiteLabelEnquiryForm = () => {
     <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-10">
       <div className="px-4 md:px-0 my-10 md:mt-6 max-w-screen-2xl mx-auto w-full sm:w-[80%] lg:w-[60%]">
         {/* Form Container */}
-        <div
-          className="border border-secondary-200 rounded-lg p-6 md:p-8"
-          style={{ borderRadius: "8px" }}
-        >
+        <div className="border-0 sm:border-0 md:border border-secondary-200 rounded-lg p-0 sm:p-0 md:p-8">
           {/* Header */}
           <p className="text-sm text-black mb-6">
             Thank you for considering our venue for your upcoming event! 🎉
@@ -43,16 +40,13 @@ const WhiteLabelEnquiryForm = () => {
           {/* Personal Information */}
           <div className="mb-6">
             <div className="flex items-center mb-4">
-              <h3
-                className="text-xs font-medium"
-                style={{ color: "#9FA9B4", fontSize: "12px" }}
-              >
+              <h3 className="text-xs font-medium text-[#9FA9B4]">
                 Personal information
               </h3>
+
               <div className="flex-grow border-t border-secondary-200 ml-2"></div>
             </div>
 
-            {/* Inline Inputs */}
             <div className="flex flex-col md:flex-row md:space-x-4">
               {/* Name Input */}
               <div className="flex-1">
@@ -86,16 +80,33 @@ const WhiteLabelEnquiryForm = () => {
 
               {/* Phone Input */}
               <div className="flex-1 mt-4 md:mt-0">
-                <span className="text-secondary-700 block mb-2 text-sm font-medium mt-[-3px]">
+                <span className="text-secondary-700 block mb-2 text-sm font-medium leading-5">
                   Phone
                 </span>
                 <PhoneInput
+                  disableSearchIcon
+                  buttonClass="rounded-r-none"
+                  buttonStyle={{
+                    border: "none",
+                    borderRadius: 8,
+                    borderRight: "none",
+                    paddingLeft: 5,
+                    paddingRight: 5,
+                    backgroundColor: "#FFFFFF",
+                  }}
+                  containerClass={`rounded-lg border border-secondary-300 focus:border-secondary-400 hover:border-secondary-400 shadow-sm h-10`}
                   country={"sg"}
+                  countryCodeEditable={false}
+                  disableCountryCode={false}
+                  disableDropdown={false}
+                  dropdownClass="border-secondary-200 rounded-xl shadow-sm"
+                  inputClass={`h-full`}
                   inputStyle={{
-                    border: "1px solid #E5E7EB",
-                    borderRadius: "8px",
+                    border: "none",
+                    height: "100%",
                     width: "100%",
-                    height: "40px",
+                    borderRadius: 8,
+                    paddingLeft: 48,
                   }}
                 />
               </div>
@@ -103,7 +114,6 @@ const WhiteLabelEnquiryForm = () => {
           </div>
 
           {/* Enquiry Information */}
-
           <div>
             <div className="flex items-center mb-4">
               <h3 className="text-xs font-medium text-[#9FA9B4]">
