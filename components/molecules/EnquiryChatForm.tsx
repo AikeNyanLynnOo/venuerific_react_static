@@ -437,7 +437,7 @@ export const EnquiryChatForm = ({
                             min_capacity: any;
                             max_capacity: any;
                           },
-                          index: number,
+                          index: number
                         ) => (
                           <SelectItem
                             key={`${value ? value : "0"}`}
@@ -445,7 +445,7 @@ export const EnquiryChatForm = ({
                           >
                             {name}
                           </SelectItem>
-                        ),
+                        )
                       )) || (
                       <SelectItem key="readonly" isReadOnly>
                         No Options
@@ -510,8 +510,8 @@ export const EnquiryChatForm = ({
                           min_duration,
                           max_duration,
                         }: any,
-                        index: number,
-                      ) => <SelectItem key={value}>{name}</SelectItem>,
+                        index: number
+                      ) => <SelectItem key={value}>{name}</SelectItem>
                     )) || (
                     <SelectItem key="readonly" isReadOnly>
                       No Options
@@ -968,12 +968,12 @@ export const EnquiryChatForm = ({
                           name: string;
                           value: string;
                         },
-                        index: number,
+                        index: number
                       ) => (
                         <SelectItem key={value} value={value}>
                           {name}
                         </SelectItem>
-                      ),
+                      )
                     )) || (
                     <SelectItem key="readonly" isReadOnly>
                       No Options

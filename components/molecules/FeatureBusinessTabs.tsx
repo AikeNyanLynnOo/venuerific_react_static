@@ -56,7 +56,7 @@ export const FeatureBusinessTabs = ({
       className={tabsClasses}
       classNames={{
         tabList: "p-0 text-center flex gap-x-7 w-full md:w-fit",
-        cursor: "w-full h-0.5 bg-primary-600",
+        cursor: "w-full h-0.5 bg-primary-600bu",
         tab: "h-12 min-w-fit p-0",
         tabContent: "min-w-fit p-0",
       }}

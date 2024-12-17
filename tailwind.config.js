@@ -19,6 +19,9 @@ module.exports = {
       height: {
         "custom-h-full": "calc(100vh - 165px)", // 81px + 80px
       },
+      screens: {
+        'below-299': {'max': '299px'},
+      },
     },
   },
   darkMode: "class",

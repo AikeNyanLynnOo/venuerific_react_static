@@ -28,19 +28,19 @@ import { useVenueListStore } from "@/store/venue-list-store";
 
 const DynamicLabelWithIcon = dynamic(() =>
   import("@/components/atoms/LabelWithIcon").then(
-    (module) => module.LabelWithIcon,
-  ),
+    (module) => module.LabelWithIcon
+  )
 );
 
 const DynamicVNFDropdown = dynamic(() =>
   import("@/components/VNFDropdown/Dropdown").then(
-    (module) => module.VNFDropdown,
-  ),
+    (module) => module.VNFDropdown
+  )
 );
 const DynamicUserMenuDropdown = dynamic(() =>
   import("@/components/molecules/UserMenuDropdown").then(
-    (module) => module.UserMenuDropdown,
-  ),
+    (module) => module.UserMenuDropdown
+  )
 );
 
 interface LanguageDescriptor {
@@ -284,7 +284,7 @@ export const VNFNavbar = ({ maxWidth, className }: VNFNavbarProps) => {
                 <Popover
                   isOpen={
                     (navItemsState.find(
-                      (navItem: any) => navItem.name === name && navItem.isOpen,
+                      (navItem: any) => navItem.name === name && navItem.isOpen
                     ) &&
                       true) ||
                     false
@@ -341,7 +341,7 @@ export const VNFNavbar = ({ maxWidth, className }: VNFNavbarProps) => {
                       {dropdowns.map(
                         (
                           { name, description, link, icon }: any,
-                          index: any,
+                          index: any
                         ) => (
                           // <NextLink
                           //   key={index}
@@ -382,7 +382,7 @@ export const VNFNavbar = ({ maxWidth, className }: VNFNavbarProps) => {
                             </div>
                           </a>
                           // </NextLink>
-                        ),
+                        )
                       )}
                     </div>
                   </PopoverContent>
@@ -628,7 +628,7 @@ export const VNFNavbar = ({ maxWidth, className }: VNFNavbarProps) => {
                   userMenus.map(
                     (
                       { name, link, icon, separator_below }: any,
-                      index: any,
+                      index: any
                     ) => ({
                       key: index,
                       link,
@@ -644,7 +644,7 @@ export const VNFNavbar = ({ maxWidth, className }: VNFNavbarProps) => {
                         />
                       ),
                       separator_below,
-                    }),
+                    })
                   )) ||
                 []
               }
@@ -749,7 +749,7 @@ export const VNFNavbar = ({ maxWidth, className }: VNFNavbarProps) => {
                   shouldCloseOnBlur
                   isOpen={
                     (navItemsStateSm.find(
-                      (navItem: any) => navItem.name === name && navItem.isOpen,
+                      (navItem: any) => navItem.name === name && navItem.isOpen
                     ) &&
                       true) ||
                     false
@@ -808,7 +808,7 @@ export const VNFNavbar = ({ maxWidth, className }: VNFNavbarProps) => {
                       {dropdowns.map(
                         (
                           { name, description, link, icon }: any,
-                          index: any,
+                          index: any
                         ) => (
                           // <NextLink
                           //   key={index}
@@ -849,7 +849,7 @@ export const VNFNavbar = ({ maxWidth, className }: VNFNavbarProps) => {
                             </div>
                           </a>
                           // </NextLink>
-                        ),
+                        )
                       )}
                     </div>
                   </PopoverContent>

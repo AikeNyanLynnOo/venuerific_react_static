@@ -73,7 +73,6 @@ const DynamicWantToGrow = dynamic(() =>
   )
 );
 
-
 const DynamicHorizontalScrollList = dynamic(() =>
   import("@/components/molecules/HorizontalScrollList").then(
     (module) => module.HorizontalScrollList
@@ -85,7 +84,6 @@ const DynamicCountryCard = dynamic(() =>
     (module) => module.CountryCard
   )
 );
-
 
 const DynamicImageWithErrorHandle = dynamic(() =>
   import("@/components/molecules/ImageWithErrorHandle").then(

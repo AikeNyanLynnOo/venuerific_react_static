@@ -4,6 +4,7 @@ import { DatePicker } from "@nextui-org/date-picker";
 import Image from "next/image";
 import { CaretDown } from "@phosphor-icons/react/dist/ssr";
 import { Select, SelectItem } from "@nextui-org/select";
+import PromotionBadgeLayout from "@/components/clients/PromotionBadgeLayout";
 
 const room_package = [
   {
@@ -111,6 +112,8 @@ export default function Testing() {
         </div>
       </div>
       <div className="bg-blue-100 h-[70vh]" />
+
+      <PromotionBadgeLayout />
     </div>
   );
 }
