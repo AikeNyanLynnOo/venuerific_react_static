@@ -10,9 +10,35 @@ import Image from "next/image";
 import "react-phone-input-2/lib/style.css";
 import { getLocalTimeZone, today } from "@internationalized/date";
 import { DatePicker } from "@nextui-org/date-picker";
+import { PromoModal } from "../molecules/PromoModal";
+import { useDisclosure } from "@nextui-org/modal";
 import WhiteLabelSchedule from "./WhiteLabelSchedule";
+import { Modal, ModalBody, ModalContent, ModalHeader } from "@nextui-org/modal";
+import { ScheduleModal } from "../molecules/modals/ScheduleModal";
 
-const WhiteLabelPageForm = () => {
+const WhiteLabelPageForm = ({
+  promo,
+  promoCode,
+  isPromoCodeValid,
+  isPromoApplied,
+
+  // setters
+  setPromo,
+  setIsPromoApplied,
+
+  // validators
+  enquiry_options,
+}: {
+  promo: any;
+  promoCode: string;
+  isPromoCodeValid: boolean;
+  isPromoApplied: boolean;
+  setPromo: any;
+  setIsPromoApplied: any;
+
+  // validators
+  enquiry_options?: any;
+}) => {
   const room_package = [
     { name: "Room A", value: "room_a" },
     { name: "Room B", value: "room_b" },
@@ -24,9 +50,15 @@ const WhiteLabelPageForm = () => {
   const times = ["10:00 AM", "11:00 AM", "12:00 PM"];
   const durations = ["1 Hour", "2 Hours", "3 Hours"];
 
+  const promoModal = useDisclosure();
+  const termsModal = useDisclosure();
+  const scheduleModal = useDisclosure();
+
+  const { promotion } = enquiry_options || {};
+
   return (
     <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-0 md:py-10">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
         {/* Form Container */}
         <div className="md:col-span-2">
           <div className="flex flex-col md:flex-row justify-between items-start rounded-lg p-4">
@@ -702,11 +734,50 @@ const WhiteLabelPageForm = () => {
               inputType="text"
               placeholder="Enter promo code"
             >
-              <span className="text-sm font-semibold leading-5 text-primary-600 underline underline-offset-4 cursor-pointer">
-                Promo code available
-              </span>
+              {!promoCode && (
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    promoModal.onOpen();
+                  }}
+                >
+                  <span className="text-sm font-semibold leading-5 text-primary-600 underline underline-offset-4 cursor-pointer">
+                    Promo code available ({(promotion && promotion.length) || 0}
+                    )
+                  </span>
+                </button>
+              )}
+              {isPromoApplied && (
+                <span className="text-sm block font-normal leading-5 text-secondary-500">
+                  Promo will be applied at Venue Owner&apos;s discretion.
+                </span>
+              )}
+              {(isPromoCodeValid && (
+                <button
+                  className="block"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    termsModal.onOpen();
+                  }}
+                >
+                  <span className="text-sm font-normal leading-5 text-secondary-500 underline underline-offset-4">
+                    Read terms & conditions
+                  </span>
+                </button>
+              )) ||
+                (promoCode && (
+                  <span className="block w-full text-danger-500 text-sm font-normal leading-5">
+                    Invalid Promo Code
+                  </span>
+                ))}
             </InputGroup>
           </div>
+          <PromoModal
+            isOpen={promoModal.isOpen}
+            placement="bottom-center"
+            promotion={promotion}
+            onOpenChange={promoModal.onOpenChange}
+          />
 
           <Button
             className="rounded-lg flex-1 w-full bg-primary-600 min-w-10 p-2.5 mt-4"
@@ -737,10 +808,31 @@ const WhiteLabelPageForm = () => {
           </div>
         </div>
 
-        <div className="md:col-span-1">
+        <div className="hidden lg:block lg:col-span-1">
           <WhiteLabelSchedule />
         </div>
       </div>
+
+      <div className="block lg:hidden mb-6">
+        <Select
+          placeholder="Contact and Schedule"
+          aria-label="Contact and Schedule"
+          onChange={() => scheduleModal.onOpen()}
+          classNames={{
+            trigger:
+              "h-[42px] rounded-lg border-1 text-secondary-700 text-sm font-medium",
+          }}
+        >
+          <SelectItem key="contact_schedule" value="contact_schedule">
+            Contact and Schedule
+          </SelectItem>
+        </Select>
+      </div>
+
+      <ScheduleModal
+        isOpen={scheduleModal.isOpen}
+        onOpenChange={scheduleModal.onOpenChange}
+      />
     </div>
   );
 };

@@ -1,8 +1,26 @@
 "use client";
 import React from "react";
 import { Button } from "@nextui-org/button";
+import {
+  checkAvailability,
+  getVenueCalendarInfo,
+} from "@/utils/venueApiFunctions";
+import { useRouter } from "next/navigation";
+import { CalendarModal } from "../molecules/modals/CalendarModal";
+import { useVenueCalendarStore } from "@/store/venue-calendar-store";
+import { useDisclosure } from "@nextui-org/modal";
 
-const WhiteLabelSchedule = () => {
+interface WhiteLabelScheduleProps {
+  params?: any;
+  headerFooterRes?: any;
+  cookies?: any;
+}
+
+export const WhiteLabelSchedule = ({
+  params,
+  headerFooterRes,
+  cookies,
+}: WhiteLabelScheduleProps) => {
   const schedule = [
     { day: "Mon", time: "08.00 am - 09.00 pm" },
     { day: "Tue", time: "08.00 am - 09.00 pm" },
@@ -13,6 +31,72 @@ const WhiteLabelSchedule = () => {
     { day: "Sun", time: "08.00 am - 09.00 pm" },
     { day: "Holidays", time: "Closed" },
   ];
+
+  const router = useRouter();
+
+  // calendar modal
+  const calendarModal = useDisclosure();
+
+  // use venue calendar store
+  const venueCalendarStore = useVenueCalendarStore();
+
+  // handle click , call calendar
+  const handleCalendar = async (start: string, end: string) => {
+    venueCalendarStore.setLoading(true);
+
+    try {
+      const { status, statusText, success, message, data, meta } =
+        await getVenueCalendarInfo({
+          country: (params.country || "sg") as string,
+          cookies,
+          id: params.venue_slug,
+          start,
+          end,
+        });
+
+      if (!success && status === 401) {
+        //401
+        return router.push("/login");
+      }
+
+      if (data && data.redirect_to) {
+        // redirect to
+        return router.push(data.redirect_to);
+      }
+
+      if (!success) {
+        throw new Error(message || "Failed to fetch data");
+      }
+
+      venueCalendarStore.setLoading(false);
+      venueCalendarStore.setErr(null);
+
+      const { country, config, legend, country_long, current_user } = {} as any;
+
+      if (country) {
+        venueCalendarStore.setCountry(country);
+      }
+      if (config && Object.keys(config).length > 0) {
+        venueCalendarStore.setConfig(config);
+      }
+      if (legend && legend.length > 0) {
+        venueCalendarStore.setLegend(legend);
+      }
+      if (data.data && data.data.length > 0) {
+        venueCalendarStore.setData(data.data);
+      }
+      if (country_long) {
+        venueCalendarStore.setCountryLong(country_long);
+      }
+      if (current_user) {
+        venueCalendarStore.setCurrentUser(current_user);
+      }
+    } catch (error: any) {
+      // err
+      venueCalendarStore.setLoading(false);
+      venueCalendarStore.setErr(error);
+    }
+  };
 
   return (
     <div className="border border-secondary-200 rounded-lg p-6 shadow-sm">
@@ -39,6 +123,7 @@ const WhiteLabelSchedule = () => {
       </div>
 
       <Button
+        onClick={calendarModal.onOpen}
         variant="bordered"
         className="w-full mb-6 rounded-lg border border-secondary-300 text-secondary-700 text-[14px] font-semibold flex items-center justify-center gap-2 bg-transparent hover:bg-gray-100"
       >
@@ -83,6 +168,17 @@ const WhiteLabelSchedule = () => {
           />
         </Button>
       </div>
+
+      <CalendarModal
+        data={venueCalendarStore.data}
+        err={venueCalendarStore.err}
+        handleCalendar={handleCalendar}
+        isOpen={calendarModal.isOpen}
+        legend={venueCalendarStore.legend}
+        loading={venueCalendarStore.loading}
+        placement={"bottom-center"}
+        onOpenChange={calendarModal.onOpenChange}
+      />
     </div>
   );
 };
