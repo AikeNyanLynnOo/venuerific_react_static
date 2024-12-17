@@ -5,14 +5,14 @@ import { Button } from "@nextui-org/button";
 import PhoneInput from "react-phone-input-2";
 import { Select, SelectItem } from "@nextui-org/select";
 import { Checkbox } from "@nextui-org/checkbox";
-import { MuiSelect } from "../molecules/MuiSelect";
 import { CaretDown } from "@phosphor-icons/react";
 import Image from "next/image";
 import "react-phone-input-2/lib/style.css";
 import { getLocalTimeZone, today } from "@internationalized/date";
 import { DatePicker } from "@nextui-org/date-picker";
+import WhiteLabelSchedule from "./WhiteLabelSchedule";
 
-const WhiteLabelEnquiryForm = () => {
+const WhiteLabelPageForm = () => {
   const room_package = [
     { name: "Room A", value: "room_a" },
     { name: "Room B", value: "room_b" },
@@ -25,10 +25,71 @@ const WhiteLabelEnquiryForm = () => {
   const durations = ["1 Hour", "2 Hours", "3 Hours"];
 
   return (
-    <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-10">
-      <div className="px-4 md:px-0 my-10 md:mt-6 max-w-screen-2xl mx-auto w-full sm:w-[80%] lg:w-[60%]">
+    <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-0 md:py-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
         {/* Form Container */}
-        <div className="border-0 sm:border-0 md:border border-secondary-200 rounded-lg p-0 sm:p-0 md:p-8">
+        <div className="md:col-span-2">
+          <div className="flex flex-col md:flex-row justify-between items-start rounded-lg p-4">
+            {/* Left Section */}
+            <div className="flex gap-4 w-full">
+              <img
+                src="/images/white_label/distrii_sg.webp"
+                alt="Distrii Singapore"
+                className="w-[70px] h-[70px] object-cover flex-shrink-0"
+              />
+
+              <div className="flex-1">
+                <h2 className="text-black font-semibold text-[20px]">
+                  Distrii Singapore
+                </h2>
+                <div className="flex items-center gap-2 mt-1">
+                  <img
+                    src="/images/icons/location.svg"
+                    alt="Location Icon"
+                    className="w-[16px] h-[16px] object-contain"
+                  />
+                  <p className="text-black text-[14px]">
+                    The Rise @ Oxley, 71, Oxley Rise, #02-17, Singapore
+                  </p>
+                </div>
+
+                {/* Reviews Container (for Mobile and Tablet) */}
+                <div className="inline-flex items-center gap-1 bg-secondary-100 py-2 px-3 rounded-lg mt-4 md:hidden">
+                  <span className="text-yellow-500">
+                    <svg
+                      className="w-[14px] h-[14px]"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.049 2.927a.75.75 0 011.902 0l1.502 4.632h4.867a.75.75 0 01.466 1.34l-3.937 2.869 1.503 4.632a.75.75 0 01-1.152.826l-3.938-2.87-3.937 2.87a.75.75 0 01-1.153-.826l1.503-4.632-3.937-2.87a.75.75 0 01.466-1.34h4.867l1.502-4.632z" />
+                    </svg>
+                  </span>
+                  <span className="text-black text-[14px] font-medium">
+                    4,6
+                  </span>
+                  <span className="text-primary-600 text-[14px]">
+                    24 Reviews
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Reviews Container (for Desktop) */}
+            <div className="hidden md:flex items-center gap-1 bg-secondary-100 py-2 px-3 rounded-lg md:ml-4 flex-none ">
+              <span className="text-yellow-500">
+                <svg
+                  className="w-[14px] h-[14px]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.049 2.927a.75.75 0 011.902 0l1.502 4.632h4.867a.75.75 0 01.466 1.34l-3.937 2.869 1.503 4.632a.75.75 0 01-1.152.826l-3.938-2.87-3.937 2.87a.75.75 0 01-1.153-.826l1.503-4.632-3.937-2.87a.75.75 0 01.466-1.34h4.867l1.502-4.632z" />
+                </svg>
+              </span>
+              <span className="text-black text-[14px] font-medium">4,6</span>
+              <span className="text-primary-600 text-[14px]">24 Reviews</span>
+            </div>
+          </div>
+          <div className="flex-grow border-t border-secondary-200 mb-6" />
           {/* Header */}
           <p className="text-sm text-black mb-6">
             Thank you for considering our venue for your upcoming event! 🎉
@@ -44,7 +105,7 @@ const WhiteLabelEnquiryForm = () => {
                 Personal information
               </h3>
 
-              <div className="flex-grow border-t border-secondary-200 ml-2"/>
+              <div className="flex-grow border-t border-secondary-200 ml-2" />
             </div>
 
             <div className="flex flex-col md:flex-row md:space-x-4">
@@ -119,7 +180,7 @@ const WhiteLabelEnquiryForm = () => {
               <h3 className="text-xs font-medium text-[#9FA9B4]">
                 Enquiry information
               </h3>
-              <div className="flex-grow border-t border-secondary-200 ml-2"/>
+              <div className="flex-grow border-t border-secondary-200 ml-2" />
             </div>
 
             {/* Venue Location */}
@@ -623,6 +684,30 @@ const WhiteLabelEnquiryForm = () => {
             />
           </div>
 
+          {/* Promo code */}
+          <div className="w-full">
+            <InputGroup
+              endContent={
+                <button>
+                  <span className="text-sm font-semibold leading-5 text-primary-600 cursor-pointer">
+                    Apply
+                  </span>
+                </button>
+              }
+              inputLabel={
+                <span className="text-secondary-700 block text-sm font-medium leading-5">
+                  Promo Code
+                </span>
+              }
+              inputType="text"
+              placeholder="Enter promo code"
+            >
+              <span className="text-sm font-semibold leading-5 text-primary-600 underline underline-offset-4 cursor-pointer">
+                Promo code available
+              </span>
+            </InputGroup>
+          </div>
+
           <Button
             className="rounded-lg flex-1 w-full bg-primary-600 min-w-10 p-2.5 mt-4"
             color="primary"
@@ -651,9 +736,13 @@ const WhiteLabelEnquiryForm = () => {
             </a>
           </div>
         </div>
+
+        <div className="md:col-span-1">
+          <WhiteLabelSchedule />
+        </div>
       </div>
     </div>
   );
 };
 
-export default WhiteLabelEnquiryForm;
+export default WhiteLabelPageForm;
