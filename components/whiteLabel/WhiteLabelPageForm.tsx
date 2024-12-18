@@ -54,6 +54,11 @@ const WhiteLabelPageForm = ({
   const termsModal = useDisclosure();
   const scheduleModal = useDisclosure();
 
+  const handleOpenScheduleModal = () => {
+    scheduleModal.onOpen();
+    console.log("Modal opened:", scheduleModal.isOpen);
+  };
+
   const { promotion } = enquiry_options || {};
 
   return (
@@ -717,122 +722,150 @@ const WhiteLabelPageForm = ({
           </div>
 
           {/* Promo code */}
-          <div className="w-full">
-            <InputGroup
-              endContent={
-                <button>
-                  <span className="text-sm font-semibold leading-5 text-primary-600 cursor-pointer">
-                    Apply
+          <div className="pb-[200px] lg:pb-0">
+            <div className="w-full">
+              <InputGroup
+                endContent={
+                  <button>
+                    <span className="text-sm font-semibold leading-5 text-primary-600 cursor-pointer">
+                      Apply
+                    </span>
+                  </button>
+                }
+                inputLabel={
+                  <span className="text-secondary-700 block text-sm font-medium leading-5">
+                    Promo Code
                   </span>
-                </button>
-              }
-              inputLabel={
-                <span className="text-secondary-700 block text-sm font-medium leading-5">
-                  Promo Code
-                </span>
-              }
-              inputType="text"
-              placeholder="Enter promo code"
-            >
-              {!promoCode && (
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    promoModal.onOpen();
-                  }}
-                >
-                  <span className="text-sm font-semibold leading-5 text-primary-600 underline underline-offset-4 cursor-pointer">
-                    Promo code available ({(promotion && promotion.length) || 0}
-                    )
+                }
+                inputType="text"
+                placeholder="Enter promo code"
+              >
+                {!promoCode && (
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      promoModal.onOpen();
+                    }}
+                  >
+                    <span className="text-sm font-semibold leading-5 text-primary-600 underline underline-offset-4 cursor-pointer">
+                      Promo code available (
+                      {(promotion && promotion.length) || 0})
+                    </span>
+                  </button>
+                )}
+                {isPromoApplied && (
+                  <span className="text-sm block font-normal leading-5 text-secondary-500">
+                    Promo will be applied at Venue Owner&apos;s discretion.
                   </span>
-                </button>
-              )}
-              {isPromoApplied && (
-                <span className="text-sm block font-normal leading-5 text-secondary-500">
-                  Promo will be applied at Venue Owner&apos;s discretion.
-                </span>
-              )}
-              {(isPromoCodeValid && (
-                <button
-                  className="block"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    termsModal.onOpen();
-                  }}
-                >
-                  <span className="text-sm font-normal leading-5 text-secondary-500 underline underline-offset-4">
-                    Read terms & conditions
-                  </span>
-                </button>
-              )) ||
-                (promoCode && (
-                  <span className="block w-full text-danger-500 text-sm font-normal leading-5">
-                    Invalid Promo Code
-                  </span>
-                ))}
-            </InputGroup>
+                )}
+                {(isPromoCodeValid && (
+                  <button
+                    className="block"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      termsModal.onOpen();
+                    }}
+                  >
+                    <span className="text-sm font-normal leading-5 text-secondary-500 underline underline-offset-4">
+                      Read terms & conditions
+                    </span>
+                  </button>
+                )) ||
+                  (promoCode && (
+                    <span className="block w-full text-danger-500 text-sm font-normal leading-5">
+                      Invalid Promo Code
+                    </span>
+                  ))}
+              </InputGroup>
+            </div>
+            <PromoModal
+              isOpen={promoModal.isOpen}
+              placement="bottom-center"
+              promotion={promotion}
+              onOpenChange={promoModal.onOpenChange}
+            />
           </div>
-          <PromoModal
-            isOpen={promoModal.isOpen}
-            placement="bottom-center"
-            promotion={promotion}
-            onOpenChange={promoModal.onOpenChange}
-          />
-
-          <Button
-            className="rounded-lg flex-1 w-full bg-primary-600 min-w-10 p-2.5 mt-4"
-            color="primary"
-            variant="solid"
-            onClick={() => {
-              return;
-            }}
-          >
-            Enquiry Now
-          </Button>
-
-          <div className="text-center text-[12px] text-secondary-500 mt-4">
-            By clicking send booking request, you agree to Venuerific's{" "}
-            <a
-              href="#"
-              className="text-primary-600 underline underline-offset-4 hover:text-primary-700"
+          {/* Sticky Bottom Container for Mobile and Tablet */}
+          <div className="block lg:hidden fixed bottom-0 left-0 w-full bg-white border-t border-secondary-200 rounded-t-[22px] shadow-2xl z-50 overflow-hidden">
+            {/* Contact and Schedule */}
+            <div
+              role="button"
+              onClick={handleOpenScheduleModal}
+              className="h-[52px] flex items-center justify-between px-4 border-b border-secondary-200 cursor-pointer"
             >
-              Terms of Service
-            </a>{" "}
-            &amp;{" "}
-            <a
-              href="#"
-              className="text-primary-600 underline underline-offset-4 hover:text-primary-700"
+              <span className="text-primary-600 font-semibold text-[16px]">
+                Contact and Schedule
+              </span>
+              <CaretDown size={20} className="text-primary-600" />
+            </div>
+
+            {/* Enquiry Button */}
+            <div className="px-4 py-5 bg-white">
+              <Button
+                className="rounded-lg w-full bg-primary-600 text-white text-center py-2"
+                color="primary"
+                variant="solid"
+              >
+                Enquire Now
+              </Button>
+            </div>
+
+            {/* Terms and Privacy */}
+            <div className="text-center text-[12px] text-secondary-500 pb-3 px-4 bg-white">
+              By clicking send booking request, you agree to Venuerific's{" "}
+              <a
+                href="#"
+                className="text-primary-600 underline underline-offset-4 hover:text-primary-700"
+              >
+                Terms of Service
+              </a>{" "}
+              &amp;{" "}
+              <a
+                href="#"
+                className="text-primary-600 underline underline-offset-4 hover:text-primary-700"
+              >
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+
+          {/* Enquiry Button and Terms for Desktop */}
+          <div className="hidden lg:block w-full my-6">
+            <Button
+              className="rounded-lg w-full bg-primary-600 text-white text-center py-3 font-semibold"
+              color="primary"
+              variant="solid"
             >
-              Privacy Policy
-            </a>
+              Enquire Now
+            </Button>
+            <p className="text-[12px] text-secondary-500 mt-3 text-center">
+              By clicking send booking request, you agree to Venuerific's{" "}
+              <a
+                href="#"
+                className="text-primary-600 underline underline-offset-4 hover:text-primary-700"
+              >
+                Terms of Service
+              </a>{" "}
+              &amp;{" "}
+              <a
+                href="#"
+                className="text-primary-600 underline underline-offset-4 hover:text-primary-700"
+              >
+                Privacy Policy
+              </a>
+            </p>
           </div>
         </div>
+        {/* Schedule Modal */}
+        <ScheduleModal
+          isOpen={scheduleModal.isOpen}
+          onOpenChange={scheduleModal.onOpenChange}
+        />
 
         <div className="hidden lg:block lg:col-span-1">
           <WhiteLabelSchedule />
         </div>
       </div>
-
-      <div className="block lg:hidden mb-6">
-        <Select
-          placeholder="Contact and Schedule"
-          aria-label="Contact and Schedule"
-          onChange={() => scheduleModal.onOpen()}
-          classNames={{
-            trigger:
-              "h-[42px] rounded-lg border-1 text-secondary-700 text-sm font-medium",
-          }}
-        >
-          <SelectItem key="contact_schedule" value="contact_schedule">
-            Contact and Schedule
-          </SelectItem>
-        </Select>
-      </div>
-
-      <ScheduleModal
-        isOpen={scheduleModal.isOpen}
-        onOpenChange={scheduleModal.onOpenChange}
-      />
     </div>
   );
 };

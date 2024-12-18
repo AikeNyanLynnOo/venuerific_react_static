@@ -1,10 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@nextui-org/button";
 import {
   checkAvailability,
   getVenueCalendarInfo,
 } from "@/utils/venueApiFunctions";
+import { CaretDown } from "@phosphor-icons/react";
 import { useRouter } from "next/navigation";
 import { CalendarModal } from "../molecules/modals/CalendarModal";
 import { useVenueCalendarStore } from "@/store/venue-calendar-store";
@@ -98,11 +99,13 @@ export const WhiteLabelSchedule = ({
     }
   };
 
+  const [isScheduleOpen, setIsScheduleOpen] = useState(false);
+
   return (
-    <div className="border border-secondary-200 rounded-lg p-6 shadow-sm">
+    <div className="lg:border lg:border-secondary-200 rounded-lg p-0 lg:p-6 shadow-sm">
       <div className="flex justify-between items-center mb-4">
         <div className="flex items-center">
-          <div className="w-16 h-16 rounded-full flex-shrink-0 mr-4">
+          <div className="w-16 h-16 rounded-full flex-shrink-0 mr-4 hidden lg:block">
             <img
               src="/images/white_label/agustine_img.webp"
               alt="Host Avatar"
@@ -139,9 +142,26 @@ export const WhiteLabelSchedule = ({
         <div className="flex items-center mb-4">
           <h3 className="text-xs font-medium text-[#9FA9B4]">Open schedule</h3>
           <div className="flex-grow border-t border-secondary-200 ml-2" />
+          <div className="flex-grow border-t border-secondary-200 ml-2" />
+          {/* CaretDown Icon with Toggle Handler for Mobile and Tablet */}
+          <div
+            className="block lg:hidden ml-2 cursor-pointer"
+            onClick={() => setIsScheduleOpen(!isScheduleOpen)}
+          >
+            <CaretDown
+              size={20}
+              className={`text-secondary-400 transition-transform duration-300 ${
+                isScheduleOpen ? "rotate-180" : ""
+              }`}
+            />
+          </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 text-sm">
+        <div
+          className={`grid grid-cols-2 gap-2 text-sm ${
+            isScheduleOpen ? "block" : "hidden lg:grid"
+          }`}
+        >
           {schedule.map(({ day, time }) => (
             <div key={day} className="p-2 bg-[#F7FAFC] rounded-lg">
               <span className="text-[14px] text-[#9FA9B4] font-semibold">
@@ -167,6 +187,38 @@ export const WhiteLabelSchedule = ({
             className="w-[87px] h-[20px] object-contain"
           />
         </Button>
+
+        {/* Enquiry Button */}
+        <div className="lg:hidden flex-grow border-t border-secondary-200 my-4" />
+
+        <Button
+          className="lg:hidden rounded-lg w-full bg-primary-600 text-white items-center justify-center gap-2 px-4 text-center py-2"
+          color="primary"
+          variant="solid"
+          onClick={() => {
+            return;
+          }}
+        >
+          Enquire Now
+        </Button>
+
+        {/* Terms and Privacy */}
+        <div className="lg:hidden text-center text-[12px] text-secondary-500 mt-4 pb-3 px-4 bg-white">
+          By clicking send booking request, you agree to Venuerific's{" "}
+          <a
+            href="#"
+            className="text-primary-600 underline underline-offset-4 hover:text-primary-700"
+          >
+            Terms of Service
+          </a>{" "}
+          &amp;{" "}
+          <a
+            href="#"
+            className="text-primary-600 underline underline-offset-4 hover:text-primary-700"
+          >
+            Privacy Policy
+          </a>
+        </div>
       </div>
 
       <CalendarModal
