@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import InputGroup from "../atoms/InputGroup";
 import { Button } from "@nextui-org/button";
 import PhoneInput from "react-phone-input-2";
@@ -57,6 +57,18 @@ const WhiteLabelPageForm = ({
   const handleOpenScheduleModal = () => {
     scheduleModal.onOpen();
     console.log("Modal opened:", scheduleModal.isOpen);
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+    handleOpenScheduleModal();
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+    scheduleModal.onClose();
   };
 
   const { promotion } = enquiry_options || {};
@@ -785,18 +797,24 @@ const WhiteLabelPageForm = ({
               onOpenChange={promoModal.onOpenChange}
             />
           </div>
+
           {/* Sticky Bottom Container for Mobile and Tablet */}
           <div className="block lg:hidden fixed bottom-0 left-0 w-full bg-white border-t border-secondary-200 rounded-t-[22px] shadow-2xl z-50 overflow-hidden">
             {/* Contact and Schedule */}
             <div
               role="button"
-              onClick={handleOpenScheduleModal}
+              onClick={handleClick}
               className="h-[52px] flex items-center justify-between px-4 border-b border-secondary-200 cursor-pointer"
             >
               <span className="text-primary-600 font-semibold text-[16px]">
                 Contact and Schedule
               </span>
-              <CaretDown size={20} className="text-primary-600" />
+              <CaretDown
+                size={20}
+                className={`transform transition-transform ${
+                  isOpen ? "rotate-180" : ""
+                }`}
+              />
             </div>
 
             {/* Enquiry Button */}
@@ -856,10 +874,15 @@ const WhiteLabelPageForm = ({
             </p>
           </div>
         </div>
+
         {/* Schedule Modal */}
         <ScheduleModal
           isOpen={scheduleModal.isOpen}
-          onOpenChange={scheduleModal.onOpenChange}
+          onOpenChange={(isModalOpen) => {
+            if (!isModalOpen) {
+              handleCloseModal();
+            }
+          }}
         />
 
         <div className="hidden lg:block lg:col-span-1">
