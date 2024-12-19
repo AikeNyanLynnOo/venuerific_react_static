@@ -443,7 +443,7 @@ export const INDUSTRY_LEADERS = [
     src: "/images/why_venue_list/industry_leaders/5.png",
     alt: "industryleader5",
     href: "#",
-  }
+  },
 ];
 
 export const COOKIE_NAME = "googtrans";
