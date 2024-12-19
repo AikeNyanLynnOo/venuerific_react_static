@@ -7,16 +7,14 @@ const PvmPlaceManageSec = () => {
         <div className="flex-1 space-y-8 text-center lg:text-left lg:mx-auto flex lg:items-center">
           <div>
             <p className="text-secondary-900 text-2xl md:text-3xl leading-relaxed">
-              Venuerific&apos;s Private Venue Management is proud of its
-              management of over 20+ unique venues around Singapore, with each
-              providing unique spaces for birthdays, corporate events, weddings,
-              meetings, and other celebrations.
+              Next-Level Venue Management
+              <span className="block">Simplify Event Planning</span>
             </p>
+
             <p className="mt-8 text-secondary-600 text-lg md:text-xl leading-relaxed">
-              Our Private Venue Management system takes your venue marketing,
-              enquiries management, and event execution to new heights. We are
-              proud of our expert management of spaces around Singapore, home to
-              any and all celebrations.
+              Transform how you manage your venue with us, covering everything
+              from venue marketing , lead generation to seamless event
+              execution.
             </p>
             <div className="mt-10 flex flex-col items-center lg:items-start space-y-1">
               <span className="text-primary-600 text-[60px] font-semibold">

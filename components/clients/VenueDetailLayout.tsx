@@ -1670,7 +1670,7 @@ export const VenueDetailLayout = ({
           </div>
 
           {/* Footer  */}
-          <div className="w-full mt-10 mx-auto px-5 md:px-5 lg:px-12 xl:px-20 block md:flex items-center justify-between w-full">
+          <div className="w-full mt-10 mx-auto px-5 md:px-5 lg:px-12 xl:px-20 block md:flex items-center justify-between">
             <Footer headerFooterRes={headerFooterRes} />
           </div>
         </>
