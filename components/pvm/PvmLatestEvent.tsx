@@ -21,7 +21,7 @@ const PvmLatestEvent = () => {
         title="Our Latest Event"
         titleClasses="text-primary-700 font-semibold text-3xl"
       >
-        <p className="text-black text-xl">
+        <p className="text-black text-xl font-medium">
           Venuerific has the experience necessary to manage a variety of venues
           and to host all kinds of events. From high-profile corporate dinners.
         </p>

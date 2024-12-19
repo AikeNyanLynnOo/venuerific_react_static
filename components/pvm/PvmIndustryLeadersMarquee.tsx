@@ -1,4 +1,4 @@
-import { TRUSTED_BUSINESSES } from "@/config/constants";
+import { INDUSTRY_LEADERS } from "@/config/constants";
 import Marquee from "react-fast-marquee";
 
 const PvmIndustryLeadersMarquee = () => {
@@ -10,11 +10,13 @@ const PvmIndustryLeadersMarquee = () => {
         </h2>
 
         <Marquee gradient pauseOnHover className="my-16 md:mt-20">
-          {TRUSTED_BUSINESSES.map(({ src, alt, href }, index) => (
-            <a href={href} key={index} className="mx-10">
+          {INDUSTRY_LEADERS.map(({ src, alt, href }, index) => (
+            <a href={href} key={index} className="inline-block mx-10">
               <img
                 alt={alt}
                 className="w-auto h-[55px]"
+                width="20"
+                height="55"
                 loading="lazy"
                 src={src}
               />

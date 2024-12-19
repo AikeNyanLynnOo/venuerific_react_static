@@ -362,30 +362,88 @@ export const MARQUEE_IMGS = [
 
 export const TRUSTED_BUSINESSES = [
   {
-    src: "/images/why_venue_list/venue_trusted_business_img1.svg",
+    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/1.png",
     alt: "trusted1",
     href: "#",
   },
   {
-    src: "/images/why_venue_list/venue_trusted_business_img2.svg",
+    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/2.webp",
     alt: "trusted2",
     href: "#",
   },
   {
-    src: "/images/why_venue_list/venue_trusted_business_img3.svg",
+    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/3.png",
     alt: "trusted3",
     href: "#",
   },
   {
-    src: "/images/why_venue_list/venue_trusted_business_img4.svg",
+    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/4.png",
     alt: "trusted4",
     href: "#",
   },
   {
-    src: "/images/why_venue_list/venue_trusted_business_img5.svg",
+    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/5.png",
     alt: "trusted5",
     href: "#",
   },
+  {
+    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/6.png",
+    alt: "trusted6",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/7.png",
+    alt: "trusted7",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/8.png",
+    alt: "trusted8",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/9.png",
+    alt: "trusted9",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/10.png",
+    alt: "trusted10",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/11.png",
+    alt: "trusted11",
+    href: "#",
+  },
+];
+
+export const INDUSTRY_LEADERS = [
+  {
+    src: "/images/why_venue_list/industry_leaders/1.png",
+    alt: "industryleader1",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/industry_leaders/2.png",
+    alt: "industryleader2",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/industry_leaders/3.png",
+    alt: "industryleader3",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/industry_leaders/4.png",
+    alt: "industryleader4",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/industry_leaders/5.png",
+    alt: "industryleader5",
+    href: "#",
+  }
 ];
 
 export const COOKIE_NAME = "googtrans";
