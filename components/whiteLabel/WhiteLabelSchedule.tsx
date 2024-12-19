@@ -99,7 +99,7 @@ export const WhiteLabelSchedule = ({
     }
   };
 
-  const [isScheduleOpen, setIsScheduleOpen] = useState(false);
+  const [isScheduleOpen, setIsScheduleOpen] = useState(true);
 
   return (
     <div className="lg:border lg:border-secondary-200 rounded-lg p-0 lg:p-6 shadow-sm">
