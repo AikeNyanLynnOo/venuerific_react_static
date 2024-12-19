@@ -65,7 +65,7 @@ export const PvmBannerWorkTogether = ({
               color="primary"
               startContent={
                 <img
-                  src="/images/pvm/chat_default.webp"
+                  src="/images/pvm/calendar.webp"
                   alt="Chat Icon Desktop"
                   className="w-4 h-4"
                 />

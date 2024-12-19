@@ -37,10 +37,9 @@ const PvmVenueManagement = () => {
             Management
           </h1>
           <p className="text-secondary-500 text-lg">
-            Managing your venue can be a logistical and creative nightmare,
-            especially since you have to keep up with it day-to-day. This is
-            where we come in: Venuerific Management Service will manage
-            everything from your enquiry to post-event.
+            Venue management can be a challenge, but our Private Venue
+            Management services will transform how you run things—managing
+            everything from inquiries to post-event follow-up.
           </p>
         </header>
 

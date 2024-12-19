@@ -23,7 +23,7 @@ export const ScheduleModal = ({ isOpen, onOpenChange }: ScheduleModalProps) => {
         backdrop: "bg-black/40",
       }}
     >
-      <ModalContent>
+      <ModalContent className="max-h-[calc(100%-4rem)]">
         {(onClose) => (
           <>
             <ModalHeader className="flex items-center justify-between px-4 py-2 ">

@@ -4,7 +4,7 @@ const PvmYourPlaceSec = () => {
   return (
     <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-14 bg-primary-800">
       <div className="max-w-[1000px] px-4 md:px-0 my-10 md:mt-4 mx-auto text-center">
-        <h2 className="text-3xl text-white">Your Place Is In Good Hands.</h2>
+        <h2 className="text-3xl text-white">Your Space Is In Good Hands.</h2>
 
         <p className="text-xl text-primary-200 mt-6">
           Venuerific has been the standard for venue management and events

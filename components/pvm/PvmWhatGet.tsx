@@ -5,13 +5,13 @@ const PvmWhatGet = () => {
     <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-10">
       <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
         <h2 className="text-primary-800 text-3xl font-bold mb-6 text-center lg:text-left">
-          What will you get
+          Why Venuerific as Your Venue Management Partner?
         </h2>
         <p className="text-secondary-600 text-lg mb-10 text-center lg:text-left">
-          Venuerific has the experience necessary to manage a variety of venues
-          and to host all kinds of events. From high-profile corporate dinners
-          to personal milestones such as engagements, birthday parties, and
-          weddings, we have what you need.
+          Venuerific brings the expertise to manage a diverse range of venues
+          and host every type of event. Whether it&apos;s a high-profile
+          corporate dinner or personal milestones like engagements, birthdays,
+          and weddings, we have the solutions and services you need.
         </p>
 
         <div className="flex flex-col lg:flex-row items-start pt-6 gap-8">

@@ -174,19 +174,26 @@ export const WhiteLabelSchedule = ({
       </div>
 
       <div className="text-center mt-6">
-        <Button
-          variant="light"
-          className="bg-primary-100 rounded-lg px-4 py-2 w-full flex items-center justify-center gap-2"
+        <a
+          href="/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="block w-full"
         >
-          <span className="text-[14px] font-semibold text-secondary-700">
-            View Venue at
-          </span>
-          <img
-            src="/images/white_label/venuerific_logo.webp"
-            alt="Venuerific Logo"
-            className="w-[87px] h-[20px] object-contain"
-          />
-        </Button>
+          <Button
+            variant="light"
+            className="bg-primary-100 rounded-lg px-4 py-2 w-full flex items-center justify-center gap-2"
+          >
+            <span className="text-[14px] font-semibold text-secondary-700">
+              View Venue at
+            </span>
+            <img
+              src="/images/white_label/venuerific_logo.webp"
+              alt="Venuerific Logo"
+              className="w-[87px] h-[20px] object-contain"
+            />
+          </Button>
+        </a>
 
         {/* Enquiry Button */}
         <div className="lg:hidden flex-grow border-t border-secondary-200 my-4" />
