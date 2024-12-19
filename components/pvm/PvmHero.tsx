@@ -5,7 +5,7 @@ import { Button } from "@nextui-org/button";
 const PvmHero = () => {
   return (
     <div className="relative">
-      <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-[400px] md:h-[500px]">
         <img
           src="/images/pvm/pvm_hero_img.webp"
           alt="Venue background image"
@@ -13,8 +13,8 @@ const PvmHero = () => {
         />
       </div>
       <div className="mt-[81px] w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 relative z-30">
-        <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto flex flex-col items-center justify-center py-20 lg:flex-row lg:items-start lg:justify-start">
-          <div className="max-w-screen-xl mx-auto px-8 lg:mt-20 lg:w-3/5 lg:pr-8 space-y-4 text-center lg:text-left text-white z-40 relative lg:mx-0">
+        <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto flex flex-col items-center justify-center h-[400px] md:h-[500px] py-20 lg:flex-row lg:items-center lg:justify-start">
+          <div className="max-w-screen-xl mx-auto px-8 lg:w-3/5 lg:pr-8 space-y-4 text-center lg:text-left text-white z-40 relative lg:mx-0">
             {/* <div className="flex items-center justify-center lg:justify-start space-x-2 mb-4">
               <img
                 src="/images/pvm/pvm_hero_trusted_icon.webp"
@@ -27,10 +27,12 @@ const PvmHero = () => {
             </div> */}
 
             <h1 className="text-3xl lg:text-5xl font-semibold">
-            Increase revenue and elevate experiences
+              Increase revenue and elevate experiences
             </h1>
             <p className="text-white text-lg max-w-[60ch]">
-            Transform your venue&apos;s potential with Venuerific&apos;s Private Venue Management service, driving increased revenue while delivering exceptional event experiences.
+              Transform your venue&apos;s potential with Venuerific&apos;s
+              Private Venue Management service, driving increased revenue while
+              delivering exceptional event experiences.
             </p>
 
             <div className="flex justify-center lg:justify-start">
