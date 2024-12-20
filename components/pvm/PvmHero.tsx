@@ -5,7 +5,7 @@ import { Button } from "@nextui-org/button";
 const PvmHero = () => {
   return (
     <div className="relative">
-        <div className="absolute inset-0 w-full h-[400px] md:h-[500px]">
+      <div className="absolute inset-0 w-full h-[400px] md:h-[500px]">
         <img
           src="/images/pvm/pvm_hero_img.webp"
           alt="Venue background image"
@@ -26,7 +26,7 @@ const PvmHero = () => {
               </p>
             </div> */}
 
-            <h1 className="text-3xl lg:text-5xl font-semibold">
+            <h1 className="text-3xl lg:text-4xl font-semibold">
               Increase revenue and elevate experiences
             </h1>
             <p className="text-white text-lg max-w-[60ch]">
@@ -46,7 +46,7 @@ const PvmHero = () => {
                   />
                 }
               >
-                <span className="text-[16px]">Talk To Us</span>
+                <span className="text-[16px]">Schedule A Consultation</span>
               </Button>
             </div>
           </div>
