@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import dynamic from "next/dynamic";
 import { Fragment, useRef } from "react";
 import { WhyListGrowCard } from "../whyVenueList/WhyListGrowCard";
-import { PvmEventsCard } from "../pvm/PvmEventsCard";
+import { PvmEventCard } from "../pvm/PvmEventCard";
 
 const DynamicCountryCard = dynamic(() =>
   import("@/components/molecules/CountryCard").then(
@@ -75,7 +75,7 @@ export const HorizontalScrollList = ({
                   <DynamicReviewCard {...item} />
                 )}
                 {cardType === "whylistgrow" && <WhyListGrowCard {...item} />}
-                {cardType === "pvmevents" && <PvmEventsCard {...item} />}
+                {cardType === "pvmevents" && <PvmEventCard {...item} />}
               </Fragment>
             ))}
         </div>

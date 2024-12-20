@@ -1,5 +1,5 @@
 import { Button } from "@nextui-org/button";
-interface PvmEventsCardProps {
+interface PvmEventCardProps {
   imageUrl: string;
   imgAlt: string;
   logoUrl: string;
@@ -8,16 +8,16 @@ interface PvmEventsCardProps {
   eventDate: string;
 }
 
-export const PvmEventsCard = ({
+export const PvmEventCard = ({
   imageUrl,
   imgAlt,
   logoUrl,
   logoAlt,
   eventTitle,
   eventDate,
-}: PvmEventsCardProps) => {
+}: PvmEventCardProps) => {
   return (
-    <div className="relative overflow-hidden rounded-lg shadow-lg min-w-full sm:min-w-[400px] w-fit max-w-[420px] h-[280px] sm:h-[250px]">
+    <div className="relative overflow-hidden rounded-lg shadow-lg min-w-full  sm:min-w-[400px] w-fit max-w-[400px] h-[280px] sm:h-[250px]">
       <img src={imageUrl} alt={imgAlt} className="w-full h-full object-cover" />
 
       <div className="absolute top-6 left-4 md:hidden z-20 ">

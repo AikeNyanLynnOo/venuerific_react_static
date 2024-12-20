@@ -1,6 +1,6 @@
 import { HorizontalScrollList } from "../molecules/HorizontalScrollList";
 import { ScrollContainerWithTitle } from "../molecules/ScrollContainerWithTitle";
-import { PvmEventsCard } from "./PvmEventsCard";
+import { PvmEventCard } from "./PvmEventCard";
 
 const PvmLatestEvent = () => {
   const venueItems = [
@@ -30,7 +30,7 @@ const PvmLatestEvent = () => {
 
         <HorizontalScrollList items={venueItems} cardType="pvmevents">
           {venueItems.map((item) => (
-            <PvmEventsCard
+            <PvmEventCard
               key={item.id}
               imageUrl={item.imageUrl}
               imgAlt={item.alt}
