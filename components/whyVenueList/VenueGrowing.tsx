@@ -63,8 +63,9 @@ const VenueGrowing = () => {
       <ScrollContainerWithTitle
         className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto"
         title={` The world's best venues are growing their venues using Venuerific`}
-        titleClasses="text-primary-700 font-semibold text-3xl"
+        titleClasses="text-primary-700 font-semibold text-[36px]"
         text={`Thousands of venues, including WeWork, Mandala Club, Guoco Midtown Network Hub, and more are increasing their revenue by partnering with Venuerific.`}
+        textClasses="text-black text-[24px] font-medium"
       >
         <HorizontalScrollList items={venueItems} cardType="whylistgrow" />
       </ScrollContainerWithTitle>
