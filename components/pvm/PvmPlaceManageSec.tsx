@@ -6,12 +6,12 @@ const PvmPlaceManageSec = () => {
       <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto py-18 lg:py-10 flex flex-col lg:flex-row items-center lg:justify-between gap-8 lg:gap-[60px]">
         <div className="flex-1 space-y-8 text-center lg:text-left lg:mx-auto flex lg:items-center">
           <div>
-            <p className="text-secondary-900 text-2xl md:text-3xl leading-relaxed">
+            <p className="text-secondary-900 text-[24px] leading-relaxed">
               Next-Level Venue Management
               <span className="block">Simplify Event Planning</span>
             </p>
 
-            <p className="mt-8 text-secondary-600 text-lg md:text-xl leading-relaxed">
+            <p className="mt-8 text-secondary-600 text-lg md:text-[20px] leading-relaxed">
               Transform how you manage your venue with us, covering everything
               from venue marketing , lead generation to seamless event
               execution.
@@ -20,7 +20,7 @@ const PvmPlaceManageSec = () => {
               <span className="text-primary-600 text-[60px] font-semibold">
                 +20
               </span>
-              <span className="text-secondary-500 text-2xl">
+              <span className="text-secondary-500 text-[24px] font-semibold">
                 Places managed by us
               </span>
             </div>

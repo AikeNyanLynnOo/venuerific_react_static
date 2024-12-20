@@ -19,9 +19,9 @@ const PvmLatestEvent = () => {
       <ScrollContainerWithTitle
         className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto flex flex-col items-center md:items-start text-center md:text-left"
         title="Our Latest Event"
-        titleClasses="text-primary-700 font-semibold text-3xl"
+        titleClasses="text-primary-700 font-semibold text-[36px]"
       >
-        <p className="text-black text-xl font-medium">
+        <p className="text-black text-[24px] font-medium">
           Venuerific has the experience necessary to manage a variety of venues
           and to host all kinds of events. From high-profile corporate dinners.
         </p>
