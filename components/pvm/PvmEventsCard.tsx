@@ -27,7 +27,7 @@ export const PvmEventsCard = ({
       <div
         className="
         absolute top-0 left-0 w-full 
-        h-[calc(50%+4px)] md:h-[calc(33%+7px)] sm:h-[calc(50%+8px)] 
+        h-[calc(50%+4px)] md:h-[calc(33%+12px)] sm:h-[calc(50%+8px)] 
         backdrop-blur-md bg-gray-300 bg-opacity-30 
         flex flex-col text-left 
         p-6 md:pt-4 md:pb-4 md:pl-6 
@@ -37,7 +37,7 @@ export const PvmEventsCard = ({
         <h3 className="text-white text-2xl md:text-3xl font-bold mt-11 md:mt-0">
           {eventTitle}
         </h3>
-        <p className="text-white text-sm md:text-base">{eventDate}</p>
+        <p className="text-white text-sm md:text-base md:pt-2">{eventDate}</p>
       </div>
 
       <div className="absolute bottom-4 left-4 right-4 p-4 bg-opacity-70 rounded-lg hidden md:flex items-center justify-between">
