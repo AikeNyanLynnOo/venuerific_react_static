@@ -5,14 +5,40 @@ import { Button } from "@nextui-org/button";
 import PhoneInput from "react-phone-input-2";
 import { Select, SelectItem } from "@nextui-org/select";
 import { Checkbox } from "@nextui-org/checkbox";
-import { MuiSelect } from "../molecules/MuiSelect";
 import { CaretDown } from "@phosphor-icons/react";
 import Image from "next/image";
 import "react-phone-input-2/lib/style.css";
 import { getLocalTimeZone, today } from "@internationalized/date";
 import { DatePicker } from "@nextui-org/date-picker";
+import { PromoModal } from "../molecules/PromoModal";
+import { useDisclosure } from "@nextui-org/modal";
+import WhiteLabelSchedule from "./WhiteLabelSchedule";
+import { Modal, ModalBody, ModalContent, ModalHeader } from "@nextui-org/modal";
+import { ScheduleModal } from "../molecules/modals/ScheduleModal";
 
-const WhiteLabelEnquiryForm = () => {
+const WhiteLabelPageForm = ({
+  promo,
+  promoCode,
+  isPromoCodeValid,
+  isPromoApplied,
+
+  // setters
+  setPromo,
+  setIsPromoApplied,
+
+  // validators
+  enquiry_options,
+}: {
+  promo: any;
+  promoCode: string;
+  isPromoCodeValid: boolean;
+  isPromoApplied: boolean;
+  setPromo: any;
+  setIsPromoApplied: any;
+
+  // validators
+  enquiry_options?: any;
+}) => {
   const venue_location = [
     { name: "Conference Hall", value: "conference_hall" },
     { name: "Boardroom", value: "boardroom" },
@@ -22,6 +48,29 @@ const WhiteLabelEnquiryForm = () => {
     { name: "Package 1", value: "package_1" },
     { name: "Package 2", value: "package_2" },
   ];
+
+  const promoModal = useDisclosure();
+  const termsModal = useDisclosure();
+  const scheduleModal = useDisclosure();
+
+  const handleOpenScheduleModal = () => {
+    scheduleModal.onOpen();
+    console.log("Modal opened:", scheduleModal.isOpen);
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+    handleOpenScheduleModal();
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+    scheduleModal.onClose();
+  };
+
+  const { promotion } = enquiry_options || {};
 
   // State variables
   const [name, setName] = useState("");
@@ -125,11 +174,72 @@ const WhiteLabelEnquiryForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-10">
-        <div className="px-4 md:px-0 my-10 md:mt-6 max-w-screen-2xl mx-auto w-full sm:w-[80%] lg:w-[60%]">
+    <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-0 md:py-10">
+      <form onSubmit={handleSubmit}>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
           {/* Form Container */}
-          <div className="border-0 sm:border-0 md:border border-secondary-200 rounded-lg p-0 sm:p-0 md:p-8">
+          <div className="md:col-span-2">
+            <div className="flex flex-col md:flex-row justify-between items-start rounded-lg p-4">
+              {/* Left Section (logo)*/}
+              <div className="flex gap-4 w-full">
+                <img
+                  src="/images/white_label/distrii_sg.webp"
+                  alt="Distrii Singapore"
+                  className="w-[70px] h-[70px] object-cover flex-shrink-0"
+                />
+
+                <div className="flex-1">
+                  <h2 className="text-black font-semibold text-[20px]">
+                    Distrii Singapore
+                  </h2>
+                  <div className="flex items-center gap-2 mt-1">
+                    <img
+                      src="/images/icons/location.svg"
+                      alt="Location Icon"
+                      className="w-[16px] h-[16px] object-contain"
+                    />
+                    <p className="text-black text-[14px]">
+                      The Rise @ Oxley, 71, Oxley Rise, #02-17, Singapore
+                    </p>
+                  </div>
+
+                  {/* Right Sec-Reviews Container (for Mobile and Tablet) */}
+                  <div className="inline-flex items-center gap-1 bg-secondary-100 py-2 px-3 rounded-lg mt-4 md:hidden">
+                    <span className="text-yellow-500">
+                      <svg
+                        className="w-[14px] h-[14px]"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927a.75.75 0 011.902 0l1.502 4.632h4.867a.75.75 0 01.466 1.34l-3.937 2.869 1.503 4.632a.75.75 0 01-1.152.826l-3.938-2.87-3.937 2.87a.75.75 0 01-1.153-.826l1.503-4.632-3.937-2.87a.75.75 0 01.466-1.34h4.867l1.502-4.632z" />
+                      </svg>
+                    </span>
+                    <span className="text-black text-[14px] font-medium">
+                      4,6
+                    </span>
+                    <span className="text-primary-600 text-[14px]">
+                      24 Reviews
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Sec-Reviews Container (for Desktop) */}
+              <div className="hidden md:flex items-center gap-1 bg-secondary-100 py-2 px-3 rounded-lg md:ml-4 flex-none ">
+                <span className="text-yellow-500">
+                  <svg
+                    className="w-[14px] h-[14px]"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927a.75.75 0 011.902 0l1.502 4.632h4.867a.75.75 0 01.466 1.34l-3.937 2.869 1.503 4.632a.75.75 0 01-1.152.826l-3.938-2.87-3.937 2.87a.75.75 0 01-1.153-.826l1.503-4.632-3.937-2.87a.75.75 0 01.466-1.34h4.867l1.502-4.632z" />
+                  </svg>
+                </span>
+                <span className="text-black text-[14px] font-medium">4,6</span>
+                <span className="text-primary-600 text-[14px]">24 Reviews</span>
+              </div>
+            </div>
+            <div className="flex-grow border-t border-secondary-200 mb-6" />
             {/* Header */}
             <p className="text-sm text-black mb-6">
               Thank you for considering our venue for your upcoming event! 🎉
@@ -180,7 +290,7 @@ const WhiteLabelEnquiryForm = () => {
                 </div>
 
                 {/* Phone Input */}
-                <div className="flex-1 mt-4 md:mt-0">
+                <div className="flex-1 md:mt-[-4px]">
                   <span className="text-secondary-700 block mb-2 text-sm font-medium leading-5">
                     Phone
                   </span>
@@ -571,13 +681,13 @@ const WhiteLabelEnquiryForm = () => {
                         }
                         variant="bordered"
                       >
-                        <SelectItem key="location-1" value="Main Venue">
+                        <SelectItem key="00:00" value="00:00">
                           00:00
                         </SelectItem>
-                        <SelectItem key="location-2" value="Alternate Venue">
+                        <SelectItem key="00:30" value="00:30">
                           00:30
                         </SelectItem>
-                        <SelectItem key="location-3" value="Backup Venue">
+                        <SelectItem key="01:00" value="01:00">
                           01:00
                         </SelectItem>
                       </Select>
@@ -588,15 +698,15 @@ const WhiteLabelEnquiryForm = () => {
                       <Select
                         disableAnimation
                         aria-label="Select duration"
-                        value={selectedDuration}
-                        onChange={(e) =>
-                          handleSelectChange(e.target.value, "duration")
-                        }
                         classNames={{
                           trigger:
                             "h-[42px] min-h-10 rounded-lg border-1 rounded-tl-none rounded-bl-none",
                         }}
                         placeholder="Duration"
+                        value={selectedDuration}
+                        onChange={(e) =>
+                          handleSelectChange(e.target.value, "duration")
+                        }
                         popoverProps={{
                           offset: 0,
                           classNames: {
@@ -626,13 +736,13 @@ const WhiteLabelEnquiryForm = () => {
                         }
                         variant="bordered"
                       >
-                        <SelectItem key="location-1" value="1 hour">
+                        <SelectItem key="1 hour" value="1 hour">
                           1 hour
                         </SelectItem>
-                        <SelectItem key="location-2" value="2 hours">
+                        <SelectItem key="2 hours" value="2 hours">
                           2 hours
                         </SelectItem>
-                        <SelectItem key="location-3" value="3 hours">
+                        <SelectItem key="3 hours" value="3 hours">
                           3 hours
                         </SelectItem>
                       </Select>
@@ -752,39 +862,167 @@ const WhiteLabelEnquiryForm = () => {
               />
             </div>
 
-            <Button
-              type="submit"
-              className="rounded-lg flex-1 w-full bg-primary-600 min-w-10 p-2.5 mt-4"
-              color="primary"
-              variant="solid"
-              onClick={() => {
-                return;
-              }}
-            >
-              Enquiry Now
-            </Button>
+            {/* Promo code */}
+            <div className="pb-[200px] lg:pb-0">
+              <div className="w-full">
+                <InputGroup
+                  endContent={
+                    <button>
+                      <span className="text-sm font-semibold leading-5 text-primary-600 cursor-pointer">
+                        Apply
+                      </span>
+                    </button>
+                  }
+                  inputLabel={
+                    <span className="text-secondary-700 block text-sm font-medium leading-5">
+                      Promo Code
+                    </span>
+                  }
+                  inputType="text"
+                  placeholder="Enter promo code"
+                >
+                  {!promoCode && (
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        promoModal.onOpen();
+                      }}
+                    >
+                      <span className="text-sm font-semibold leading-5 text-primary-600 underline underline-offset-4 cursor-pointer">
+                        Promo code available (
+                        {(promotion && promotion.length) || 0})
+                      </span>
+                    </button>
+                  )}
+                  {isPromoApplied && (
+                    <span className="text-sm block font-normal leading-5 text-secondary-500">
+                      Promo will be applied at Venue Owner&apos;s discretion.
+                    </span>
+                  )}
+                  {(isPromoCodeValid && (
+                    <button
+                      className="block"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        termsModal.onOpen();
+                      }}
+                    >
+                      <span className="text-sm font-normal leading-5 text-secondary-500 underline underline-offset-4">
+                        Read terms & conditions
+                      </span>
+                    </button>
+                  )) ||
+                    (promoCode && (
+                      <span className="block w-full text-danger-500 text-sm font-normal leading-5">
+                        Invalid Promo Code
+                      </span>
+                    ))}
+                </InputGroup>
+              </div>
+              <PromoModal
+                isOpen={promoModal.isOpen}
+                placement="bottom-center"
+                promotion={promotion}
+                onOpenChange={promoModal.onOpenChange}
+              />
+            </div>
 
-            <div className="text-center text-[12px] text-secondary-500 mt-4">
-              By clicking send booking request, you agree to Venuerific's{" "}
-              <a
-                href="#"
-                className="text-primary-600 underline underline-offset-4 hover:text-primary-700"
+            {/* Sticky Bottom Container for Mobile and Tablet */}
+            <div className="block lg:hidden fixed bottom-0 left-0 w-full bg-white border-t border-secondary-200 rounded-t-[22px] shadow-2xl z-50 overflow-hidden">
+              {/* Contact and Schedule */}
+              <div
+                role="button"
+                onClick={handleClick}
+                className="h-[52px] flex items-center justify-between px-4 border-b border-secondary-200 cursor-pointer"
               >
-                Terms of Service
-              </a>{" "}
-              &amp;{" "}
-              <a
-                href="#"
-                className="text-primary-600 underline underline-offset-4 hover:text-primary-700"
+                <span className="text-primary-600 font-semibold text-[16px]">
+                  Contact and Schedule
+                </span>
+                <CaretDown
+                  size={20}
+                  className={`transform transition-transform ${
+                    isOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </div>
+
+              {/* Enquiry Button */}
+              <div className="px-4 py-5 bg-white">
+                <Button
+                  type="submit"
+                  className="rounded-lg w-full bg-primary-600 text-white text-center py-2"
+                  color="primary"
+                  variant="solid"
+                >
+                  Enquire Now
+                </Button>
+              </div>
+
+              {/* Terms and Privacy */}
+              <div className="text-center text-[12px] text-secondary-500 pb-3 px-4 bg-white">
+                By clicking send booking request, you agree to Venuerific's{" "}
+                <a
+                  href="#"
+                  className="text-primary-600 underline underline-offset-4 hover:text-primary-700"
+                >
+                  Terms of Service
+                </a>{" "}
+                &amp;{" "}
+                <a
+                  href="#"
+                  className="text-primary-600 underline underline-offset-4 hover:text-primary-700"
+                >
+                  Privacy Policy
+                </a>
+              </div>
+            </div>
+
+            {/* Enquiry Button and Terms for Desktop */}
+            <div className="hidden lg:block w-full my-6">
+              <Button
+                type="submit"
+                className="rounded-lg w-full bg-primary-600 text-white text-center py-3 font-semibold"
+                color="primary"
+                variant="solid"
               >
-                Privacy Policy
-              </a>
+                Enquire Now
+              </Button>
+              <p className="text-[12px] text-secondary-500 mt-3 text-center">
+                By clicking send booking request, you agree to Venuerific's{" "}
+                <a
+                  href="#"
+                  className="text-primary-600 underline underline-offset-4 hover:text-primary-700"
+                >
+                  Terms of Service
+                </a>{" "}
+                &amp;{" "}
+                <a
+                  href="#"
+                  className="text-primary-600 underline underline-offset-4 hover:text-primary-700"
+                >
+                  Privacy Policy
+                </a>
+              </p>
             </div>
           </div>
+
+          {/* Schedule Modal */}
+          <ScheduleModal
+            isOpen={scheduleModal.isOpen}
+            onOpenChange={(isModalOpen) => {
+              if (!isModalOpen) {
+                handleCloseModal();
+              }
+            }}
+          />
+
+          <div className="hidden lg:block lg:col-span-1">
+            <WhiteLabelSchedule />
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 };
 
-export default WhiteLabelEnquiryForm;
+export default WhiteLabelPageForm;
