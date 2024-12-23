@@ -48,7 +48,7 @@ const PaymentFormEnquiryDetails = () => {
   };
 
   return (
-    <div className="mt-[81px] w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-0 md:py-10">
+    <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-0 md:py-10 lg:mt-[81px]">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-screen-2xl mx-auto">
         <div className="col-span-1 lg:col-span-2">
           {/* Back Button and Title */}
