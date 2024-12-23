@@ -6,7 +6,7 @@ import { Button } from "@nextui-org/button";
 import PaymentChat from "./PaymentChat";
 
 const PaymentFormEnquiryDetails = () => {
-  const [chipState, setChipState] = useState("Declined");
+  const [chipState, setChipState] = useState("Unread");
 
   const getChipColor = () => {
     switch (chipState) {
@@ -229,23 +229,59 @@ const PaymentFormEnquiryDetails = () => {
             </div>
 
             {/* Buttons */}
-            <div className="grid grid-cols-2 gap-4">
-              <a href="/" className="w-full">
-                <Button className="border border-secondary-300 text-sm font-semibold py-3 px-4 rounded-lg w-full">
-                  Refund and Cancel Enquiry
-                </Button>
-              </a>
+            <div
+              className={`grid gap-4 ${
+                chipState === "Scheduled" || chipState === "Completed"
+                  ? "grid-cols-1"
+                  : "grid-cols-2"
+              }`}
+            >
+              {chipState === "Scheduled" && (
+                <a href="/" className="w-full">
+                  <Button className="bg-primary-600 text-white text-sm font-semibold py-3 px-4 rounded-lg flex justify-center items-center gap-2 w-full">
+                    <img
+                      src="/images/icons/call.png"
+                      alt="Call Icon"
+                      className="w-5 h-5"
+                    />
+                    <span>Call Owner</span>
+                  </Button>
+                </a>
+              )}
 
-              <a href="/" className="w-full">
-                <Button className="bg-primary-600 text-white text-sm font-semibold py-3 px-4 rounded-lg flex justify-center items-center gap-2 w-full">
-                  <img
-                    src="/images/icons/call.png"
-                    alt="Call Icon"
-                    className="w-5 h-5"
-                  />
-                  <span>Call Owner</span>
-                </Button>
-              </a>
+              {chipState === "Completed" && (
+                <a href="/" className="w-full">
+                  <Button className="bg-primary-600 text-white text-sm font-semibold py-3 px-4 rounded-lg flex justify-center items-center gap-2 w-full">
+                    <img
+                      src="/images/icons/review_venue_icon.png"
+                      alt="Review Icon"
+                      className="w-5 h-5"
+                    />
+                    <span>Review Venue</span>
+                  </Button>
+                </a>
+              )}
+
+              {chipState === "Unread" && (
+                <>
+                  <a href="/" className="w-full">
+                    <Button className="border border-secondary-300 bg-transparent text-sm font-semibold py-3 px-4 rounded-lg w-full">
+                      Refund and Cancel Enquiry
+                    </Button>
+                  </a>
+
+                  <a href="/" className="w-full">
+                    <Button className="bg-primary-600 text-white text-sm font-semibold py-3 px-4 rounded-lg flex justify-center items-center gap-2 w-full">
+                      <img
+                        src="/images/icons/call.png"
+                        alt="Call Icon"
+                        className="w-5 h-5"
+                      />
+                      <span>Call Owner</span>
+                    </Button>
+                  </a>
+                </>
+              )}
             </div>
           </div>
         </div>
