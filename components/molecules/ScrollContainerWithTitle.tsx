@@ -57,7 +57,9 @@ export const ScrollContainerWithTitle = ({
           <span className="sr-only">Go to link</span>
         </a>
       </div>
-      <span className="text-base font-normal leading-6 text-secondary-500 block w-full my-5">
+      <span
+        className={`${textClasses || "text-base font-normal leading-6"} block w-full my-5`}
+      >
         {text || ""}
       </span>
 

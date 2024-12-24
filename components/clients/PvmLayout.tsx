@@ -9,6 +9,7 @@ import PvmBannerWorkTogether from "@/components/pvm/PvmBannerWorkTogether";
 import PvmFaqSec from "@/components/pvm/PvmFaqSec";
 import PvmHero from "@/components/pvm/PvmHero";
 import PvmPlaceManageSec from "@/components/pvm/PvmPlaceManageSec";
+import PvmIndustryLeadersMarquee from "../pvm/PvmIndustryLeadersMarquee";
 
 export default function PvmLayout() {
   return (
@@ -20,6 +21,7 @@ export default function PvmLayout() {
       <PvmHero />
       <PvmVenueManagement />
       <PvmTopEventsMarquee />
+      <PvmIndustryLeadersMarquee />
       <PvmPlaceManageSec />
       <PvmWhatGet />
       <PvmLatestEvent />
@@ -30,7 +32,7 @@ export default function PvmLayout() {
         title="Let’s Work On Your Space Together!"
         text="Got questions? We'd love to help and we're looking
               forward to hearing from you!"
-        btnText="Talk To Us"
+        btnText="Schedule A Consultation"
       />
       <div className="w-full mt-10 mx-auto px-5 md:px-5 lg:px-12 xl:px-20 block md:flex items-center justify-between">
         <Footer />

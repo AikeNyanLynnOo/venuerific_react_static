@@ -6,6 +6,7 @@ import { LightLabelWithIcon } from "./LightLabelWithIcon";
 import { COLORS } from "@/styles/colors";
 
 interface PromoCodeCardProps {
+  image?: string;
   name?: string;
   value?: string;
   valid_until?: string;
@@ -15,6 +16,7 @@ interface PromoCodeCardProps {
 }
 
 export const PromoCodeCard = ({
+  image,
   name,
   value,
   valid_until,
@@ -26,13 +28,15 @@ export const PromoCodeCard = ({
 
   return (
     <div className="border rounded-lg p-3 flex flex-col gap-y-2">
+      {image && (
+        <img src={image} alt="promo_image" className="w-full rounded-lg" />
+      )}
+
       <span className="text-lg font-bold leading-7">{name || ""}</span>
       <span className="text-secondary-400 text-sm font-normal leading-5">
         {valid_until || ""}
       </span>
-      <span className="capitalize text-sm font-normal leading-5">
-        {description?.toLowerCase() || ""}
-      </span>
+      <span className="text-sm font-normal leading-5">{description || ""}</span>
       <div className="rounded-md border flex justify-between items-center py-2 px-3">
         <span className="text-success-600 text-sm font-bold leading-5">
           {code || ""}

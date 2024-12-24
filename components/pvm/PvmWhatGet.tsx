@@ -4,29 +4,29 @@ const PvmWhatGet = () => {
   return (
     <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-10">
       <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
-        <h2 className="text-primary-800 text-3xl font-bold mb-6 text-center lg:text-left">
-          What will you get
+        <h2 className="text-primary-800 text-[36px] font-semibold mb-6 text-center lg:text-left">
+          Why Venuerific as Your Venue Management Partner?
         </h2>
-        <p className="text-secondary-600 text-lg mb-10 text-center lg:text-left">
-          Venuerific has the experience necessary to manage a variety of venues
-          and to host all kinds of events. From high-profile corporate dinners
-          to personal milestones such as engagements, birthday parties, and
-          weddings, we have what you need.
+        <p className="text-secondary-600 font-medium text-[20px] mb-10 text-center lg:text-left">
+          Venuerific brings the expertise to manage a diverse range of venues
+          and host every type of event. Whether it&apos;s a high-profile
+          corporate dinner or personal milestones like engagements, birthdays,
+          and weddings, we have the solutions and services you need.
         </p>
 
-        <div className="flex flex-col lg:flex-row items-start pt-6 gap-8">
+        <div className="flex flex-col lg:flex-row items-stretch pt-6 gap-8">
           <div className="flex-1 hidden lg:block">
             <img
               src="/images/pvm/pvm_what_get_img.webp"
               alt="Event Management Image"
               width="560"
               height="560"
-              className="rounded-md"
+              className="rounded-md h-full object-cover"
             />
           </div>
 
-          <div className="flex-1">
-            <ul className="space-y-4 font-semibold">
+          <div className="flex-1 flex items-center">
+            <ul className="space-y-4 text-[17px] font-semibold h-full">
               {[
                 "Implement a proven management and marketing methodology",
                 "Manage the paperwork trail for all venue inquiries and sales",
@@ -39,7 +39,10 @@ const PvmWhatGet = () => {
                 "Increased client satisfaction with your venue/facilities",
                 "Increased venue revenue and profits",
               ].map((text, index) => (
-                <li key={index} className="flex items-start text-secondary-900">
+                <li
+                  key={index}
+                  className="flex items-center text-secondary-900"
+                >
                   <img
                     src="/images/pvm/featured_icon.webp"
                     alt="Check Icon"
@@ -47,7 +50,7 @@ const PvmWhatGet = () => {
                     height="32"
                     className="mr-4"
                   />
-                  <span className="pt-1">{text}</span>
+                  <span>{text}</span>
                 </li>
               ))}
             </ul>
