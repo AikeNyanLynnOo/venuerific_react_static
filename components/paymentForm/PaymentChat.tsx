@@ -74,7 +74,7 @@ export const PaymentChat = () => {
               <div className="flex justify-between items-center w-[70%] mb-1">
                 <p className="text-xs text-secondary-400">You</p>
                 <p className="text-xs text-secondary-400 text-right">
-                  11:45 AM
+                  11:40 AM
                 </p>
               </div>
               <div className="bg-primary-100 border border-primary-200 rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px] p-3 w-[70%] text-sm text-black shadow-sm">
@@ -102,7 +102,7 @@ export const PaymentChat = () => {
   const currentTab = tabsData.find((tab) => tab.key === selectedTab);
 
   return (
-    <div className="lg:border lg:border-secondary-200 rounded-lg p-0 lg:pb-6 lg:pt-0 lg:px-6 shadow-sm">
+    <div className="lg:border lg:border-secondary-200 rounded-lg p-0 lg:pb-4 lg:pt-0 lg:px-6 shadow-sm">
       <div className="px-4 md:px-0 max-w-screen-2xl mx-auto">
         {/* Tabs */}
         <Tabs
