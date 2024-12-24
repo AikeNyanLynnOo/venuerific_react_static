@@ -13,7 +13,7 @@ interface PaymentChatFormModalProps {
     | "secondary"
     | "success"
     | "warning"
-    | "danger"; 
+    | "danger";
 }
 
 export const PaymentChatFormModal = ({
@@ -41,7 +41,12 @@ export const PaymentChatFormModal = ({
             <ModalHeader className="flex items-center justify-between px-4 py-2 border-b">
               <div className="flex items-center">
                 <div className="flex items-center text-primary-600 font-semibold">
-                  <ArrowLeft className="mr-2" size={20} weight="bold" onClick={onClose} />
+                  <ArrowLeft
+                    className="mr-2"
+                    size={20}
+                    weight="bold"
+                    onClick={onClose}
+                  />
                 </div>
                 {/* Avatar */}
                 <div className="w-12 h-12 rounded-full flex-shrink-0 mx-4">
@@ -52,11 +57,11 @@ export const PaymentChatFormModal = ({
                   />
                 </div>
                 {/* Details */}
-                <div>
-                  <p className="text-[16px] font-semibold text-black">
+                <div className="flex flex-col my-2">
+                  <p className="text-[16px] font-semibold text-black leading-none">
                     Agustine T.
                   </p>
-                  <span className="text-green-500 text-[12px] font-semibold">
+                  <span className="text-green-500 text-[12px] font-semibold mt-1">
                     Online
                   </span>
                 </div>
