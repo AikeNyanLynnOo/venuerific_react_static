@@ -137,7 +137,7 @@ export const PaymentChat = () => {
             <input
               type="text"
               placeholder="Type message"
-              className="flex-1 border border-secondary-200 rounded-lg px-4 py-2 text-sm"
+              className="flex-1 border border-secondary-200 focus:border-secondary-400 outline-none rounded-lg px-4 py-2 text-sm"
             />
             <a href="#" className="absolute right-10">
               <button>

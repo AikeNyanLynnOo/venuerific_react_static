@@ -56,7 +56,7 @@ export const PaymentChatMobile = () => {
             <input
               type="text"
               placeholder="Type message"
-              className="flex-1 border border-secondary-200 rounded-lg px-4 py-6 text-[16px] pr-16" // Add padding to the right
+              className="flex-1 border border-secondary-200 focus:border-secondary-400 outline-none rounded-lg px-4 py-6 text-[16px] pr-16" 
             />
             <a
               href="#"
