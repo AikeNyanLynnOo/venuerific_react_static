@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Tab, Tabs } from "@nextui-org/tabs";
 import { twMerge } from "tailwind-merge";
+import { Button } from "@nextui-org/button";
 
 export const PaymentChat = () => {
   const [selectedTab, setSelectedTab] = useState("Chat");
@@ -139,34 +140,27 @@ export const PaymentChat = () => {
               placeholder="Type message"
               className="flex-1 border border-secondary-200 focus:border-secondary-400 outline-none rounded-lg px-4 py-2 text-sm"
             />
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute right-10"
+
+            <Button
+              isIconOnly
+              className="absolute right-10 flex items-center justify-center bg-transparent"
             >
-              <button>
-                <img
-                  src="/images/icons/attach_icon.png"
-                  alt="Attach"
-                  className="w-[14px] h-[15px]"
-                />
-              </button>
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute right-2"
+              <img
+                src="/images/icons/attach_icon.png"
+                alt="Attach"
+                className="w-[14px] h-[15px]"
+              />
+            </Button>
+            <Button
+              isIconOnly
+              className="absolute right-2 flex items-center justify-center bg-transparent"
             >
-              <button>
-                <img
-                  src="/images/icons/send-icon.png"
-                  alt="Send"
-                  className="w-[14px] h-[15px]"
-                />
-              </button>
-            </a>
+              <img
+                src="/images/icons/send-icon.png"
+                alt="Send"
+                className="w-[14px] h-[15px]"
+              />
+            </Button>
           </div>
         </div>
       )}

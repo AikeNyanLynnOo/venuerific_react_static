@@ -207,11 +207,9 @@ const PaymentFormEnquiryDetails = () => {
                     The Rise @ Oxley, 71, Oxley Rise, #02-17, Singapore
                   </p>
                 </div>
-                <div className="">
-                  <button className="mt-4 block w-full border border-secondary-300 text-secondary-700 bg-transparent text-sm font-semibold py-3 px-4 rounded-lg lg:hidden">
-                    Call Venues
-                  </button>
-                </div>
+                <Button className="mt-4 block w-full border border-secondary-300 text-secondary-700 bg-transparent text-sm font-semibold py-3 px-4 rounded-lg lg:hidden">
+                  Call Venues
+                </Button>
               </div>
 
               {/* Divider */}

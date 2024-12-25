@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { Button } from "@nextui-org/button";
 
 export const PaymentChatMobile = () => {
   return (
@@ -38,42 +39,33 @@ export const PaymentChatMobile = () => {
           </div>
         </div>
 
-        {/* Input Section */}
-        <div className="border-t border-secondary-200 flex items-center w-full px-4 py-2 bg-white shadow-lg">
+        <div className="border-t border-secondary-200 flex items-center w-full px-4 py-2 shadow-lg">
           <div className="relative w-full flex items-center">
             <input
               type="text"
               placeholder="Type message"
-              className="flex-1 px-4 py-3 text-[16px]"
+              className="flex-1 px-4 py-3 text-[16px] border border-secondary-200 rounded-lg"
             />
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute right-4 flex items-center justify-center"
+            <Button
+              isIconOnly
+              className="absolute right-4 flex items-center justify-center bg-transparent"
             >
-              <button>
-                <img
-                  src="/images/icons/send-icon.png"
-                  alt="Send"
-                  className="w-[20px] h-[20px]"
-                />
-              </button>
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute right-14 flex items-center justify-center"
+              <img
+                src="/images/icons/send-icon.png"
+                alt="Send"
+                className="w-[20px] h-[20px]"
+              />
+            </Button>
+            <Button
+              isIconOnly
+              className="absolute right-14 flex items-center justify-center bg-transparent"
             >
-              <button>
-                <img
-                  src="/images/icons/attach_icon.png"
-                  alt="Attach"
-                  className="w-[20px] h-[20px]"
-                />
-              </button>
-            </a>
+              <img
+                src="/images/icons/attach_icon.png"
+                alt="Attach"
+                className="w-[20px] h-[20px]"
+              />
+            </Button>
           </div>
         </div>
       </div>
