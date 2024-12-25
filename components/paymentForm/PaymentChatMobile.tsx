@@ -4,35 +4,23 @@ import React from "react";
 export const PaymentChatMobile = () => {
   return (
     <div
-      className="h-screen flex flex-col"
+      className="h-screen w-full flex flex-col"
       style={{
         backgroundImage: `url('/images/payment_form/chat_bg.webp')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="md:px-0 max-w-screen-2xl mx-auto flex-1 flex flex-col">
-        <div className="px-4 py-4 space-y-6 overflow-y-auto flex-1">
+      <div className="flex-1 flex flex-col w-full">
+        {/* Chat Section */}
+        <div className="px-4 py-4 space-y-6 overflow-y-auto flex-1 w-full">
           {/* Incoming Messages */}
-          <div className="flex items-start space-x-3 mt-52">
-            <div>
-              <div className="bg-white border rounded-tr-[12px] rounded-br-[12px] rounded-bl-[12px] border-secondary-200 p-3 text-sm text-black shadow-sm">
+          <div className="flex items-start space-x-3 w-full">
+            <div className="max-w-[75%]">
+              <div className="bg-white border rounded-tr-[12px] rounded-br-[12px] rounded-bl-[12px] border-secondary-200 p-3 text-sm text-black shadow-sm w-full">
                 Welcome to Venuerific, the biggest venue marketplace in Asia.
                 How can we help you?
               </div>
-              <p className="text-xs text-secondary-400 text-right mt-2">
-                11:40 AM
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-start space-x-3">
-            <div>
-              <div className="bg-white border rounded-tr-[12px] rounded-br-[12px] rounded-bl-[12px] border-secondary-200 p-3 text-sm text-black shadow-sm">
-                Welcome to Venuerific, the biggest venue marketplace in Asia.
-                How can we help you?
-              </div>
-
               <p className="text-xs text-secondary-400 text-right mt-2">
                 11:40 AM
               </p>
@@ -40,8 +28,8 @@ export const PaymentChatMobile = () => {
           </div>
 
           {/* Outgoing Messages */}
-          <div className="flex flex-col items-end">
-            <div className="bg-primary-100 border border-primary-200 rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px] p-3 w-[70%] text-sm text-black shadow-sm">
+          <div className="flex flex-col items-end w-full">
+            <div className="bg-primary-100 border border-primary-200 rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px] p-3 w-[75%] text-sm text-black shadow-sm">
               Hello, I'm interested in booking this venue, what's my next step?
             </div>
             <p className="text-xs text-secondary-400 text-right mt-2">
@@ -51,15 +39,17 @@ export const PaymentChatMobile = () => {
         </div>
 
         {/* Input Section */}
-        <div className="border-t border-secondary-200 flex items-center">
+        <div className="border-t border-secondary-200 flex items-center w-full px-4 py-2 bg-white shadow-lg">
           <div className="relative w-full flex items-center">
             <input
               type="text"
               placeholder="Type message"
-              className="flex-1 border border-secondary-200 focus:border-secondary-400 outline-none rounded-lg px-4 py-6 text-[16px] pr-16" 
+              className="flex-1 px-4 py-3 text-[16px]"
             />
             <a
               href="#"
+              target="_blank"
+              rel="noopener noreferrer"
               className="absolute right-4 flex items-center justify-center"
             >
               <button>
@@ -72,6 +62,8 @@ export const PaymentChatMobile = () => {
             </a>
             <a
               href="#"
+              target="_blank"
+              rel="noopener noreferrer"
               className="absolute right-14 flex items-center justify-center"
             >
               <button>

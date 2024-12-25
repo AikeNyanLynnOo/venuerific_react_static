@@ -37,7 +37,7 @@ export const PaymentChat = () => {
                   </div>
                   <p className="text-xs text-secondary-400">11:40 AM</p>
                 </div>
-                <div className="bg-white border rounded-tr-[12px] rounded-br-[12px] rounded-bl-[12px] border-secondary-200 p-3 text-sm text-black shadow-sm">
+                <div className="bg-white border rounded-tr-[12px] rounded-br-[12px] rounded-bl-[12px] border-secondary-200 p-3 mt-1 text-sm text-black shadow-sm">
                   Welcome to Venuerific, the biggest venue marketplace in Asia.
                   How can we help you?
                 </div>
@@ -63,7 +63,7 @@ export const PaymentChat = () => {
                   </div>
                   <p className="text-xs text-secondary-400">11:40 AM</p>
                 </div>
-                <div className="bg-white border rounded-tr-[12px] rounded-br-[12px] rounded-bl-[12px] border-secondary-200 p-3 text-sm text-black shadow-sm">
+                <div className="bg-white border rounded-tr-[12px] rounded-br-[12px] rounded-bl-[12px] border-secondary-200 p-3 mt-1 text-sm text-black shadow-sm">
                   We have a catolog ready for you if you need one.
                 </div>
               </div>
@@ -77,7 +77,7 @@ export const PaymentChat = () => {
                   11:40 AM
                 </p>
               </div>
-              <div className="bg-primary-100 border border-primary-200 rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px] p-3 w-[70%] text-sm text-black shadow-sm">
+              <div className="bg-primary-100 border border-primary-200 rounded-tl-[12px] rounded-br-[12px] rounded-bl-[12px] p-3 mt-1 w-[70%] text-sm text-black shadow-sm">
                 Hello, I'm interested in booking this venue, what's my next
                 step?
               </div>
@@ -139,7 +139,12 @@ export const PaymentChat = () => {
               placeholder="Type message"
               className="flex-1 border border-secondary-200 focus:border-secondary-400 outline-none rounded-lg px-4 py-2 text-sm"
             />
-            <a href="#" className="absolute right-10">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute right-10"
+            >
               <button>
                 <img
                   src="/images/icons/attach_icon.png"
@@ -148,7 +153,12 @@ export const PaymentChat = () => {
                 />
               </button>
             </a>
-            <a href="#" className="absolute right-2">
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute right-2"
+            >
               <button>
                 <img
                   src="/images/icons/send-icon.png"

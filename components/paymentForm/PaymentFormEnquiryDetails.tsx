@@ -76,14 +76,21 @@ const PaymentFormEnquiryDetails = () => {
           <div className="flex flex-col mb-4">
             <a
               href="#"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden lg:flex items-center text-primary-700 text-lg font-medium hover:underline"
             >
-              <div className="flex items-center text-primary-600 font-semibold">
-                <ArrowLeft className="mr-2" size={20} weight="bold" /> Back
-              </div>
+              <ArrowLeft className="mr-2" size={20} weight="bold" />
+              Back
             </a>
+
             <div className="flex items-center justify-between lg:hidden shadow-md p-4">
-              <a href="#" className="text-primary-600">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-600"
+              >
                 <ArrowLeft className="mr-2" size={20} weight="bold" />
               </a>
               <h1 className="text-xl font-semibold text-black flex-1 text-left">
@@ -157,9 +164,9 @@ const PaymentFormEnquiryDetails = () => {
             <div className="flex-grow border-t border-secondary-200 my-6 hidden lg:block" />
 
             {/* Venue and Host Section Container */}
-            <div className="flex flex-col gap-4 border rounded-lg md:border-0 md:p-0 mt-6 lg:mt-0 mb-36 lg:mb-0">
+            <div className="flex flex-col gap-4 border rounded-lg lg:border-0 md:p-0 mt-6 lg:mt-0 mb-36 lg:mb-0">
               {/* Venue Details */}
-              <div className="flex flex-col gap-4 px-4 pt-4 lg:pt-0">
+              <div className="flex flex-col px-4 pt-4 lg:pt-0">
                 <div className="flex gap-4">
                   <img
                     src="/images/white_label/distrii_sg.webp"
@@ -190,7 +197,7 @@ const PaymentFormEnquiryDetails = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 mt-4">
                   <img
                     src="/images/icons/location.svg"
                     alt="Location Icon"
@@ -200,8 +207,8 @@ const PaymentFormEnquiryDetails = () => {
                     The Rise @ Oxley, 71, Oxley Rise, #02-17, Singapore
                   </p>
                 </div>
-                <div>
-                  <button className="block w-full border border-secondary-300 text-secondary-700 bg-transparent text-sm font-semibold py-3 px-4 rounded-lg md:hidden">
+                <div className="">
+                  <button className="mt-4 block w-full border border-secondary-300 text-secondary-700 bg-transparent text-sm font-semibold py-3 px-4 rounded-lg lg:hidden">
                     Call Venues
                   </button>
                 </div>
@@ -279,6 +286,8 @@ const PaymentFormEnquiryDetails = () => {
                     refunded to your account. Not yet received the refund?{" "}
                     <a
                       href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-primary-600 underline underline-offset-4"
                     >
                       Contact us here
@@ -327,7 +336,12 @@ const PaymentFormEnquiryDetails = () => {
                 )}
 
                 {chipState === "Completed" && (
-                  <a href="" className="w-full">
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full"
+                  >
                     <Button className="bg-primary-600 text-white text-sm font-semibold py-3 px-4 rounded-lg flex justify-center items-center gap-2 w-full">
                       <img
                         src="/images/icons/review_venue_icon.png"
@@ -341,7 +355,12 @@ const PaymentFormEnquiryDetails = () => {
 
                 {chipState === "Unread" && (
                   <>
-                    <a href="" className="w-full">
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full"
+                    >
                       <Button className="border border-secondary-300 text-secondary-700 bg-transparent text-sm font-semibold py-3 px-4 rounded-lg w-full">
                         <span className="hidden lg:inline">
                           Refund and Cancel Enquiry
