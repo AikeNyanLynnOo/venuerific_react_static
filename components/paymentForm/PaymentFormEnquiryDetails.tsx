@@ -128,7 +128,7 @@ const PaymentFormEnquiryDetails = () => {
               <img
                 src="/images/icons/payment_calendar.png"
                 alt="Payment Calendar"
-                className="w-5 h-5"
+                className="w-[14px] h-[14px]"
               />
               <p className="text-sm text-black">
                 Monday, Dec 25, 2024 @ 10.00 - 16.00
