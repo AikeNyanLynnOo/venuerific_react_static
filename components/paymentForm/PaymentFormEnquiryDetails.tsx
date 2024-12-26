@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { Star } from "@phosphor-icons/react";
 import { ArrowLeft } from "@phosphor-icons/react";
 import { Chip } from "@nextui-org/chip";
 import { Button } from "@nextui-org/button";
@@ -166,7 +167,7 @@ const PaymentFormEnquiryDetails = () => {
             {/* Venue and Host Section Container */}
             <div className="flex flex-col gap-4 border rounded-lg lg:border-0 md:p-0 mt-6 lg:mt-0 mb-36 lg:mb-0">
               {/* Venue Details */}
-              <div className="flex flex-col px-4 pt-4 lg:pt-0">
+              <div className="flex flex-col px-4 lg:px-0 pt-4 lg:pt-0">
                 <div className="flex gap-4">
                   <img
                     src="/images/white_label/distrii_sg.webp"
@@ -178,15 +179,7 @@ const PaymentFormEnquiryDetails = () => {
                       Distrii Singapore
                     </h2>
                     <div className="flex items-center gap-1 mt-2">
-                      <span className="text-yellow-500">
-                        <svg
-                          className="w-[14px] h-[14px]"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9.049 2.927a.75.75 0 011.902 0l1.502 4.632h4.867a.75.75 0 01.466 1.34l-3.937 2.869 1.503 4.632a.75.75 0 01-1.152.826l-3.938-2.87-3.937 2.87a.75.75 0 01-1.153-.826l1.503-4.632-3.937-2.87a.75.75 0 01.466-1.34h4.867l1.502-4.632z" />
-                        </svg>
-                      </span>
+                      <Star color="#F8D830" size={15} weight="fill" />
                       <span className="text-black text-[14px] font-medium">
                         4,6
                       </span>
@@ -201,7 +194,7 @@ const PaymentFormEnquiryDetails = () => {
                   <img
                     src="/images/icons/location.svg"
                     alt="Location Icon"
-                    className="w-[16px] h-[16px] object-contain"
+                    className="w-4 h-4 object-contain"
                   />
                   <p className="text-black text-[14px]">
                     The Rise @ Oxley, 71, Oxley Rise, #02-17, Singapore
@@ -218,7 +211,7 @@ const PaymentFormEnquiryDetails = () => {
               {/* Host Section */}
               <div className="flex flex-col lg:flex-row lg:justify-between items-start">
                 {/* Avatar and Name */}
-                <div className="flex items-center px-4">
+                <div className="flex items-center px-4 lg:px-0">
                   <div className="w-16 h-16 rounded-full flex-shrink-0 mr-4">
                     <img
                       src="/images/white_label/agustine_img.webp"
@@ -276,7 +269,7 @@ const PaymentFormEnquiryDetails = () => {
                 <img
                   src="/images/icons/info-circle.png"
                   alt="Info Circle"
-                  className="w-5 h-5"
+                  className="w-4 h-4"
                 />
                 {chipState === "Declined" ? (
                   <p className="text-sm text-secondary-500">

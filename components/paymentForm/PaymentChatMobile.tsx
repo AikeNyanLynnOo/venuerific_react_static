@@ -39,12 +39,12 @@ export const PaymentChatMobile = () => {
           </div>
         </div>
 
-        <div className="border-t border-secondary-200 flex items-center w-full px-4 py-2 shadow-lg">
-          <div className="relative w-full flex items-center">
+        <div className="flex items-center w-full shadow-lg">
+          <div className="relative w-full flex items-center shadow-lg ">
             <input
               type="text"
               placeholder="Type message"
-              className="flex-1 px-4 py-3 text-[16px] border border-secondary-200 rounded-lg"
+              className="flex-1 px-4 py-6 text-[16px] shadow-lg focus:border-secondary-400 outline-none"
             />
             <Button
               isIconOnly
