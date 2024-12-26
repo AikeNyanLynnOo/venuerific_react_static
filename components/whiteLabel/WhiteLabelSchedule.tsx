@@ -113,22 +113,22 @@ export const WhiteLabelSchedule = ({
             />
           </div>
           <div>
-            <h4 className="text-[12px] font-medium text-secondary-400">Host</h4>
+            <h4 className="text-xs font-medium text-secondary-400">Host</h4>
             <p className="text-[18px] font-semibold text-black">Agustine T.</p>
           </div>
         </div>
         <div className="text-right">
-          <h4 className="text-[12px] font-medium text-secondary-400">
+          <h4 className="text-xs font-medium text-secondary-400">
             Average Response Time
           </h4>
-          <p className="text-[16px] font-semibold text-black">19 Hours</p>
+          <p className="text-base font-semibold text-black">19 Hours</p>
         </div>
       </div>
 
       <Button
         onClick={calendarModal.onOpen}
         variant="bordered"
-        className="w-full mb-6 rounded-lg border border-secondary-300 text-secondary-700 text-[14px] font-semibold flex items-center justify-center gap-2 bg-transparent hover:bg-gray-100"
+        className="w-full mb-6 rounded-lg border border-secondary-300 text-secondary-700 text-sm font-semibold flex items-center justify-center gap-2 bg-transparent hover:bg-gray-100"
       >
         <img
           src="/images/icons/calendar-date.webp"
@@ -164,7 +164,7 @@ export const WhiteLabelSchedule = ({
         >
           {schedule.map(({ day, time }) => (
             <div key={day} className="p-2 bg-[#F7FAFC] rounded-lg">
-              <span className="text-[14px] text-[#9FA9B4] font-semibold">
+              <span className="text-sm text-[#9FA9B4] font-semibold">
                 {day}
               </span>
               <span className="text-black mt-1 block">{time}</span>
@@ -184,7 +184,7 @@ export const WhiteLabelSchedule = ({
             variant="light"
             className="bg-primary-100 rounded-lg px-4 py-2 w-full flex items-center justify-center gap-2"
           >
-            <span className="text-[14px] font-semibold text-secondary-700">
+            <span className="text-sm font-semibold text-secondary-700">
               View Venue at
             </span>
             <img
@@ -210,7 +210,7 @@ export const WhiteLabelSchedule = ({
         </Button>
 
         {/* Terms and Privacy */}
-        <div className="lg:hidden text-center text-[12px] text-secondary-500 mt-4 pb-3 px-4 bg-white">
+        <div className="lg:hidden text-center text-xs text-secondary-500 mt-4 pb-3 px-4 bg-white">
           By clicking send booking request, you agree to Venuerific's{" "}
           <a
             href="#"

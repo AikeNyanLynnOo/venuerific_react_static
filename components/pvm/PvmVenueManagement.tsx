@@ -32,11 +32,11 @@ const PvmVenueManagement = () => {
     <div className="mt-4 md:mt-2 lg:mt-[81px] w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-0 lg:py-4">
       <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
         <header className="text-center mb-10">
-          <h1 className="text-primary-800 text-[36px] font-bold mb-4">
+          <h1 className="text-primary-800 text-4xl font-bold mb-4">
             With Years of Experience, We&apos;re Your Go-To Place for Venue
             Management
           </h1>
-          <p className="text-secondary-500 text-[16px]">
+          <p className="text-secondary-500 text-base">
             Venue management can be a challenge, but our Private Venue
             Management services will transform how you run things—managing
             everything from inquiries to post-event follow-up.

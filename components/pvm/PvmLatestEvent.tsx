@@ -19,11 +19,11 @@ const PvmLatestEvent = () => {
       <ScrollContainerWithTitle
         className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto"
         title={`Our Latest Event`}
-        titleClasses="text-primary-700 font-semibold text-[36px]"
+        titleClasses="text-primary-700 font-semibold text-4xl"
         text={`Venuerific has the experience necessary to manage a variety of venues and to host all kinds of events. From high-profile corporate dinners.`}
-        textClasses="text-black text-[24px] font-medium"
+        textClasses="text-black text-2xl font-medium"
       >
-        {/* <p className="text-black text-[24px] font-medium">
+        {/* <p className="text-black text-2xl font-medium">
           Venuerific has the experience necessary to manage a variety of venues
           and to host all kinds of events. From high-profile corporate dinners.
         </p> */}

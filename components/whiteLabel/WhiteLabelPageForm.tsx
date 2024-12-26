@@ -189,7 +189,7 @@ const WhiteLabelPageForm = ({
                 />
 
                 <div className="flex-1">
-                  <h2 className="text-black font-semibold text-[20px]">
+                  <h2 className="text-black font-semibold text-xl">
                     Distrii Singapore
                   </h2>
                   <div className="flex items-center gap-2 mt-1">
@@ -198,7 +198,7 @@ const WhiteLabelPageForm = ({
                       alt="Location Icon"
                       className="w-[16px] h-[16px] object-contain"
                     />
-                    <p className="text-black text-[14px]">
+                    <p className="text-black text-sm">
                       The Rise @ Oxley, 71, Oxley Rise, #02-17, Singapore
                     </p>
                   </div>
@@ -214,10 +214,10 @@ const WhiteLabelPageForm = ({
                         <path d="M9.049 2.927a.75.75 0 011.902 0l1.502 4.632h4.867a.75.75 0 01.466 1.34l-3.937 2.869 1.503 4.632a.75.75 0 01-1.152.826l-3.938-2.87-3.937 2.87a.75.75 0 01-1.153-.826l1.503-4.632-3.937-2.87a.75.75 0 01.466-1.34h4.867l1.502-4.632z" />
                       </svg>
                     </span>
-                    <span className="text-black text-[14px] font-medium">
+                    <span className="text-black text-sm font-medium">
                       4,6
                     </span>
-                    <span className="text-primary-600 text-[14px]">
+                    <span className="text-primary-600 text-sm">
                       24 Reviews
                     </span>
                   </div>
@@ -235,8 +235,8 @@ const WhiteLabelPageForm = ({
                     <path d="M9.049 2.927a.75.75 0 011.902 0l1.502 4.632h4.867a.75.75 0 01.466 1.34l-3.937 2.869 1.503 4.632a.75.75 0 01-1.152.826l-3.938-2.87-3.937 2.87a.75.75 0 01-1.153-.826l1.503-4.632-3.937-2.87a.75.75 0 01.466-1.34h4.867l1.502-4.632z" />
                   </svg>
                 </span>
-                <span className="text-black text-[14px] font-medium">4,6</span>
-                <span className="text-primary-600 text-[14px]">24 Reviews</span>
+                <span className="text-black text-sm font-medium">4,6</span>
+                <span className="text-primary-600 text-sm">24 Reviews</span>
               </div>
             </div>
             <div className="flex-grow border-t border-secondary-200 mb-6" />
@@ -935,7 +935,7 @@ const WhiteLabelPageForm = ({
                 onClick={handleClick}
                 className="h-[52px] flex items-center justify-between px-4 border-b border-secondary-200 cursor-pointer"
               >
-                <span className="text-primary-600 font-semibold text-[16px]">
+                <span className="text-primary-600 font-semibold text-base">
                   Contact and Schedule
                 </span>
                 <CaretDown
@@ -959,7 +959,7 @@ const WhiteLabelPageForm = ({
               </div>
 
               {/* Terms and Privacy */}
-              <div className="text-center text-[12px] text-secondary-500 pb-3 px-4 bg-white">
+              <div className="text-center text-xs text-secondary-500 pb-3 px-4 bg-white">
                 By clicking send booking request, you agree to Venuerific's{" "}
                 <a
                   href="#"
@@ -987,7 +987,7 @@ const WhiteLabelPageForm = ({
               >
                 Enquire Now
               </Button>
-              <p className="text-[12px] text-secondary-500 mt-3 text-center">
+              <p className="text-xs text-secondary-500 mt-3 text-center">
                 By clicking send booking request, you agree to Venuerific's{" "}
                 <a
                   href="#"

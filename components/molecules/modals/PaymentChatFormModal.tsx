@@ -58,10 +58,10 @@ export const PaymentChatFormModal = ({
                 </div>
                 {/* Details */}
                 <div className="flex flex-col my-2">
-                  <p className="text-[16px] font-semibold text-black leading-none">
+                  <p className="text-base font-semibold text-black leading-none">
                     Agustine T.
                   </p>
-                  <span className="text-green-500 text-[12px] font-semibold mt-1">
+                  <span className="text-green-500 text-xs font-semibold mt-1">
                     Online
                   </span>
                 </div>

@@ -46,7 +46,7 @@ const PvmHero = () => {
                   />
                 }
               >
-                <span className="text-[16px]">Schedule A Consultation</span>
+                <span className="text-base">Schedule A Consultation</span>
               </Button>
             </div>
           </div>

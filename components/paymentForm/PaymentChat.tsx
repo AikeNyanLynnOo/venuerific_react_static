@@ -133,7 +133,7 @@ export const PaymentChat = () => {
 
       {/* Input Section */}
       {selectedTab === "Chat" && (
-        <div className="border-t border-secondary-200 py-4 flex items-center">
+        <div className="border-secondary-200 py-4 flex items-center">
           <div className="relative w-full flex items-center">
             <input
               type="text"

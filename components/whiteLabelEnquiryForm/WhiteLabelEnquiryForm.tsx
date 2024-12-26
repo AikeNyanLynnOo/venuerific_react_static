@@ -764,7 +764,7 @@ const WhiteLabelEnquiryForm = () => {
               Enquiry Now
             </Button>
 
-            <div className="text-center text-[12px] text-secondary-500 mt-4">
+            <div className="text-center text-xs text-secondary-500 mt-4">
               By clicking send booking request, you agree to Venuerific's{" "}
               <a
                 href="#"

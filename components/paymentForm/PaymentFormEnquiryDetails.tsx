@@ -9,7 +9,7 @@ import { useDisclosure } from "@nextui-org/modal";
 import { PaymentChatFormModal } from "../molecules/modals/PaymentChatFormModal";
 
 const PaymentFormEnquiryDetails = () => {
-  const [chipState, setChipState] = useState("Unread");
+  const [chipState, setChipState] = useState("Declined");
 
   const getChipColor = () => {
     switch (chipState) {
@@ -30,7 +30,7 @@ const PaymentFormEnquiryDetails = () => {
     if (chipState === "Completed") {
       return (
         <div className="flex items-center gap-2">
-          <p className="text-[16px] text-black">4,000 SGD</p>
+          <p className="text-base text-black">4,000 SGD</p>
           <Chip color="primary" variant="flat" className="font-semibold">
             <span className="font-semibold">Paid</span>
           </Chip>
@@ -39,7 +39,7 @@ const PaymentFormEnquiryDetails = () => {
     } else {
       return (
         <div className="flex items-center gap-2">
-          <p className="text-[16px] text-black">4,000 SGD</p>
+          <p className="text-base text-black">4,000 SGD</p>
           <img
             src="/images/payment_form/google_pay.webp"
             alt="Google Pay"
@@ -107,10 +107,10 @@ const PaymentFormEnquiryDetails = () => {
           <div className="border-0 lg:border border-secondary-200 rounded-lg p-4 my-4 lg:my-8">
             <div className="flex justify-between items-center mb-4">
               <div>
-                <p className="text-sm text-black">
+                <p className="text-sm text-black mt-1">
                   Enquiry ID <span className="font-semibold">12345AV345</span>
                 </p>
-                <p className="text-sm text-secondary-600">
+                <p className="text-sm text-secondary-600 mt-2">
                   Enquiry date Oct 20, 2022 - 10.42 pm
                 </p>
               </div>
@@ -119,33 +119,35 @@ const PaymentFormEnquiryDetails = () => {
               </Chip>
             </div>
 
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-2">
+              <h2 className="text-lg font-semibold">
+                Event name inputted by the user
+              </h2>
+            </div>
+            <div className="flex items-center gap-2">
               <img
                 src="/images/icons/payment_calendar.png"
                 alt="Payment Calendar"
                 className="w-5 h-5"
               />
-              <h2 className="text-lg font-semibold">
-                Event name inputted by the user
-              </h2>
+              <p className="text-sm text-black">
+                Monday, Dec 25, 2024 @ 10.00 - 16.00
+              </p>
             </div>
-            <p className="text-sm text-secondary-600">
-              Monday, Dec 25, 2024 @ 10.00 - 16.00
-            </p>
 
             {/* Event Details */}
-            <div className="grid grid-cols-2 gap-4 mt-4">
+            <div className="grid grid-cols-2 gap-4 mt-6">
               <div>
                 <p className="text-sm text-secondary-500">Attendees</p>
-                <p className="text-[16px] text-black">13 Pax</p>
+                <p className="text-base text-black">13 Pax</p>
               </div>
               <div>
                 <p className="text-sm text-secondary-500">Duration</p>
-                <p className="text-[16px] text-black">6 Hour</p>
+                <p className="text-base text-black">6 Hour</p>
               </div>
               <div>
                 <p className="text-sm text-secondary-500">Event Type</p>
-                <p className="text-[16px] text-black">Indoor Wedding</p>
+                <p className="text-base text-black">Indoor Wedding</p>
               </div>
               <div>
                 <p className="text-sm text-secondary-500">Budget</p>
@@ -153,11 +155,11 @@ const PaymentFormEnquiryDetails = () => {
               </div>
               <div>
                 <p className="text-sm text-secondary-500">Room</p>
-                <p className="text-[16px] text-black">Indoor Wedding</p>
+                <p className="text-base text-black">Indoor Wedding</p>
               </div>
               <div>
                 <p className="text-sm text-secondary-500">Room</p>
-                <p className="text-[16px] text-black">Indoor Wedding</p>
+                <p className="text-base text-black">Indoor Wedding</p>
               </div>
             </div>
 
@@ -175,15 +177,15 @@ const PaymentFormEnquiryDetails = () => {
                     className="w-[70px] h-[70px] object-cover flex-shrink-0 border rounded-lg"
                   />
                   <div className="flex-1">
-                    <h2 className="text-primary-600 font-semibold text-[20px]">
+                    <h2 className="text-primary-600 font-semibold text-base">
                       Distrii Singapore
                     </h2>
                     <div className="flex items-center gap-1 mt-2">
                       <Star color="#F8D830" size={15} weight="fill" />
-                      <span className="text-black text-[14px] font-medium">
+                      <span className="text-black text-sm font-medium">
                         4,6
                       </span>
-                      <span className="text-primary-600 text-[14px]">
+                      <span className="text-primary-600 text-sm">
                         24 Reviews
                       </span>
                     </div>
@@ -196,7 +198,7 @@ const PaymentFormEnquiryDetails = () => {
                     alt="Location Icon"
                     className="w-4 h-4 object-contain"
                   />
-                  <p className="text-black text-[14px]">
+                  <p className="text-black text-sm">
                     The Rise @ Oxley, 71, Oxley Rise, #02-17, Singapore
                   </p>
                 </div>
@@ -221,13 +223,13 @@ const PaymentFormEnquiryDetails = () => {
                   </div>
                   <div>
                     {/* For Desktop */}
-                    <h4 className="text-[12px] font-medium text-secondary-400 hidden lg:block">
+                    <h4 className="text-xs font-medium text-secondary-400 hidden lg:block">
                       Host
                     </h4>
-                    <p className="text-[18px] font-semibold text-black">
+                    <p className="text-lg font-semibold text-black">
                       Agustine T.
                     </p>
-                    <span className="text-green-500 text-[12px] font-semibold hidden lg:block mt-1">
+                    <span className="text-green-500 text-xs font-semibold hidden lg:block mt-1">
                       Online
                     </span>
                   </div>
@@ -235,10 +237,10 @@ const PaymentFormEnquiryDetails = () => {
 
                 {/* For Desktop */}
                 <div className="hidden lg:block text-right">
-                  <h4 className="text-[12px] font-medium text-secondary-400">
+                  <h4 className="text-xs font-medium text-secondary-400">
                     Average Response Time
                   </h4>
-                  <p className="text-[16px] font-semibold text-black">
+                  <p className="text-base font-semibold text-black">
                     19 Hours
                   </p>
                 </div>
@@ -247,10 +249,10 @@ const PaymentFormEnquiryDetails = () => {
                 <div className="block lg:hidden w-full mt-4">
                   <div className="bg-primary-100 rounded-bl-lg rounded-br-lg px-4 py-4">
                     <div className="flex justify-between items-center">
-                      <h4 className="text-[12px] font-medium text-secondary-500">
+                      <h4 className="text-xs font-medium text-secondary-500">
                         Average Response Time
                       </h4>
-                      <p className="text-[16px] font-semibold text-black">
+                      <p className="text-base font-semibold text-black">
                         19 Hours
                       </p>
                     </div>
@@ -265,30 +267,35 @@ const PaymentFormEnquiryDetails = () => {
             {/* Info and Buttons Section */}
             <div className="lg:static fixed bottom-0 left-0 w-full bg-white shadow-lg lg:shadow-none px-4 py-4 lg:px-0">
               {/* Info Section */}
-              <div className="flex items-center gap-2 mb-4">
-                <img
-                  src="/images/icons/info-circle.png"
-                  alt="Info Circle"
-                  className="w-4 h-4"
-                />
-                {chipState === "Declined" ? (
-                  <p className="text-sm text-secondary-500">
-                    Venue owner has declined your enquiry. The payment has been
-                    refunded to your account. Not yet received the refund?{" "}
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary-600 underline underline-offset-4"
-                    >
-                      Contact us here
-                    </a>
-                  </p>
-                ) : (
-                  <p className="text-sm text-secondary-500">
-                    Once enquiry scheduled, you can refund the payment.
-                  </p>
-                )}
+              <div className="flex items-start gap-2 mb-4">
+                <div className="flex-shrink-0 mt-1">
+                  <img
+                    src="/images/icons/info-circle.png"
+                    alt="Info Circle"
+                    className="w-4 h-4"
+                  />
+                </div>
+                <div className="flex-1">
+                  {chipState === "Declined" ? (
+                    <p className="text-sm text-secondary-500">
+                      Venue owner has declined your enquiry. The payment has
+                      been refunded to your account. Not yet received the
+                      refund?{" "}
+                      <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary-600 underline underline-offset-4"
+                      >
+                        Contact us here
+                      </a>
+                    </p>
+                  ) : (
+                    <p className="text-sm text-secondary-500">
+                      Once enquiry scheduled, you can refund the payment.
+                    </p>
+                  )}
+                </div>
               </div>
 
               {/* Buttons Section */}

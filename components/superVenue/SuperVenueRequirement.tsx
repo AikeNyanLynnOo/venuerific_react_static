@@ -101,7 +101,7 @@ const SuperVenueRequirement = () => {
               />
             </div>
             <div className="absolute bottom-0 left-0 w-full mx-auto py-4 px-6 backdrop-blur-md bg-gray-300 bg-opacity-30 rounded-t-lg">
-              <span className="text-white text-[30px]">SOCIOQ | Singapore</span>
+              <span className="text-white text-3xl">SOCIOQ | Singapore</span>
             </div>
           </div>
 
