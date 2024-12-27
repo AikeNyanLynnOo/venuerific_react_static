@@ -99,7 +99,7 @@ const RefundPaymentForm = () => {
             </Select>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 gap-y-6 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
             {/* First Name */}
             <InputGroup
               handleChange={handleFirstNameChange}
