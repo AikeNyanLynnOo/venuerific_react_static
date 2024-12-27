@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { CaretDown } from "@phosphor-icons/react";
 
 const PvmWhatGet = () => {
   return (
@@ -18,15 +20,97 @@ const PvmWhatGet = () => {
       <div className="relative flex items-center justify-center">
         {/* Dotted Circle */}
         <div
-          className="absolute rounded-full border border-dashed border-gray-400"
+          className="absolute rounded-full border border-dashed border-secondary-200"
           style={{
             width: "500px",
             height: "500px",
+            borderWidth: "3px",
+            borderSpacing: "10px",
           }}
         ></div>
 
+        <div
+          className="absolute w-[500px] h-[500px]"
+          style={{ pointerEvents: "none" }}
+        >
+          {/* Bottom CaretDown */}
+          <div
+            className="absolute"
+            style={{
+              bottom: "-12px",
+              left: "50%",
+              transform: "translateX(-50%) rotate(90deg)",
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={3}
+              stroke="#7C98B6"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
+
+          {/* Left CaretDown */}
+          <div
+            className="absolute"
+            style={{
+              top: "30%",
+              left: "9px",
+              transform: "translateY(-50%) rotate(197deg)",
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={3}
+              stroke="#7C98B6"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
+
+          {/* Right CaretDown */}
+          <div
+            className="absolute"
+            style={{
+              top: "30%",
+              right: "9px",
+              transform: "translateY(-50%) rotate(-20deg)",
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={3}
+              stroke="#7C98B6"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
+        </div>
+
         <svg
-          width="480" 
+          width="480"
           height="480"
           viewBox="0 0 42 42"
           className="relative"
@@ -50,7 +134,7 @@ const PvmWhatGet = () => {
 
           {/* Event Coordination Segment */}
           <circle
-            r="15.5" 
+            r="15.5"
             cx="21"
             cy="21"
             fill="transparent"
@@ -85,12 +169,10 @@ const PvmWhatGet = () => {
             transform="rotate(-90 21 21)"
           />
 
-          {/* Adjusted Paths for Text */}
           <path id="arc1" d="M 21 6 A 15.5 15.5 0 0 1 36 21" fill="none" />
           <path id="arc2" d="M 36 21 A 15.5 15.5 0 0 1 21 36" fill="none" />
           <path id="arc3" d="M 21 36 A 15.5 15.5 0 0 1 6 21" fill="none" />
 
-          {/* Updated Text Labels */}
           <text fontSize="0.14em" fill="#FFFFFF">
             <textPath
               href="#arc1"
