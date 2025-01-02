@@ -152,9 +152,9 @@ const PvmWhatGetUpdate = () => {
 
         {/* Venue Growth */}
         <div
-          className="absolute w-[370px] h-[360px]"
+          className="absolute w-[380px] h-[360px]"
           style={{
-            bottom: "-25px", 
+            bottom: "-22px",
             left: "52%",
             transform: "translate(-50%, 2%)",
           }}

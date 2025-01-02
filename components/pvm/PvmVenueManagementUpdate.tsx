@@ -32,7 +32,7 @@ const PvmVenueManagementUpdate = () => {
     <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-10">
       <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
         <div className="flex flex-wrap lg:flex-nowrap gap-12 max-w-screen-2xl mx-auto">
-          <div className="flex flex-col gap-6 w-full lg:w-1/2">
+          <div className="flex flex-col gap-8 w-full lg:w-1/2">
             <div className="mb-4">
               <h1 className="text-primary-800 text-4xl font-semibold mb-4">
                 With Years of Experience, We&apos;re Your Go-To Place for Venue

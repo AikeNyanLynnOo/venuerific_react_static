@@ -13,8 +13,8 @@ const PvmHero = () => {
         />
       </div>
       <div className="mt-[81px] w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 relative z-30">
-        <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto flex flex-col items-center justify-center h-[400px] md:h-[500px] py-20 lg:flex-row lg:items-center lg:justify-start">
-          <div className="max-w-screen-xl mx-auto px-8 lg:w-3/5 lg:pr-8 space-y-4 text-center lg:text-left text-white z-40 relative lg:mx-0">
+        <div className=" md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto flex flex-col  h-[400px] md:h-[500px] py-20 lg:flex-row lg:items-center lg:justify-start">
+          <div className="max-w-screen-xl mx-auto px-3 lg:w-3/5 lg:pr-8 space-y-4 text-left text-white z-40 relative lg:mx-0">
             {/* <div className="flex items-center justify-center lg:justify-start space-x-2 mb-4">
               <img
                 src="/images/pvm/pvm_hero_trusted_icon.webp"
@@ -35,7 +35,7 @@ const PvmHero = () => {
               delivering exceptional event experiences.
             </p>
 
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex justify-start">
               <Button
                 className="flex items-center bg-primary-600 hover:bg-primary-500 text-white px-6 py-3 rounded-md shadow-lg transition sm:w-auto"
                 startContent={

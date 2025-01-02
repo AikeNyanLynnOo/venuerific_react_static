@@ -25,7 +25,7 @@ export default function PvmLayout() {
       <PvmVenueManagementUpdate/>
       <PvmPlaceManageSec />
       {/* <PvmWhatGet /> */}
-      <PvmWhatGetUpdate/>
+      {/* <PvmWhatGetUpdate/> */}
       <PvmLatestEvent />
       <PvmYourPlaceSec />
       <PvmFaqSec />
