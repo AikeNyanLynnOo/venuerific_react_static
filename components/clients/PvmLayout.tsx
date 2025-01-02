@@ -10,6 +10,7 @@ import PvmHero from "@/components/pvm/PvmHero";
 import PvmPlaceManageSec from "@/components/pvm/PvmPlaceManageSec";
 import PvmIndustryLeadersMarquee from "../pvm/PvmIndustryLeadersMarquee";
 import PvmVenueManagementUpdate from "../pvm/PvmVenueManagementUpdate";
+import PvmWhatGetUpdate from "../pvm/PvmWhatGetUpdate";
 
 export default function PvmLayout() {
   return (
@@ -23,7 +24,8 @@ export default function PvmLayout() {
       <PvmIndustryLeadersMarquee />
       <PvmVenueManagementUpdate/>
       <PvmPlaceManageSec />
-      <PvmWhatGet />
+      {/* <PvmWhatGet /> */}
+      <PvmWhatGetUpdate/>
       <PvmLatestEvent />
       <PvmYourPlaceSec />
       <PvmFaqSec />

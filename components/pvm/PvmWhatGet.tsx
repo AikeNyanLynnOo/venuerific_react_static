@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { CaretDown } from "@phosphor-icons/react";
 
 const PvmWhatGet = () => {
   return (
@@ -28,86 +27,6 @@ const PvmWhatGet = () => {
             borderSpacing: "10px",
           }}
         ></div>
-
-        <div
-          className="absolute w-[500px] h-[500px]"
-          style={{ pointerEvents: "none" }}
-        >
-          {/* Bottom CaretDown */}
-          <div
-            className="absolute"
-            style={{
-              bottom: "-12px",
-              left: "50%",
-              transform: "translateX(-50%) rotate(90deg)",
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={3}
-              stroke="#7C98B6"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </div>
-
-          {/* Left CaretDown */}
-          <div
-            className="absolute"
-            style={{
-              top: "30%",
-              left: "9px",
-              transform: "translateY(-50%) rotate(197deg)",
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={3}
-              stroke="#7C98B6"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </div>
-
-          {/* Right CaretDown */}
-          <div
-            className="absolute"
-            style={{
-              top: "30%",
-              right: "9px",
-              transform: "translateY(-50%) rotate(-20deg)",
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={3}
-              stroke="#7C98B6"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </div>
-        </div>
 
         <svg
           width="480"
@@ -140,7 +59,7 @@ const PvmWhatGet = () => {
             fill="transparent"
             stroke="url(#gradient1)"
             strokeWidth="7"
-            strokeDasharray="30 3"
+            strokeDasharray="31 2 27" // Segment: 31, Gap: 2, Remaining: 67
             strokeDashoffset="0"
             transform="rotate(-90 21 21)"
           />
@@ -152,8 +71,8 @@ const PvmWhatGet = () => {
             fill="transparent"
             stroke="url(#gradient2)"
             strokeWidth="7"
-            strokeDasharray="30 3"
-            strokeDashoffset="33"
+            strokeDasharray="31 2 67"
+            strokeDashoffset="-33" // Adjust offset for segment alignment
             transform="rotate(-90 21 21)"
           />
           {/* Sales and Support Segment */}
@@ -164,8 +83,8 @@ const PvmWhatGet = () => {
             fill="transparent"
             stroke="url(#gradient3)"
             strokeWidth="7"
-            strokeDasharray="30 3"
-            strokeDashoffset="66"
+            strokeDasharray="41 5 87"
+            strokeDashoffset="-66" // Adjust offset for segment alignment
             transform="rotate(-90 21 21)"
           />
 
