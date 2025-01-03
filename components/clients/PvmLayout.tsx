@@ -1,14 +1,15 @@
 import { VNFNavbar } from "@/components/molecules/VNFNavbar";
 import Footer from "@/components/molecules/Footer";
-import PvmVenueManagement from "@/components/pvm/PvmVenueManagement";
-import PvmTopEventsMarquee from "@/components/pvm/PvmTopEventsMarquee";
-import PvmWhatGet from "@/components/pvm/PvmWhatGet";
-import PvmLatestEvent from "@/components/pvm/PvmLatestEvent";
-import PvmYourPlaceSec from "@/components/pvm/PvmYourPlaceSec";
+import PvmTopEventsMarquee from "@/components/pvm/PvmTrustedVenuesMarquee";
+import PvmLatestEvent from "@/components/pvm/PvmBrandTrustSectionGlobal";
+import PvmYourPlaceSec from "@/components/pvm/PvmYourSpaceSec";
 import PvmBannerWorkTogether from "@/components/pvm/PvmBannerWorkTogether";
 import PvmFaqSec from "@/components/pvm/PvmFaqSec";
 import PvmHero from "@/components/pvm/PvmHero";
-import PvmPlaceManageSec from "@/components/pvm/PvmPlaceManageSec";
+import PvmPlaceManageSec from "@/components/pvm/PvmSimplifyEventPlanning";
+import PvmIndustryLeadersMarquee from "../pvm/PvmIndustryLeadersMarquee";
+import PvmVenueManagementUpdate from "../pvm/PvmVenueManagementUpdate";
+import PvmWhatGetUpdate from "../pvm/PvmWhyPartner";
 
 export default function PvmLayout() {
   return (
@@ -18,10 +19,11 @@ export default function PvmLayout() {
         maxWidth="full"
       />
       <PvmHero />
-      <PvmVenueManagement />
       <PvmTopEventsMarquee />
+      <PvmVenueManagementUpdate />
       <PvmPlaceManageSec />
-      <PvmWhatGet />
+      <PvmWhatGetUpdate />
+      <PvmIndustryLeadersMarquee />
       <PvmLatestEvent />
       <PvmYourPlaceSec />
       <PvmFaqSec />
@@ -30,7 +32,7 @@ export default function PvmLayout() {
         title="Let’s Work On Your Space Together!"
         text="Got questions? We'd love to help and we're looking
               forward to hearing from you!"
-        btnText="Talk To Us"
+        btnText="Schedule A Consultation"
       />
       <div className="w-full mt-10 mx-auto px-5 md:px-5 lg:px-12 xl:px-20 block md:flex items-center justify-between">
         <Footer />

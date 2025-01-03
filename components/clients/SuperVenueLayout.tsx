@@ -1,8 +1,8 @@
 import { VNFNavbar } from "@/components/molecules/VNFNavbar";
 import Footer from "@/components/molecules/Footer";
 import WhatIsSuperVenue from "@/components/superVenue/WhatIsSuperVenue";
-import SuperVenueRequirement from "@/components/superVenue/SuperVenueRequirement";
-import SuperVenueRaiseStatus from "@/components/superVenue/SuperVenueRaiseStatus";
+import SuperVenueRequirementUpdate from "../superVenue/SuperVenueStandardRequirement";
+import SuperVenueRaiseStatus from "@/components/superVenue/SuperVenueEarnStatus";
 import SuperVenueFaqSec from "@/components/superVenue/SuperVenueFaqSec";
 import SuperVenueBanner from "@/components/superVenue/SuperVenueBanner";
 import SuperVenueHero from "@/components/superVenue/SuperVenueHero";
@@ -17,14 +17,15 @@ export default function SuperVenueLayout() {
       <SuperVenueHero />
       <SuperVenueRaiseStatus />
       <WhatIsSuperVenue />
-      <SuperVenueRequirement />
+      {/* <SuperVenueRequirement /> */}
+      <SuperVenueRequirementUpdate />
       <SuperVenueFaqSec />
       <SuperVenueBanner
         imgSrc="/images/why_vendor_list/vendor_banner.webp"
-        title="Become Super Venue Now"
+        title="Not on Venuerific yet? Get listed today."
         text="Got questions? We'd love to help and we're looking
               forward to hearing from you!"
-        btnText="Get In Touch"
+        btnText="List Now"
       />
       <div className="w-full mt-10 mx-auto px-5 md:px-5 lg:px-12 xl:px-20 block md:flex items-center justify-between">
         <Footer />

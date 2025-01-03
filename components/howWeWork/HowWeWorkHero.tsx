@@ -3,7 +3,7 @@
 const HowWeWorkHero = () => {
   return (
     <div className="relative">
-      <div className="absolute inset-0 w-full h-[400px] md:h-[500px]">
+      <div className="absolute inset-0 w-full h-full">
         <img
           src="/images/how_we_work/how_we_work_hero_img.webp"
           alt="How We Work Hero"

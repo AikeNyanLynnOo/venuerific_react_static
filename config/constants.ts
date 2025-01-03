@@ -362,28 +362,61 @@ export const MARQUEE_IMGS = [
 
 export const TRUSTED_BUSINESSES = [
   {
-    src: "/images/why_venue_list/venue_trusted_business_img1.svg",
+    src: "/images/why_venue_list/trusted_businesses_update/1.png",
     alt: "trusted1",
     href: "#",
   },
   {
-    src: "/images/why_venue_list/venue_trusted_business_img2.svg",
+    src: "/images/why_venue_list/trusted_businesses_update/2.png",
     alt: "trusted2",
     href: "#",
   },
   {
-    src: "/images/why_venue_list/venue_trusted_business_img3.svg",
+    src: "/images/why_venue_list/trusted_businesses_update/3.png",
     alt: "trusted3",
     href: "#",
   },
   {
-    src: "/images/why_venue_list/venue_trusted_business_img4.svg",
+    src: "/images/why_venue_list/trusted_businesses_update/4.png",
     alt: "trusted4",
     href: "#",
   },
   {
-    src: "/images/why_venue_list/venue_trusted_business_img5.svg",
+    src: "/images/why_venue_list/trusted_businesses_update/5.png",
     alt: "trusted5",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/trusted_businesses_update/6.png",
+    alt: "trusted6",
+    href: "#",
+  },
+];
+
+export const INDUSTRY_LEADERS = [
+  {
+    src: "/images/why_venue_list/industry_leaders/1.png",
+    alt: "industryleader1",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/industry_leaders/2.png",
+    alt: "industryleader2",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/industry_leaders/3.png",
+    alt: "industryleader3",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/industry_leaders/4.png",
+    alt: "industryleader4",
+    href: "#",
+  },
+  {
+    src: "/images/why_venue_list/industry_leaders/5.png",
+    alt: "industryleader5",
     href: "#",
   },
 ];
