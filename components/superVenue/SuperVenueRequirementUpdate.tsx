@@ -1,38 +1,7 @@
 "use client";
+import { REQUIREMENTS } from "@/config/constants/super-venue-constants";
 
 const SuperVenueRequirementUpdate = () => {
-  const requirements = [
-    {
-      title: "90% or higher",
-      subtitle: "Response Rate",
-      description:
-        "Response rates of 90% or higher make for a proactive venue.",
-    },
-    {
-      title: "6% or higher",
-      subtitle: "Conversion Rate",
-      description:
-        "Conversion rates of 6% or higher make for a proactive venue.",
-    },
-    {
-      title: "5 booking / year",
-      subtitle: "Number of Booking",
-      description: "5 or more bookings a year build a venue's good reputation.",
-    },
-    {
-      title: "Under 24 hours",
-      subtitle: "Response Time",
-      description:
-        "Responsive venues reply in less than 24 hours after an enquiry.",
-    },
-    {
-      title: "4 Star or higher",
-      subtitle: "Venue Rating",
-      description:
-        "If customers love you, they'll let you know. Super Venue lets future customers know too.",
-    },
-  ];
-
   return (
     <div className="w-full mx-auto px-0 py-6 lg:py-10 md:px-5 lg:px-12 xl:px-20">
       <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
@@ -58,7 +27,7 @@ const SuperVenueRequirementUpdate = () => {
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {requirements.slice(0, 3).map((req, index) => (
+          {REQUIREMENTS.slice(0, 3).map((req, index) => (
             <div
               key={index}
               className="bg-secondary-100 p-6 rounded-lg text-left"
@@ -78,7 +47,7 @@ const SuperVenueRequirementUpdate = () => {
 
         {/* Centered Bottom Row */}
         <div className="mt-6 mx-auto max-w-screen-md grid grid-cols-1 md:grid-cols-2 gap-6">
-          {requirements.slice(3).map((req, index) => (
+          {REQUIREMENTS.slice(3).map((req, index) => (
             <div
               key={index}
               className="bg-secondary-100 p-6 rounded-lg text-left"

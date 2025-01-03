@@ -20,9 +20,9 @@ export default function PvmLayout() {
       />
       <PvmHero />
       <PvmTopEventsMarquee />
-      <PvmVenueManagementUpdate/>
+      <PvmVenueManagementUpdate />
       <PvmPlaceManageSec />
-      <PvmWhatGetUpdate/>
+      <PvmWhatGetUpdate />
       <PvmIndustryLeadersMarquee />
       <PvmLatestEvent />
       <PvmYourPlaceSec />

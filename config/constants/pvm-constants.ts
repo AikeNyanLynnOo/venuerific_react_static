@@ -28,7 +28,7 @@ export const FAQ_ITEMS = [
     question: "How much does event space rental in Singapore cost?",
     answer:
       "The cost varies depending on the location, size, and amenities of the event space. Visit our pricing page for more details.",
-  },
+  }
 ];
 
 export const VENUES = [
@@ -55,5 +55,5 @@ export const VENUES = [
     alt: "Unique Space Icon",
     title: "Unique Venues",
     // description: "Learn, network, and enjoy large events",
-  },
+  }
 ];

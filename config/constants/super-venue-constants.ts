@@ -60,3 +60,33 @@ export const CARD_DATA = [
       "Our team values your venue, so we're always here to help, ASAP.",
   },
 ];
+
+export const REQUIREMENTS = [
+  {
+    title: "90% or higher",
+    subtitle: "Response Rate",
+    description: "Response rates of 90% or higher make for a proactive venue.",
+  },
+  {
+    title: "6% or higher",
+    subtitle: "Conversion Rate",
+    description: "Conversion rates of 6% or higher make for a proactive venue.",
+  },
+  {
+    title: "5 booking / year",
+    subtitle: "Number of Booking",
+    description: "5 or more bookings a year build a venue's good reputation.",
+  },
+  {
+    title: "Under 24 hours",
+    subtitle: "Response Time",
+    description:
+      "Responsive venues reply in less than 24 hours after an enquiry.",
+  },
+  {
+    title: "4 Star or higher",
+    subtitle: "Venue Rating",
+    description:
+      "If customers love you, they'll let you know. Super Venue lets future customers know too.",
+  },
+];

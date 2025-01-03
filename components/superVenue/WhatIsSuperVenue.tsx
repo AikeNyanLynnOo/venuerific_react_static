@@ -21,7 +21,7 @@ const WhatIsSuperVenue = () => {
           {CARD_DATA.map((card, index) => (
             <div
               key={index}
-              className="border border-secondary200 rounded-lg p-6 flex flex-col items-start text-left"
+              className="border border-secondary200 rounded-lg p-4 flex flex-col items-start text-left"
             >
               <div className="w-full flex justify-start">
                 <img
