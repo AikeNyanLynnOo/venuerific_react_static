@@ -1,36 +1,7 @@
 "use client";
+import { CARD_DATA } from "@/config/constants/super-venue-constants";
 
 const WhatIsSuperVenue = () => {
-  const cardData = [
-    {
-      image: "/images/super_venue/what_super_venue_search_icon.webp",
-      alt: "Top Search Icon",
-      title: "Top Search",
-      description:
-        "Appear at the beginning of every venue search and increase your chances of getting booked!",
-    },
-    {
-      image: "/images/super_venue/what_super_venue_badge_icon.webp",
-      alt: "Special Badge Icon",
-      title: "Special Badge",
-      description:
-        "Stand out with a Super Venue badge to enhance your visibility and book more events at your space.",
-    },
-    {
-      image: "/images/super_venue/what_super_venue_filter_icon.webp",
-      alt: "Super Venue Filter Icon",
-      title: "Super Venue Filter Search",
-      description: "A special filter that celebrates YOUR hard work.",
-    },
-    {
-      image: "/images/super_venue/what_super_venue_support_icon.webp",
-      alt: "Priority Support Icon",
-      title: "Priority Support from our Team",
-      description:
-        "Our team values your venue, so we're always here to help, ASAP.",
-    },
-  ];
-
   return (
     <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-0 md:py-0 lg:py-10 mt-14">
       <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
@@ -47,7 +18,7 @@ const WhatIsSuperVenue = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-6 mt-10 md:mt-16">
-          {cardData.map((card, index) => (
+          {CARD_DATA.map((card, index) => (
             <div
               key={index}
               className="border border-secondary200 rounded-lg p-6 flex flex-col items-start text-left"

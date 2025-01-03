@@ -1,4 +1,4 @@
-import { SOLUTIONS } from "../../config/constants/why-venue-list";
+import { SOLUTIONS } from "../../config/constants/why-venue-list_constants";
 
 const VenuerificSolution = () => {
   return (

@@ -1,7 +1,6 @@
 import { VNFNavbar } from "@/components/molecules/VNFNavbar";
 import Footer from "@/components/molecules/Footer";
 import PvmTopEventsMarquee from "@/components/pvm/PvmTopEventsMarquee";
-import PvmWhatGet from "@/components/pvm/PvmWhatGet";
 import PvmLatestEvent from "@/components/pvm/PvmLatestEvent";
 import PvmYourPlaceSec from "@/components/pvm/PvmYourPlaceSec";
 import PvmBannerWorkTogether from "@/components/pvm/PvmBannerWorkTogether";
@@ -21,11 +20,10 @@ export default function PvmLayout() {
       />
       <PvmHero />
       <PvmTopEventsMarquee />
-      <PvmIndustryLeadersMarquee />
       <PvmVenueManagementUpdate/>
       <PvmPlaceManageSec />
-      {/* <PvmWhatGet /> */}
       <PvmWhatGetUpdate/>
+      <PvmIndustryLeadersMarquee />
       <PvmLatestEvent />
       <PvmYourPlaceSec />
       <PvmFaqSec />

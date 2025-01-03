@@ -362,58 +362,33 @@ export const MARQUEE_IMGS = [
 
 export const TRUSTED_BUSINESSES = [
   {
-    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/1.png",
+    src: "/images/why_venue_list/trusted_businesses_update/1.png",
     alt: "trusted1",
     href: "#",
   },
   {
-    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/2.webp",
+    src: "/images/why_venue_list/trusted_businesses_update/2.png",
     alt: "trusted2",
     href: "#",
   },
   {
-    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/3.png",
+    src: "/images/why_venue_list/trusted_businesses_update/3.png",
     alt: "trusted3",
     href: "#",
   },
   {
-    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/4.png",
+    src: "/images/why_venue_list/trusted_businesses_update/4.png",
     alt: "trusted4",
     href: "#",
   },
   {
-    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/5.png",
+    src: "/images/why_venue_list/trusted_businesses_update/5.png",
     alt: "trusted5",
     href: "#",
   },
   {
-    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/6.png",
+    src: "/images/why_venue_list/trusted_businesses_update/6.png",
     alt: "trusted6",
-    href: "#",
-  },
-  {
-    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/7.png",
-    alt: "trusted7",
-    href: "#",
-  },
-  {
-    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/8.png",
-    alt: "trusted8",
-    href: "#",
-  },
-  {
-    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/9.png",
-    alt: "trusted9",
-    href: "#",
-  },
-  {
-    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/10.png",
-    alt: "trusted10",
-    href: "#",
-  },
-  {
-    src: "/images/why_venue_list/trusted_businesses/trusted_businesses/11.png",
-    alt: "trusted11",
     href: "#",
   },
 ];

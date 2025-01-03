@@ -137,3 +137,69 @@ export const GROW_ITEMS = [
     alt: "WeWork Logo",
   },
 ];
+
+export const SECTIONS = [
+  {
+    key: "attract_capture",
+    title: "Attract & Capture",
+    icon: "/images/why_venue_list/venue_marketing_img1.webp",
+    inactiveIcon: "/images/why_venue_list/venue_marketing_img1.webp",
+    content: [
+      {
+        heading: "Rank Higher on Google",
+        text: "Boost your online visibility and attract a world of new event organizers by getting listed on Venuerific.",
+      },
+      {
+        heading: "Generate More Leads",
+        text: "Increase venue bookings through specialized venue marketing strategies.",
+      },
+    ],
+    rightImage: "/images/why_venue_list/1-attract-capture.webp",
+    textStyle: "text-primary-600",
+  },
+  {
+    key: "manage_automate",
+    title: "Manage & Automate",
+    icon: "/images/why_venue_list/venue_marketing_img2.webp",
+    inactiveIcon: "/images/why_venue_list/venue_marketing_icon_inactive_2.webp",
+    content: [
+      {
+        heading: "Easily Manage Leads and Bookings",
+        text: "Track all your leads and manage bookings easily in one platform. Automate the entire venue sales process so you can focus what truly matters - growing your venue business.",
+      },
+      {
+        heading: "Manage Your Schedule with Ease",
+        text: "Stay organized from the comfort of our CRM! Our calendar sync feature allows you to integrate your venue’s calendar to Venuerific, enabling you to check event availability and upcoming bookings. Keep your venue management seamless and efficient!",
+      },
+      {
+        heading: "Instant Venue Insights",
+        text: "Save time preparing for meetings with analytics that automatically update in real-time, delivering key insights on your venue's performance, including conversion rates and listing views.",
+      },
+    ],
+    rightImage: "/images/why_venue_list/2-manage-automate.webp",
+    textStyle: "text-[#A261FD]",
+  },
+  {
+    key: "convert_nurture",
+    title: "Convert & Nurture",
+    icon: "/images/why_venue_list/venue_marketing_img3.webp",
+    inactiveIcon: "/images/why_venue_list/venue_marketing_icon_inactive_3.webp",
+    content: [
+      {
+        heading: "Instant Quotation Generation",
+        text: "Quickly generate and send quotations to clients, complete with detailed descriptions and price via email or WhatsApp.",
+      },
+      {
+        heading: "Seamless and Secure Transactions with Venuerific Payment",
+        text: "With Venuerific Payment, receive payment safely and quickly for any bookings you get.",
+      },
+      {
+        heading:
+          "Grow Revenue through WhatsApp and email campaigns for your venue",
+        text: "Harness the power of WhatsApp and email campaigns on Venuerific to promote your venue and nurture customer relationships, positioning your venue for long-term growth.",
+      },
+    ],
+    rightImage: "/images/why_venue_list/3-convert-nurture.webp",
+    textStyle: "text-[#0D6EFD]",
+  },
+];

@@ -18,7 +18,7 @@ const PvmPlaceManageSec = () => {
             </p>
             <div className="mt-10 flex flex-col items-start space-y-3">
               <span className="text-primary-600 text-6xl font-semibold">
-                +20
+                +30
               </span>
               <span className="text-secondary-500 text-2xl font-semibold">
                 Places managed by us

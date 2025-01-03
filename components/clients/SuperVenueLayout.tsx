@@ -1,12 +1,11 @@
 import { VNFNavbar } from "@/components/molecules/VNFNavbar";
 import Footer from "@/components/molecules/Footer";
 import WhatIsSuperVenue from "@/components/superVenue/WhatIsSuperVenue";
-import SuperVenueRequirement from "@/components/superVenue/SuperVenueRequirement";
+import SuperVenueRequirementUpdate from "../superVenue/SuperVenueRequirementUpdate";
 import SuperVenueRaiseStatus from "@/components/superVenue/SuperVenueRaiseStatus";
 import SuperVenueFaqSec from "@/components/superVenue/SuperVenueFaqSec";
 import SuperVenueBanner from "@/components/superVenue/SuperVenueBanner";
 import SuperVenueHero from "@/components/superVenue/SuperVenueHero";
-import SuperVenueRequirementUpdate from "../superVenue/SuperVenueRequirementUpdate";
 
 export default function SuperVenueLayout() {
   return (
@@ -19,7 +18,7 @@ export default function SuperVenueLayout() {
       <SuperVenueRaiseStatus />
       <WhatIsSuperVenue />
       {/* <SuperVenueRequirement /> */}
-      <SuperVenueRequirementUpdate/>
+      <SuperVenueRequirementUpdate />
       <SuperVenueFaqSec />
       <SuperVenueBanner
         imgSrc="/images/why_vendor_list/vendor_banner.webp"

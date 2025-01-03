@@ -4,8 +4,8 @@ import React from "react";
 const PvmWhatGetUpdate = () => {
   return (
     <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-10">
-      <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
-        <h2 className="text-primary-800 text-4xl font-semibold mb-10">
+      <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto text-left lg:text-center">
+        <h2 className="text-primary-800 text-3xl lg:text-4xl font-semibold mb-10">
           Why Venuerific as Your Venue Management Partner?
         </h2>
         <p className="text-secondary-600 font-medium text-xl mb-20">
