@@ -47,7 +47,7 @@ export const SuperVenueBanner = ({
                 color="primary"
                 startContent={
                   <img
-                    src="/images/pvm/chat_default.webp"
+                    src="/images/pvm/list.webp"
                     alt="Chat Icon Desktop"
                     className="w-4 h-4"
                   />
@@ -65,7 +65,7 @@ export const SuperVenueBanner = ({
               color="primary"
               startContent={
                 <img
-                  src="/images/pvm/chat_default.webp"
+                  src="/images/pvm/list.webp"
                   alt="Chat Icon Desktop"
                   className="w-4 h-4"
                 />

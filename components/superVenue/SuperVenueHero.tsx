@@ -2,9 +2,9 @@
 
 const SuperVenueHero = () => {
   return (
-    <div className="relative">
+    <div className="mt-[81px] relative">
       {/* Background image for mobile and tablet */}
-      <div className="absolute inset-0 w-full h-[400px] lg:h-[500px] block lg:hidden">
+      <div className="absolute inset-0 w-full h-full block lg:hidden">
         <img
           src="/images/super_venue/super_venue_hero_mobile.webp"
           alt="Mobile venue background image"
@@ -12,15 +12,15 @@ const SuperVenueHero = () => {
         />
       </div>
       {/* Background image for desktop */}
-      <div className="absolute inset-0 w-full h-[400px] lg:h-[500px] hidden lg:block">
+      <div className="absolute inset-0 w-full h-full hidden lg:block">
         <img
           src="/images/super_venue/super_venue_hero.webp"
           alt="Desktop venue background image"
           className="h-full w-full object-cover object-center"
         />
       </div>
-      <div className="relative z-10 mt-[81px] w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-20 lg:py-26">
-        <div className="px-4 md:px-0 my-10 md:mt-6 max-w-screen-2xl mx-auto text-left lg:text-center">
+      <div className="relative z-10 flex items-center justify-center min-h-[60vh] w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20">
+        <div className="px-4 md:px-0 max-w-screen-2xl mx-auto text-left lg:text-center">
           <p className="text-white text-sm lg:text-base font-semibold mb-2 lg:mb-6">
             Super Venue
           </p>

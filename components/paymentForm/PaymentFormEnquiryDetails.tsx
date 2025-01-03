@@ -9,7 +9,7 @@ import { useDisclosure } from "@nextui-org/modal";
 import { PaymentChatFormModal } from "../molecules/modals/PaymentChatFormModal";
 
 const PaymentFormEnquiryDetails = () => {
-  const [chipState, setChipState] = useState("Declined");
+  const [chipState, setChipState] = useState("Unread");
 
   const getChipColor = () => {
     switch (chipState) {
