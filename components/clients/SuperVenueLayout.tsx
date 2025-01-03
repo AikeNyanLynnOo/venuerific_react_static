@@ -1,8 +1,8 @@
 import { VNFNavbar } from "@/components/molecules/VNFNavbar";
 import Footer from "@/components/molecules/Footer";
 import WhatIsSuperVenue from "@/components/superVenue/WhatIsSuperVenue";
-import SuperVenueRequirementUpdate from "../superVenue/SuperVenueRequirementUpdate";
-import SuperVenueRaiseStatus from "@/components/superVenue/SuperVenueRaiseStatus";
+import SuperVenueRequirementUpdate from "../superVenue/SuperVenueStandardRequirement";
+import SuperVenueRaiseStatus from "@/components/superVenue/SuperVenueEarnStatus";
 import SuperVenueFaqSec from "@/components/superVenue/SuperVenueFaqSec";
 import SuperVenueBanner from "@/components/superVenue/SuperVenueBanner";
 import SuperVenueHero from "@/components/superVenue/SuperVenueHero";

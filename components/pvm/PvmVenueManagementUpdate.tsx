@@ -1,5 +1,5 @@
 "use client";
-import { VENUES } from "@/config/constants/pvm-constants";
+import { VENUE_MANAGEMENT } from "@/config/constants/pvm-constants";
 
 const PvmVenueManagementUpdate = () => {
   return (
@@ -18,7 +18,7 @@ const PvmVenueManagementUpdate = () => {
                 everything from inquiries to post-event follow-up.
               </p>
             </div>
-            {VENUES.map((venue, index) => (
+            {VENUE_MANAGEMENT.map((venue, index) => (
               <div
                 key={index}
                 className="p-6 border border-gray-200 rounded-lg hover:shadow-lg"

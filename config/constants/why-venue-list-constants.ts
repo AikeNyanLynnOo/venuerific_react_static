@@ -55,7 +55,7 @@ export const TRUSTED_BUSINESSES = [
     src: "/images/why_venue_list/trusted_businesses/6.png",
     alt: "trusted5",
     href: "#",
-  }
+  },
 ];
 
 export const SOLUTIONS = [
@@ -103,7 +103,7 @@ export const SOLUTIONS = [
     image: "/images/why_venue_list/hotel_with_events.webp",
     alt: "Hotels with Event Spaces",
     title: "Hotels with Event Spaces",
-  }
+  },
 ];
 
 export const FEATURES = [
@@ -126,7 +126,7 @@ export const FEATURES = [
     title: "End-to-End Support",
     description:
       "Our customer success team offers local and fast assistance to guide you in growing your venue business.",
-  }
+  },
 ];
 
 export const GROW_ITEMS = [
@@ -135,10 +135,10 @@ export const GROW_ITEMS = [
     logoUrl: "/images/why_venue_list/wework.png",
     imageUrl: "/images/why_venue_list/venue_growing_wework_img.png",
     alt: "WeWork Logo",
-  }
+  },
 ];
 
-export const SECTIONS = [
+export const MARKETING_LIFECYCLE = [
   {
     key: "attract_capture",
     title: "Attract & Capture",
@@ -201,5 +201,5 @@ export const SECTIONS = [
     ],
     rightImage: "/images/why_venue_list/3-convert-nurture.webp",
     textStyle: "text-[#0D6EFD]",
-  }
+  },
 ];

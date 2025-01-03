@@ -1,10 +1,13 @@
 "use client";
+import { SPACE_IN_GOOD_HANDS } from "@/config/constants/pvm-constants";
 
 const PvmYourPlaceSec = () => {
   return (
     <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-14 bg-primary-800">
       <div className="max-w-[1000px] px-4 md:px-0 my-10 md:mt-4 mx-auto text-center">
-        <h2 className="text-4xl text-white font-semibold">Your Space Is In Good Hands.</h2>
+        <h2 className="text-4xl text-white font-semibold">
+          Your Space Is In Good Hands.
+        </h2>
 
         <p className="text-xl text-primary-200 mt-6">
           Venuerific has been the standard for venue management and events
@@ -13,23 +16,7 @@ const PvmYourPlaceSec = () => {
         </p>
 
         <div className="flex flex-col items-center md:flex-row justify-center mt-12 gap-8 md:gap-20">
-          {[
-            {
-              src: "/images/pvm/professionalism_icon.webp",
-              alt: "Professionalism Icon",
-              label: "Professionalism",
-            },
-            {
-              src: "/images/pvm/trustworthy_icon.webp",
-              alt: "Trustworthy Icon",
-              label: "Trustworthy",
-            },
-            {
-              src: "/images/pvm/experience_icon.webp",
-              alt: "Experience Icon",
-              label: "Experienced",
-            },
-          ].map((item, index) => (
+          {SPACE_IN_GOOD_HANDS.map((item, index) => (
             <div
               className="flex items-center md:flex-col md:items-center text-left md:text-center w-full max-w-[200px]"
               key={index}

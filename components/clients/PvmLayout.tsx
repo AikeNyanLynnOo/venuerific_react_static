@@ -1,15 +1,15 @@
 import { VNFNavbar } from "@/components/molecules/VNFNavbar";
 import Footer from "@/components/molecules/Footer";
-import PvmTopEventsMarquee from "@/components/pvm/PvmTopEventsMarquee";
-import PvmLatestEvent from "@/components/pvm/PvmLatestEvent";
-import PvmYourPlaceSec from "@/components/pvm/PvmYourPlaceSec";
+import PvmTopEventsMarquee from "@/components/pvm/PvmTrustedVenuesMarquee";
+import PvmLatestEvent from "@/components/pvm/PvmBrandTrustSectionGlobal";
+import PvmYourPlaceSec from "@/components/pvm/PvmYourSpaceSec";
 import PvmBannerWorkTogether from "@/components/pvm/PvmBannerWorkTogether";
 import PvmFaqSec from "@/components/pvm/PvmFaqSec";
 import PvmHero from "@/components/pvm/PvmHero";
-import PvmPlaceManageSec from "@/components/pvm/PvmPlaceManageSec";
+import PvmPlaceManageSec from "@/components/pvm/PvmSimplifyEventPlanning";
 import PvmIndustryLeadersMarquee from "../pvm/PvmIndustryLeadersMarquee";
 import PvmVenueManagementUpdate from "../pvm/PvmVenueManagementUpdate";
-import PvmWhatGetUpdate from "../pvm/PvmWhatGetUpdate";
+import PvmWhatGetUpdate from "../pvm/PvmWhyPartner";
 
 export default function PvmLayout() {
   return (

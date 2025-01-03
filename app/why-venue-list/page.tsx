@@ -1,9 +1,9 @@
 import Footer from "@/components/molecules/Footer";
 import { VNFNavbar } from "@/components/molecules/VNFNavbar";
 import TryVenuerific from "@/components/whyVenueList/TryVenuerific";
-import VenueGrowing from "@/components/whyVenueList/VenueGrowing";
+import VenueGrowing from "@/components/whyVenueList/VenueGrowthShowcase";
 import VenueMarketing from "@/components/whyVenueList/VenueMarketing";
-import VenueMarketingUpdate from "@/components/whyVenueList/VenueMarketingUpdate";
+import VenueMarketingUpdate from "@/components/whyVenueList/VenueMarketingLifeCycle";
 import VenueMonthlyRevenue from "@/components/whyVenueList/VenueMonthlyRevenue";
 import VenuerificSolution from "@/components/whyVenueList/VenuerificSolution";
 import VenueTrustedBusiness from "@/components/whyVenueList/VenueTrustedBusiness";

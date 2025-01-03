@@ -1,33 +1,8 @@
-const vendorData = [
-  {
-    numberImage: "/images/why_vendor_list/vendor_number1.webp",
-    contentImage: "/images/why_vendor_list/why_vendor_img_1.webp",
-    title: "Rank higher on Google.",
-    description:
-      "Boost your search engine rankings and drive more organic traffic with Venuerific.",
-    imagePosition: "left",
-  },
-  {
-    numberImage: "/images/why_vendor_list/vendor_number2.webp",
-    contentImage: "/images/why_vendor_list/why_vendor_img_2.webp",
-    title: "Connect with Event Organizers on Venuerific.",
-    description:
-      "Over 500,000 active event organizers are on the Venuerific platform.",
-    imagePosition: "right",
-  },
-  {
-    numberImage: "/images/why_vendor_list/vendor_number3.webp",
-    contentImage: "/images/why_vendor_list/why_vendor_img_3.webp",
-    title: "Grow your business for free.",
-    description:
-      "Yes, you read that right!<br />It’s completely free to get listed as a vendor on our platform to unlock revenue opportunities.",
-    imagePosition: "left",
-  },
-];
+import { WHY_VENDOR_DATA } from "@/config/constants/why-vendor-list-constants";
 
 const WhyVendor = () => {
   return (
-    <div className="w-full mx-auto px-4 md:px-6 lg:px-12 xl:px-20 py-10">
+    <div className="w-full mx-auto px-4 md:px-6 lg:px-12 xl:px-20 pt-10 pb-28">
       <div className="px-4 md:px-0 my-10 md:mt-4 max-w-screen-2xl mx-auto">
         <h2 className="text-center text-3xl md:text-4xl text-primary-700 mb-10">
           <span className="font-semibold hidden md:inline">
@@ -38,7 +13,7 @@ const WhyVendor = () => {
           </span>
         </h2>
         <div className="space-y-8">
-          {vendorData.map((vendor, index) => (
+          {WHY_VENDOR_DATA.map((vendor, index) => (
             <div
               key={index}
               className={`flex flex-col ${

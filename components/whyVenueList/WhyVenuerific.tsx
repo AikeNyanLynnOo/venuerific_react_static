@@ -1,4 +1,4 @@
-import { FEATURES } from "../../config/constants/why-venue-list_constants";
+import { FEATURES } from "../../config/constants/why-venue-list-constants";
 
 const WhyVenuerific = () => {
   return (

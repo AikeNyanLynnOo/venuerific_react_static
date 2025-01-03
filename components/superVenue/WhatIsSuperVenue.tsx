@@ -1,5 +1,5 @@
 "use client";
-import { CARD_DATA } from "@/config/constants/super-venue-constants";
+import { SUPER_VENUE_INFO } from "@/config/constants/super-venue-constants";
 
 const WhatIsSuperVenue = () => {
   return (
@@ -18,7 +18,7 @@ const WhatIsSuperVenue = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-6 mt-10 md:mt-16">
-          {CARD_DATA.map((card, index) => (
+          {SUPER_VENUE_INFO.map((card, index) => (
             <div
               key={index}
               className="border border-secondary200 rounded-lg p-4 flex flex-col items-start text-left"

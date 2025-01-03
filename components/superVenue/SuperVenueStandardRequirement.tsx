@@ -1,5 +1,5 @@
 "use client";
-import { REQUIREMENTS } from "@/config/constants/super-venue-constants";
+import { STANDARD_REQUIREMENTS } from "@/config/constants/super-venue-constants";
 
 const SuperVenueRequirementUpdate = () => {
   return (
@@ -27,7 +27,7 @@ const SuperVenueRequirementUpdate = () => {
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {REQUIREMENTS.slice(0, 3).map((req, index) => (
+          {STANDARD_REQUIREMENTS.slice(0, 3).map((req, index) => (
             <div
               key={index}
               className="bg-secondary-100 p-6 rounded-lg text-left"
@@ -47,7 +47,7 @@ const SuperVenueRequirementUpdate = () => {
 
         {/* Centered Bottom Row */}
         <div className="mt-6 mx-auto max-w-screen-md grid grid-cols-1 md:grid-cols-2 gap-6">
-          {REQUIREMENTS.slice(3).map((req, index) => (
+          {STANDARD_REQUIREMENTS.slice(3).map((req, index) => (
             <div
               key={index}
               className="bg-secondary-100 p-6 rounded-lg text-left"

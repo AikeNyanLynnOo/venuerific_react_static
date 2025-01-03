@@ -1,5 +1,4 @@
 "use client";
-
 import { CustomAccordionItem } from "@/components/atoms/CustomAccordionItem";
 import { FAQ_ITEMS } from "@/config/constants/pvm-constants";
 

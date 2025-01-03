@@ -2,7 +2,7 @@
 import { Tab, Tabs } from "@nextui-org/tabs";
 import { useState, useMemo } from "react";
 import { twMerge } from "tailwind-merge";
-import { SECTIONS } from "../../config/constants/why-venue-list_constants";
+import { MARKETING_LIFECYCLE } from "../../config/constants/why-venue-list-constants";
 
 const VenueMarketingUpdate = () => {
   const [selectedTab, setSelectedTab] = useState("attract_capture");
@@ -15,7 +15,7 @@ const VenueMarketingUpdate = () => {
     []
   );
 
-  const currentTab = SECTIONS.find((tab) => tab.key === selectedTab);
+  const currentTab = MARKETING_LIFECYCLE.find((tab) => tab.key === selectedTab);
 
   return (
     <div className="w-full mx-auto px-0 md:px-5 lg:px-12 xl:px-20 py-10 md:py-20 bg-primary-50">
@@ -44,7 +44,7 @@ const VenueMarketingUpdate = () => {
               tabContent: "min-w-fit p-0",
             }}
           >
-            {SECTIONS.map((section) => (
+            {MARKETING_LIFECYCLE.map((section) => (
               <Tab
                 key={section.key}
                 title={
@@ -106,7 +106,7 @@ const VenueMarketingUpdate = () => {
 
         {/* Mobile & Tablet View */}
         <div className="lg:hidden">
-          {SECTIONS.map((section, sectionIndex) => (
+          {MARKETING_LIFECYCLE.map((section, sectionIndex) => (
             <div key={section.key} className="mb-10">
               <div className="flex flex-col items-start gap-2">
                 {sectionIndex === 0 && (

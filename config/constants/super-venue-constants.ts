@@ -31,7 +31,7 @@ export const FAQ_ITEMS = [
   },
 ];
 
-export const CARD_DATA = [
+export const SUPER_VENUE_INFO = [
   {
     image: "/images/super_venue/what_super_venue_search_icon.webp",
     alt: "Top Search Icon",
@@ -61,7 +61,7 @@ export const CARD_DATA = [
   },
 ];
 
-export const REQUIREMENTS = [
+export const STANDARD_REQUIREMENTS = [
   {
     title: "90% or higher",
     subtitle: "Response Rate",
